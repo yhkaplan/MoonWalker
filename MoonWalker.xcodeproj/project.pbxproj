@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
-		039FDB5520DA56A0003A9794 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5420DA56A0003A9794 /* WalkthroughView.swift */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
 		039FDB5C20DA64A6003A9794 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5B20DA64A6003A9794 /* ParentViewController.swift */; };
 		039FDB5E20DA64E7003A9794 /* MoonWalkerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */; };
 		039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6020DA6854003A9794 /* UIViewExtensions.swift */; };
+		039FDB6320DA7197003A9794 /* WalkthroughChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6220DA7197003A9794 /* WalkthroughChildView.swift */; };
 		287D0A6E1C4B73BD004566D6 /* MoonWalkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* MoonWalkerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* MoonWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* MoonWalker.framework */; };
@@ -32,11 +32,11 @@
 /* Begin PBXFileReference section */
 		0375142020DA535100260C36 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0375142120DA535100260C36 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		039FDB5420DA56A0003A9794 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		039FDB5920DA5AE1003A9794 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		039FDB5B20DA64A6003A9794 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonWalkerCoordinator.swift; sourceTree = "<group>"; };
 		039FDB6020DA6854003A9794 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		039FDB6220DA7197003A9794 /* WalkthroughChildView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughChildView.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* MoonWalkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoonWalkerTests.swift; path = Tests/MoonWalkerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* MoonWalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoonWalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828801C494B2C00330CF4 /* MoonWalker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoonWalker.h; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		0375142620DA55CB00260C36 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				039FDB5420DA56A0003A9794 /* WalkthroughView.swift */,
+				039FDB6220DA7197003A9794 /* WalkthroughChildView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				039FDB5520DA56A0003A9794 /* WalkthroughView.swift in Sources */,
+				039FDB6320DA7197003A9794 /* WalkthroughChildView.swift in Sources */,
 				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
 				039FDB5E20DA64E7003A9794 /* MoonWalkerCoordinator.swift in Sources */,
 				039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */,

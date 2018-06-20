@@ -20,7 +20,7 @@ class ChildViewControllerTests: QuickSpec {
             let mainImage = UIImage()
             let backgroundImage = UIImage()
 
-            let walkView = WalkthroughView(
+            let walkView = WalkthroughChildView(
                 upperLabelText: upperLabelText,
                 lowerLabelText: lowerLabelText,
                 childView: childView,
@@ -28,7 +28,7 @@ class ChildViewControllerTests: QuickSpec {
                 backgroundImage: backgroundImage
             )
 
-            let childVC = ChildViewController(walkthroughView: walkView)
+            let childVC = ChildViewController(walkthroughChildView: walkView)
 
             _ = childVC.view // Calls viewDidLoad/Appear
 

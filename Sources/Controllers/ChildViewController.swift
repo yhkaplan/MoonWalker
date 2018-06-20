@@ -18,12 +18,12 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
-    private var walkthroughView = WalkthroughView()
+    private var walkthroughChildView = WalkthroughChildView()
 
-    init(walkthroughView: WalkthroughView) {
+    init(walkthroughChildView: WalkthroughChildView) {
         super.init(nibName: nil, bundle: nil)
 
-        self.walkthroughView = walkthroughView
+        self.walkthroughChildView = walkthroughChildView
         allLabels = [upperLabel, lowerLabel]
     }
 
@@ -34,11 +34,11 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        childView = walkthroughView.childView
-        mainImage = walkthroughView.mainImage
-        backgroundImage = walkthroughView.backgroundImage
+        childView = walkthroughChildView.childView
+        mainImage = walkthroughChildView.mainImage
+        backgroundImage = walkthroughChildView.backgroundImage
 
-        setupLabelText(walkthroughView)
+        setupLabelText(walkthroughChildView)
         setupLabelLayout()
     }
 
@@ -50,9 +50,9 @@ private extension ChildViewController {
 
     // MARK: - Label
 
-    private func setupLabelText(_ walkthroughView: WalkthroughView) {
-        upperLabel.text = walkthroughView.upperLabelText
-        lowerLabel.text = walkthroughView.lowerLabelText
+    private func setupLabelText(_ walkthroughChildView: WalkthroughChildView) {
+        upperLabel.text = walkthroughChildView.upperLabelText
+        lowerLabel.text = walkthroughChildView.lowerLabelText
     }
 
     private func setupLabelLayout() {

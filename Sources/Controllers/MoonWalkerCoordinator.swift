@@ -8,7 +8,7 @@
 /**
  This struct or class will contain the following methods:
 
- * displayWalkthrough([WalkthroughView])
+ * displayWalkthrough([WalkthroughChildView])
     * creates and displays ParentVC
 
  */

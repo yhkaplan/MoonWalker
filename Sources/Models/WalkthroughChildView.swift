@@ -1,5 +1,5 @@
 //
-//  WalkthroughView.swift
+//  WalkthroughChildView.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/20.
@@ -9,7 +9,7 @@
 /**
  This struct represents the data that will fill your Walkthrough views
 */
-public struct WalkthroughView {
+public struct WalkthroughChildView {
 
     let upperLabelText: String?
     let lowerLabelText: String?
@@ -20,7 +20,7 @@ public struct WalkthroughView {
 }
 
 // Making the initializer in extension leaves memberwise init
-extension WalkthroughView {
+extension WalkthroughChildView {
 
     init() {
         self.init(
