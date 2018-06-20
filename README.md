@@ -13,7 +13,7 @@ By [yhkaplan](http://yhkaplan@gmail.com.com).
 
 ## Introduction
 
-MoonWalker is a library to .......
+MoonWalker is an easy to use walkthrough library.
 
 <!-- <img src="Example/MoonWalker.gif" width="300"/> -->
 
@@ -26,18 +26,15 @@ import MoonWalker
 
 ## Requirements
 
-* iOS 9.0+
-* Xcode 8.0+
+* iOS 10.0+
+* Xcode 9.4+
 
 ## Getting involved
 
 * If you **want to contribute** please feel free to **submit pull requests**.
 * If you **have a feature request** please **open an issue**.
-* If you **found a bug** or **need help** please **check older issues, [FAQ](#faq) and threads on [StackOverflow](http://stackoverflow.com/questions/tagged/MoonWalker) (Tag 'MoonWalker') before submitting an issue**.
 
 Before contribute check the [CONTRIBUTING](https://github.com/yhkaplan@gmail.com/MoonWalker/blob/master/CONTRIBUTING.md) file for more info.
-
-If you use **MoonWalker** in your app We would love to hear about it! Drop us a line on [Twitter](https://twitter.com/yhkaplan@gmail.com).
 
 ## Examples
 
@@ -71,11 +68,6 @@ github "yhkaplan@gmail.com/MoonWalker" ~> 1.0
 
 * [yhkaplan](https://github.com/yhkaplan@gmail.com) ([@yhkaplan@gmail.com](https://twitter.com/yhkaplan@gmail.com))
 
-## FAQ
-
-### How to .....
-
-You can do it by conforming to .....
 
 # Changelog
 
