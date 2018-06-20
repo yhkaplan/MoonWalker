@@ -12,7 +12,7 @@ import Nimble
 class ChildViewControllerTests: QuickSpec {
 
     override func spec() {
-        describe("WalkthroughView") {
+        describe("ChildViewController") {
 
             let upperLabelText = "upperTestyMcTestFace"
             let lowerLabelText = "lowerTestyMcTestFace"
@@ -28,9 +28,11 @@ class ChildViewControllerTests: QuickSpec {
                 backgroundImage: backgroundImage
             )
 
-            let childVC = ChildViewController(walkthoughView: walkView)
+            let childVC = ChildViewController(walkthroughView: walkView)
 
-            context("All WalkthroughView properties are set") {
+            _ = childVC.view // Calls viewDidLoad/Appear
+
+            context("viewDidLoad") {
 
                 it("has upperLabelText set") {
                     expect(childVC.upperLabel.text).to(equal(upperLabelText))

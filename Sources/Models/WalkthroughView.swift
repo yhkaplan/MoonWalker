@@ -18,3 +18,18 @@ public struct WalkthroughView {
     let backgroundImage: UIImage?
 
 }
+
+// Making the initializer in extension leaves memberwise init
+extension WalkthroughView {
+
+    init() {
+        self.init(
+            upperLabelText: nil,
+            lowerLabelText: nil,
+            childView: nil,
+            mainImage: nil,
+            backgroundImage: nil
+        )
+    }
+
+}

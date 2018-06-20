@@ -9,22 +9,22 @@ import UIKit
 
 final class ChildViewController: UIViewController {
 
-    let upperLabel = UILabel()
+    let upperLabel = UILabel() //TODO: set all as lazy?
     let lowerLabel = UILabel()
+
+    var allLabels: [UILabel] = []
 
     var childView: UIView?
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
-    init(walkthoughView: WalkthroughView) {
+    private var walkthroughView = WalkthroughView()
+
+    init(walkthroughView: WalkthroughView) {
         super.init(nibName: nil, bundle: nil)
 
-        upperLabel.text = walkthoughView.upperLabelText
-        lowerLabel.text = walkthoughView.lowerLabelText
-
-        childView = walkthoughView.childView
-        mainImage = walkthoughView.mainImage
-        backgroundImage = walkthoughView.backgroundImage
+        self.walkthroughView = walkthroughView
+        allLabels = [upperLabel, lowerLabel]
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,7 +34,37 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        childView = walkthroughView.childView
+        mainImage = walkthroughView.mainImage
+        backgroundImage = walkthroughView.backgroundImage
+
+        setupLabelText(walkthroughView)
+        setupLabelLayout()
+    }
+
+}
+
+// MARK: - Private funcs
+
+private extension ChildViewController {
+
+    // MARK: - Label
+
+    private func setupLabelText(_ walkthroughView: WalkthroughView) {
+        upperLabel.text = walkthroughView.upperLabelText
+        lowerLabel.text = walkthroughView.lowerLabelText
+    }
+
+    private func setupLabelLayout() {
+        allLabels.forEach { label in
+            view.addSubviewWithConstraints(
+                label,
+                leadingConstant: 0.0,
+                trailingConstant: 0.0,
+                topConstant: 0.0,
+                bottomConstant: 0.0
+            )
+        }
     }
 
 }
