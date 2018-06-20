@@ -14,6 +14,9 @@
  */
 
 struct MoonWalkerCoordinator {
-    public var upperLabelUpperOffset: CGFloat = 0.0
-    public var lowerLabelLowerOffset: CGFloat = 0.0
+
+    public var walkthroughViewSetting = WalkthroughViewSettings()
+
+    private var childViewControllers: [ChildViewController] = []
+    // set walkthroughViewSetting for each child
 }

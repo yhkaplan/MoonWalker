@@ -17,19 +17,19 @@ public struct WalkthroughChildView {
     let mainImage: UIImage?
     let backgroundImage: UIImage?
 
-}
+    init(
+        upperLabelText: String? = nil,
+        lowerLabelText: String? = nil,
+        childView: UIView? = nil,
+        mainImage: UIImage? = nil,
+        backgroundImage: UIImage? = nil
+    ) {
 
-// Making the initializer in extension leaves memberwise init
-extension WalkthroughChildView {
-
-    init() {
-        self.init(
-            upperLabelText: nil,
-            lowerLabelText: nil,
-            childView: nil,
-            mainImage: nil,
-            backgroundImage: nil
-        )
+        self.upperLabelText = upperLabelText
+        self.lowerLabelText = lowerLabelText
+        self.childView = childView
+        self.mainImage = mainImage
+        self.backgroundImage = backgroundImage
     }
 
 }

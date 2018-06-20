@@ -18,6 +18,8 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
+    var walkthroughViewSetting = WalkthroughViewSettings()
+
     private var walkthroughChildView = WalkthroughChildView()
 
     init(walkthroughChildView: WalkthroughChildView) {
