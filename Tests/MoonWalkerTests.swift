@@ -9,30 +9,47 @@ import Quick
 import Nimble
 @testable import MoonWalker
 
-class WalkthroughViewTests: QuickSpec {
+class ChildViewControllerTests: QuickSpec {
+
     override func spec() {
         describe("WalkthroughView") {
 
-            it("has upperLabelText set") {
-                expect(1) == 2
-            }
+            let upperLabelText = "upperTestyMcTestFace"
+            let lowerLabelText = "lowerTestyMcTestFace"
+            let childView = UIView()
+            let mainImage = UIImage()
+            let backgroundImage = UIImage()
 
-            it("has lowerLabelText set") {
-                expect("number") == "string"
-            }
+            let walkView = WalkthroughView(
+                upperLabelText: upperLabelText,
+                lowerLabelText: lowerLabelText,
+                childView: childView,
+                mainImage: mainImage,
+                backgroundImage: backgroundImage
+            )
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+            let childVC = ChildViewController(walkthoughView: walkView)
 
-            context("these will pass") {
+            context("All WalkthroughView properties are set") {
 
-                it("can do maths") {
-                    expect(23) == 23
+                it("has upperLabelText set") {
+                    expect(childVC.upperLabel.text).to(equal(upperLabelText))
                 }
 
-                it("can read") {
-                    expect("🐮") == "🐮"
+                it("has lowerLabelText set") {
+                    expect(childVC.lowerLabel.text).to(equal(lowerLabelText))
+                }
+
+                it("has childView set") {
+                    expect(childVC.childView).to(equal(childView))
+                }
+
+                it("has mainImage set") {
+                    expect(childVC.mainImage).to(equal(mainImage))
+                }
+
+                it("has backgroundImage set") {
+                    expect(childVC.backgroundImage).to(equal(backgroundImage))
                 }
 
             }
