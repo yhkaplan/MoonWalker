@@ -12,19 +12,19 @@ public struct WalkthroughViewSettings { //TODO: make this each item into nested 
     let upperLabelLeadingConstant: CGFloat
     let upperLabelTrailingConstant: CGFloat
     let upperLabelTopConstant: CGFloat
-    let upperLabelHeightConstant: CGFloat
+    let upperLabelHeight: CGFloat
 
     //TODO: add lower label properties
 
     init(
-        upperLabelLeadingConstant: CGFloat = 0.0,
-        upperLabelTrailingConstant: CGFloat = 0.0,
+        upperLabelLeadingConstant: CGFloat = 20.0,
+        upperLabelTrailingConstant: CGFloat = 20.0,
         upperLabelTopConstant: CGFloat = 20.0,
-        upperLabelHeightConstant: CGFloat = 40.0
+        upperLabelHeight: CGFloat = 40.0
     ) {
         self.upperLabelLeadingConstant = upperLabelLeadingConstant
         self.upperLabelTrailingConstant = upperLabelTrailingConstant
         self.upperLabelTopConstant = upperLabelTopConstant
-        self.upperLabelHeightConstant = upperLabelHeightConstant
+        self.upperLabelHeight = upperLabelHeight
     }
 }

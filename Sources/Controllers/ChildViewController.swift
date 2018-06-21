@@ -12,8 +12,6 @@ final class ChildViewController: UIViewController {
     let upperLabel = UILabel() //TODO: set all as lazy?
     let lowerLabel = UILabel()
 
-    var allLabels: [UILabel] = []
-
     var childView: UIView?
     var mainImage: UIImage?
     var backgroundImage: UIImage?
@@ -26,7 +24,6 @@ final class ChildViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.walkthroughChildView = walkthroughChildView
-        allLabels = [upperLabel, lowerLabel]
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -58,15 +55,17 @@ private extension ChildViewController {
     }
 
     private func setupLabelLayout() {
-        allLabels.forEach { label in
+
+        if upperLabel.text != nil {
             view.addSubviewWithConstraints(
-                label,
-                leadingConstant: 0.0,
-                trailingConstant: 0.0,
-                topConstant: 0.0,
-                bottomConstant: 0.0
+                upperLabel,
+                height: walkthroughViewSetting.upperLabelHeight,
+                leadingConstant: walkthroughViewSetting.upperLabelLeadingConstant,
+                trailingConstant: walkthroughViewSetting.upperLabelTrailingConstant,
+                topConstant: walkthroughViewSetting.upperLabelTopConstant
             )
         }
+
     }
 
 }

@@ -26,4 +26,38 @@ extension UIView {
         ].forEach { $0.isActive = true }
     }
 
+    func addSubviewWithConstraints(
+        _ subView: UIView,
+        height: CGFloat,
+        leadingConstant: CGFloat = 0.0,
+        trailingConstant: CGFloat = 0.0,
+        bottomConstant: CGFloat = 0.0
+    ) {
+        self.addSubview(subView)
+        subView.translatesAutoresizingMaskIntoConstraints = false
+
+        [subView.heightAnchor.constraint(equalToConstant: height),
+         subView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingConstant),
+         subView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingConstant),
+         subView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: bottomConstant)
+        ].forEach { $0.isActive = true }
+    }
+
+    func addSubviewWithConstraints(
+        _ subView: UIView,
+        height: CGFloat,
+        leadingConstant: CGFloat = 0.0,
+        trailingConstant: CGFloat = 0.0,
+        topConstant: CGFloat = 0.0
+    ) {
+        self.addSubview(subView)
+        subView.translatesAutoresizingMaskIntoConstraints = false
+
+        [subView.heightAnchor.constraint(equalToConstant: height),
+         subView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingConstant),
+         subView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: trailingConstant),
+         subView.topAnchor.constraint(equalTo: self.topAnchor, constant: topConstant)
+        ].forEach { $0.isActive = true }
+    }
+
 }
