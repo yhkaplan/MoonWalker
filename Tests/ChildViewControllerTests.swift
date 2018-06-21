@@ -1,5 +1,5 @@
 //
-//  MoonWalkerTests.swift
+//  ChildViewControllerTests.swift
 //  MoonWalkerTests
 //
 //  Copyright © 2018 yhkaplan. All rights reserved.
