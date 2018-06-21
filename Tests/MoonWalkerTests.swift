@@ -28,32 +28,51 @@ class ChildViewControllerTests: QuickSpec {
                 backgroundImage: backgroundImage
             )
 
-            let childVC = ChildViewController(walkthroughChildView: walkView)
+            let walkthroughViewSettings = WalkthroughViewSettings(
+                upperLabelLeadingConstant: 20.45,
+                upperLabelTrailingConstant: 14.4,
+                upperLabelTopConstant: 53.54,
+                upperLabelHeight: 87.54
+            )
 
-            _ = childVC.view // Calls viewDidLoad/Appear
+            let sut = ChildViewController(childView: walkView, settings: walkthroughViewSettings)
 
-            context("viewDidLoad") {
+            sut.preloadView()
+
+            context("Labels images and views are set") {
 
                 it("has upperLabelText set") {
-                    expect(childVC.upperLabel.text).to(equal(upperLabelText))
+                    expect(sut.upperLabel.text).to(equal(upperLabelText))
                 }
 
                 it("has lowerLabelText set") {
-                    expect(childVC.lowerLabel.text).to(equal(lowerLabelText))
+                    expect(sut.lowerLabel.text).to(equal(lowerLabelText))
                 }
 
                 it("has childView set") {
-                    expect(childVC.childView).to(equal(childView))
+                    expect(sut.childView).to(equal(childView))
                 }
 
                 it("has mainImage set") {
-                    expect(childVC.mainImage).to(equal(mainImage))
+                    expect(sut.mainImage).to(equal(mainImage))
                 }
 
                 it("has backgroundImage set") {
-                    expect(childVC.backgroundImage).to(equal(backgroundImage))
+                    expect(sut.backgroundImage).to(equal(backgroundImage))
                 }
 
+            }
+
+            context("Labels images and views are layed out") {
+
+                it("upperLabel height layed out") {
+                    expect(sut.upperLabel.frame.height).to(equal(walkthroughViewSettings.upperLabelHeight))
+                }
+
+                //TODO: using leading so this will fail w/ right to left layouts
+                it("upperLabel leadingConstant layed out") {
+                    expect(sut.upperLabel.frame.minX).to(equal(walkthroughViewSettings.upperLabelLeadingConstant))
+                }
             }
         }
     }
