@@ -12,67 +12,76 @@ import Nimble
 class ChildViewControllerTests: QuickSpec {
 
     override func spec() {
-        describe("ChildViewController") {
 
-            let upperLabelText = "upperTestyMcTestFace"
-            let lowerLabelText = "lowerTestyMcTestFace"
-            let childView = UIView()
-            let mainImage = UIImage()
-            let backgroundImage = UIImage()
+        describe("viewDidLoad") {
 
-            let walkView = WalkthroughChildView(
-                upperLabelText: upperLabelText,
-                lowerLabelText: lowerLabelText,
-                childView: childView,
-                mainImage: mainImage,
-                backgroundImage: backgroundImage
-            )
+            context("When the VC is loaded") {
 
-            let walkthroughViewSettings = WalkthroughViewSettings(
-                upperLabelLeadingConstant: 20.45,
-                upperLabelTrailingConstant: 14.4,
-                upperLabelTopConstant: 53.54,
-                upperLabelHeight: 87.54
-            )
+                let upperLabelText = "upperTestyMcTestFace"
+                let lowerLabelText = "lowerTestyMcTestFace"
+                let childView = UIView()
+                let mainImage = UIImage()
+                let backgroundImage = UIImage()
 
-            let sut = ChildViewController(childView: walkView, settings: walkthroughViewSettings)
+                let walkView = WalkthroughChildView(
+                    upperLabelText: upperLabelText,
+                    lowerLabelText: lowerLabelText,
+                    childView: childView,
+                    mainImage: mainImage,
+                    backgroundImage: backgroundImage
+                )
 
-            sut.preloadView()
+                let walkthroughViewSettings = WalkthroughViewSettings(
+                    upperLabelLeadingConstant: 20.45,
+                    upperLabelTrailingConstant: 14.4,
+                    upperLabelTopConstant: 53.54,
+                    upperLabelHeight: 87.54
+                )
 
-            context("Labels images and views are set") {
+                var sut: ChildViewController!
 
-                it("has upperLabelText set") {
+                beforeEach {
+                    sut = ChildViewController(childView: walkView, settings: walkthroughViewSettings)
+                    sut.preloadView()
+                }
+
+                afterEach {
+                    sut = nil
+                }
+
+                it("upperLabelText is set") {
                     expect(sut.upperLabel.text).to(equal(upperLabelText))
                 }
 
-                it("has lowerLabelText set") {
+                it("lowerLabelText is set") {
                     expect(sut.lowerLabel.text).to(equal(lowerLabelText))
                 }
 
-                it("has childView set") {
+                it("childView is set") {
                     expect(sut.childView).to(equal(childView))
                 }
 
-                it("has mainImage set") {
+                it("mainImage image is set") {
                     expect(sut.mainImage).to(equal(mainImage))
                 }
 
-                it("has backgroundImage set") {
+                it("backgroundImage image is set") {
                     expect(sut.backgroundImage).to(equal(backgroundImage))
                 }
 
             }
 
-            context("Labels images and views are layed out") {
+            context("When the VC is loaded views are layed out") {
 
-                it("upperLabel height layed out") {
+                it("upperLabel height is layed out") {
                     expect(sut.upperLabel.frame.height).to(equal(walkthroughViewSettings.upperLabelHeight))
                 }
 
                 //TODO: using leading so this will fail w/ right to left layouts
-                it("upperLabel leadingConstant layed out") {
+                it("upperLabel leadingConstant is layed out") {
                     expect(sut.upperLabel.frame.minX).to(equal(walkthroughViewSettings.upperLabelLeadingConstant))
                 }
+
             }
         }
     }
