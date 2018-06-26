@@ -68,20 +68,6 @@ class ChildViewControllerTests: QuickSpec {
                 it("backgroundImage image is set") {
                     expect(sut.backgroundImage).to(equal(backgroundImage))
                 }
-
-            }
-
-            context("When the VC is loaded views are layed out") {
-
-                it("upperLabel height is layed out") {
-                    expect(sut.upperLabel.frame.height).to(equal(walkthroughViewSettings.upperLabelHeight))
-                }
-
-                //TODO: using leading so this will fail w/ right to left layouts
-                it("upperLabel leadingConstant is layed out") {
-                    expect(sut.upperLabel.frame.minX).to(equal(walkthroughViewSettings.upperLabelLeadingConstant))
-                }
-
             }
         }
     }

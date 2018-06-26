@@ -52,21 +52,21 @@ private extension ChildViewController {
 
     // MARK: - Label
 
-    private func setupLabelText(_ walkthroughChildView: WalkthroughChildView) {
+    func setupLabelText(_ walkthroughChildView: WalkthroughChildView) {
         upperLabel.text = walkthroughChildView.upperLabelText
         lowerLabel.text = walkthroughChildView.lowerLabelText
     }
 
-    private func setupLabelLayout() {
-        if upperLabel.text != nil {
-            view.addSubviewWithConstraints(
-                upperLabel,
-                height: walkthroughViewSettings.upperLabelHeight,
-                leadingConstant: walkthroughViewSettings.upperLabelLeadingConstant,
-                trailingConstant: walkthroughViewSettings.upperLabelTrailingConstant,
-                topConstant: walkthroughViewSettings.upperLabelTopConstant
-            )
-        }
+    func setupLabelLayout() {
+        guard upperLabel.text != nil else { return }
+
+        view.addSubviewWithConstraints(
+            upperLabel,
+            height: walkthroughViewSettings.upperLabelHeight,
+            leadingConstant: walkthroughViewSettings.upperLabelLeadingConstant,
+            trailingConstant: walkthroughViewSettings.upperLabelTrailingConstant,
+            topConstant: walkthroughViewSettings.upperLabelTopConstant
+        )
     }
 
 }

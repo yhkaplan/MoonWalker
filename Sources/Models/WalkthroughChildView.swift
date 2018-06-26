@@ -24,7 +24,6 @@ public struct WalkthroughChildView {
         mainImage: UIImage? = nil,
         backgroundImage: UIImage? = nil
     ) {
-
         self.upperLabelText = upperLabelText
         self.lowerLabelText = lowerLabelText
         self.childView = childView
