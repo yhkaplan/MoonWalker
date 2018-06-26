@@ -17,7 +17,7 @@ final class ChildViewController: UIViewController {
     var backgroundImage: UIImage?
 
     private var walkthroughChildView = WalkthroughChildView()
-    private var walkthroughViewSettings = WalkthroughViewSettings()
+    private var viewSettings = WalkthroughViewSettings()
 
     init(
         childView: WalkthroughChildView,
@@ -26,7 +26,7 @@ final class ChildViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.walkthroughChildView = childView
-        self.walkthroughViewSettings = settings
+        self.viewSettings = settings
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -62,10 +62,10 @@ private extension ChildViewController {
 
         view.addSubviewWithConstraints(
             upperLabel,
-            height: walkthroughViewSettings.upperLabelHeight,
-            leadingConstant: walkthroughViewSettings.upperLabelLeadingConstant,
-            trailingConstant: walkthroughViewSettings.upperLabelTrailingConstant,
-            topConstant: walkthroughViewSettings.upperLabelTopConstant
+            height: viewSettings.upperLabel.height,
+            leadingConstant: viewSettings.upperLabel.leadingConstant,
+            trailingConstant: viewSettings.upperLabel.trailingConstant,
+            topConstant: viewSettings.upperLabel.topConstant
         )
     }
 

@@ -8,23 +8,31 @@
 /**
  This struct represents the layout and appearance for your Walkthrough views
  */
-public struct WalkthroughViewSettings { //TODO: make this each item into nested struct
-    let upperLabelLeadingConstant: CGFloat
-    let upperLabelTrailingConstant: CGFloat
-    let upperLabelTopConstant: CGFloat
-    let upperLabelHeight: CGFloat
-
-    //TODO: add lower label properties
+public struct WalkthroughViewSettings {
+    let upperLabel: UpperLabel
 
     init(
-        upperLabelLeadingConstant: CGFloat = 20.0,
-        upperLabelTrailingConstant: CGFloat = 20.0,
-        upperLabelTopConstant: CGFloat = 20.0,
-        upperLabelHeight: CGFloat = 40.0
+        upperLabel: UpperLabel = UpperLabel()
     ) {
-        self.upperLabelLeadingConstant = upperLabelLeadingConstant
-        self.upperLabelTrailingConstant = upperLabelTrailingConstant
-        self.upperLabelTopConstant = upperLabelTopConstant
-        self.upperLabelHeight = upperLabelHeight
+        self.upperLabel = upperLabel
+    }
+}
+
+public struct UpperLabel {
+    let leadingConstant: CGFloat
+    let trailingConstant: CGFloat
+    let topConstant: CGFloat
+    let height: CGFloat
+
+    init(
+        leadingConstant: CGFloat = 20.0,
+        trailingConstant: CGFloat = 20.0,
+        topConstant: CGFloat = 20.0,
+        height: CGFloat = 40.0
+        ) {
+        self.leadingConstant = leadingConstant
+        self.trailingConstant = trailingConstant
+        self.topConstant = topConstant
+        self.height = height
     }
 }
