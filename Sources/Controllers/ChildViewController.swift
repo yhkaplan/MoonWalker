@@ -59,14 +59,10 @@ private extension ChildViewController {
 
     func setupLabelLayout() {
         guard upperLabel.text != nil else { return }
+        viewSettings.upperLabel.addChildViewToParent(childView: upperLabel, parentView: self.view)
 
-        view.addSubviewWithConstraints(
-            upperLabel,
-            height: viewSettings.upperLabel.height,
-            leadingConstant: viewSettings.upperLabel.leadingConstant,
-            trailingConstant: viewSettings.upperLabel.trailingConstant,
-            topConstant: viewSettings.upperLabel.topConstant
-        )
+        guard lowerLabel.text != nil else { return }
+        viewSettings.lowerLabel.addChildViewToParent(childView: lowerLabel, parentView: self.view)
     }
 
 }
