@@ -16,6 +16,7 @@
 		039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6020DA6854003A9794 /* UIViewExtensions.swift */; };
 		039FDB6320DA7197003A9794 /* WalkthroughChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6220DA7197003A9794 /* WalkthroughChildView.swift */; };
 		039FDB6520DA7290003A9794 /* WalkthroughViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6420DA7290003A9794 /* WalkthroughViewSettings.swift */; };
+		03F5A19C20E260A600431717 /* MoonWalkerPageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* MoonWalkerPageVCDataSource.swift */; };
 		287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* MoonWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* MoonWalker.framework */; };
@@ -41,6 +42,7 @@
 		039FDB6020DA6854003A9794 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		039FDB6220DA7197003A9794 /* WalkthroughChildView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughChildView.swift; sourceTree = "<group>"; };
 		039FDB6420DA7290003A9794 /* WalkthroughViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewSettings.swift; sourceTree = "<group>"; };
+		03F5A19B20E260A600431717 /* MoonWalkerPageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonWalkerPageVCDataSource.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewControllerTests.swift; path = Tests/ChildViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* MoonWalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoonWalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828801C494B2C00330CF4 /* MoonWalker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoonWalker.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
 				039FDB5B20DA64A6003A9794 /* ParentViewController.swift */,
 				039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */,
+				03F5A19B20E260A600431717 /* MoonWalkerPageVCDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				039FDB6520DA7290003A9794 /* WalkthroughViewSettings.swift in Sources */,
 				039FDB5E20DA64E7003A9794 /* MoonWalkerCoordinator.swift in Sources */,
 				039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */,
+				03F5A19C20E260A600431717 /* MoonWalkerPageVCDataSource.swift in Sources */,
 				039FDB5C20DA64A6003A9794 /* ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

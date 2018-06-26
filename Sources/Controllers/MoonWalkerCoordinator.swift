@@ -17,7 +17,7 @@ struct MoonWalkerCoordinator {
 
     public var viewSettings = WalkthroughViewSettings()
 
-    private var childViewControllers: [ChildViewController] = []
+    var childViewControllers: [ChildViewController] = []
     // set walkthroughViewSetting for each child
 
     init(
