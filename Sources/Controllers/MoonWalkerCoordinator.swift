@@ -6,11 +6,25 @@
 //
 
 
-public typealias ChildViews = [(childViewContents: WalkthroughChildView, viewSettings: WalkthroughViewSettings)]
+public struct ChildView {
+
+    let childViewContents: WalkthroughChildView
+    let viewSettings: WalkthroughViewSettings
+
+    public init(childViewContents: WalkthroughChildView, viewSettings: WalkthroughViewSettings) {
+        self.childViewContents = childViewContents
+        self.viewSettings = viewSettings
+    }
+
+}
 
 public struct MoonWalkerCoordinator { //TODO: rename to ViewModel or something
     
-    var childViews: ChildViews = []
+    var childViews: [ChildView] = []
+
+    public init(childViews: [ChildView]) {
+        self.childViews = childViews
+    }
 
 }
 

@@ -16,7 +16,7 @@ public struct WalkthroughViewSettings {
     let upperLabel: UpperLabel
     let lowerLabel: LowerLabel
 
-    init(
+    public init(
         upperLabel: UpperLabel = UpperLabel(),
         lowerLabel: LowerLabel = LowerLabel()
     ) {
@@ -31,7 +31,7 @@ public class UpperLabel {
     let topConstant: CGFloat
     let height: CGFloat
 
-    init(
+    public init(
         leadingConstant: CGFloat = 20.0,
         trailingConstant: CGFloat = 20.0,
         topConstant: CGFloat = 20.0,
@@ -62,7 +62,7 @@ public struct LowerLabel {
     let bottomConstant: CGFloat
     let height: CGFloat
 
-    init(
+    public init(
         leadingConstant: CGFloat = 20.0,
         trailingConstant: CGFloat = 20.0,
         bottomConstant: CGFloat = 20.0,

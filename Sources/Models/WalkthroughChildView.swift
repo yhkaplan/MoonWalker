@@ -17,7 +17,7 @@ public struct WalkthroughChildView {
     let mainImage: UIImage?
     let backgroundImage: UIImage?
 
-    init(
+    public init(
         upperLabelText: String? = nil,
         lowerLabelText: String? = nil,
         childView: UIView? = nil,
