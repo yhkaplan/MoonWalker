@@ -16,11 +16,14 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
+    var index = 0
+
     private var walkthroughChildView = WalkthroughChildView()
     private var viewSettings = WalkthroughViewSettings()
 
     init(
         childView: WalkthroughChildView,
+        index: Int,
         settings: WalkthroughViewSettings = WalkthroughViewSettings()
     ) {
         super.init(nibName: nil, bundle: nil)

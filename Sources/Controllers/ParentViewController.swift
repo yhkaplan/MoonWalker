@@ -10,17 +10,20 @@ import UIKit
 final class ParentViewController: UIViewController {
 
     // MARK: - Properties
-    private var coordinator: MoonWalkerCoordinator = MoonWalkerCoordinator()
-    private var dataSource: UIPageViewControllerDataSource
-    private let pageVC = UIPageViewController() //TODO: MoonWalkerPageViewController
+    private weak var dataSource: UIPageViewControllerDataSource?
+    private var childWalkthroughVCs: [ChildViewController] = []
+    private var pageVC = UIPageViewController() //TODO: MoonWalkerPageViewController
 
     init(
-        coordinator: MoonWalkerCoordinator,
-        dataSource: UIPageViewControllerDataSource = MoonWalkerPageVCDataSource()
+        childWalkthroughVCs: [ChildViewController], //TODO: change this to ViewSettings
+        dataSource: UIPageViewControllerDataSource,
+        pageVC: UIPageViewController = UIPageViewController()
     ) {
         super.init(nibName: nil, bundle: nil)
 
-        self.coordinator = coordinator
+        self.childWalkthroughVCs = childWalkthroughVCs
+        self.dataSource = dataSource
+        self.pageVC = pageVC
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -41,19 +44,14 @@ private extension ParentViewController {
 
     func setupPageVC() {
         pageVC.dataSource = dataSource
-        pageVC.setViewControllers(
-            coordinator.childViewControllers,
+        pageVC.setViewControllers( //TODO: MoonWalkerPageViewController will override this to require dataSource
+            childWalkthroughVCs,
             direction: .forward,
-            animated: true, completion: nil
+            animated: true,
+            completion: nil
         )
 
-        view.addSubviewWithConstraints(
-            pageVC,
-            leadingConstant: ,
-            trailingConstant: ,
-            topConstant: ,
-            bottomConstant:
-        )
+        embed(childVC: pageVC)
     }
 
 }
