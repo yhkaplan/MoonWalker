@@ -27,7 +27,7 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
             return nil
         }
 
-        return getViewController(before: viewController.index)
+        return childViewControllers.element(before: viewController.index)
     }
 
     // After
@@ -37,7 +37,7 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
             return nil
         }
 
-        return getViewController(after: viewController.index)
+        return childViewControllers.element(after: viewController.index)
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
@@ -46,26 +46,6 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return presentationIndex //TODO: defaults to zero? //return presentationIndex?
-    }
-
-}
-
-private extension MoonWalkerPageVCDataSource {
-
-    func getViewController(before index: Int) -> UIViewController {
-        if index == 0 {
-            return childViewControllers.last ?? UIViewController()
-        }
-
-        return childViewControllers[index - 1]
-    }
-
-    func getViewController(after index: Int) -> UIViewController {
-        if index == childViewControllers.endIndex {
-            return childViewControllers.first ?? UIViewController()
-        }
-
-        return childViewControllers[index + 1]
     }
 
 }

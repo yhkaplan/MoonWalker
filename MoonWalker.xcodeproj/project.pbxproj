@@ -21,6 +21,7 @@
 		287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* MoonWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* MoonWalker.framework */; };
+		A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		28F828821C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F828871C494B2C00330CF4 /* MoonWalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonWalkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F8288E1C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				039FDB6020DA6854003A9794 /* UIViewExtensions.swift */,
 				0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */,
+				A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				039FDB6320DA7197003A9794 /* WalkthroughChildView.swift in Sources */,
+				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
 				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
 				036F2FE820DBB0230089DA45 /* TestHelpers.swift in Sources */,
 				039FDB6520DA7290003A9794 /* WalkthroughViewSettings.swift in Sources */,

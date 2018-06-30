@@ -16,7 +16,7 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
-    var index = 0
+    var index = 0 //TODO: remove index from here?
 
     private var walkthroughChildView = WalkthroughChildView()
     private var viewSettings = WalkthroughViewSettings()
