@@ -9,8 +9,6 @@ class MoonWalkerPageVCDataSource: NSObject {
 
     private var childViewControllers: [ChildViewController] = []
 
-    var presentationIndex: Int = 0
-
     init(childVCs: [ChildViewController]) {
         super.init()
 
@@ -45,7 +43,7 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return presentationIndex //TODO: defaults to zero? //return presentationIndex?
+        return 0 //TODO: defaults to zero?
     }
 
 }

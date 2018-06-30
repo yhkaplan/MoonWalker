@@ -99,8 +99,8 @@
 		039FDB5820DA5AC2003A9794 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
 				039FDB5B20DA64A6003A9794 /* ParentViewController.swift */,
+				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
 				039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */,
 				03F5A19B20E260A600431717 /* MoonWalkerPageVCDataSource.swift */,
 			);

@@ -10,19 +10,14 @@ import UIKit
 final class ParentViewController: UIViewController {
 
     // MARK: - Properties
-    private weak var dataSource: UIPageViewControllerDataSource?
-    private var childWalkthroughVCs: [ChildViewController] = []
-    private var pageVC = UIPageViewController() //TODO: MoonWalkerPageViewController
+    private var pageVC: UIPageViewController! //TODO: MoonWalkerPageViewController
 
     init(
-        childWalkthroughVCs: [ChildViewController], //TODO: change this to ViewSettings
-        dataSource: UIPageViewControllerDataSource,
-        pageVC: UIPageViewController = UIPageViewController()
+        //TODO: Add array of ViewSettings
+        pageVC: UIPageViewController
     ) {
         super.init(nibName: nil, bundle: nil)
 
-        self.childWalkthroughVCs = childWalkthroughVCs
-        self.dataSource = dataSource
         self.pageVC = pageVC
     }
 
@@ -33,7 +28,7 @@ final class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupPageVC()
+        embed(childVC: pageVC)
     }
 
 }
@@ -42,16 +37,6 @@ final class ParentViewController: UIViewController {
 
 private extension ParentViewController {
 
-    func setupPageVC() {
-        pageVC.dataSource = dataSource
-        pageVC.setViewControllers( //TODO: MoonWalkerPageViewController will override this to require dataSource
-            childWalkthroughVCs,
-            direction: .forward,
-            animated: true,
-            completion: nil
-        )
-
-        embed(childVC: pageVC)
-    }
-
+    func addButtons() {}
+    
 }
