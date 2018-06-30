@@ -31,17 +31,25 @@ class ChildViewControllerTests: QuickSpec {
                     backgroundImage: backgroundImage
                 )
 
+                let upperLabelSettings = UpperLabel(
+                    leadingConstant: 20.45,
+                    trailingConstant: 14.4,
+                    topConstant: 53.54,
+                    height: 87.54
+                )
+                
                 let walkthroughViewSettings = WalkthroughViewSettings(
-                    upperLabelLeadingConstant: 20.45,
-                    upperLabelTrailingConstant: 14.4,
-                    upperLabelTopConstant: 53.54,
-                    upperLabelHeight: 87.54
+                    upperLabel: upperLabelSettings
                 )
 
                 var sut: ChildViewController!
 
                 beforeEach {
-                    sut = ChildViewController(childView: walkView, settings: walkthroughViewSettings)
+                    sut = ChildViewController(
+                        childView: walkView,
+                        index: 0,
+                        settings: walkthroughViewSettings
+                    )
                     sut.preloadView()
                 }
 
