@@ -7,11 +7,11 @@
 
 extension Array {
     
-    func element(after index: Int) -> Element? {
+    subscript(after index: Int) -> Element? {
         return index == endIndex ? first : self[index + 1]
     }
 
-    func element(before index: Int) -> Element? {
+    subscript(before index: Int) -> Element? {
         return index == startIndex ? last : self[index - 1]
     }
     

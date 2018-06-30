@@ -27,7 +27,7 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
             return nil
         }
 
-        return childViewControllers.element(before: viewController.index)
+        return childViewControllers[before: viewController.index]
     }
 
     // After
@@ -37,7 +37,7 @@ extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
             return nil
         }
 
-        return childViewControllers.element(after: viewController.index)
+        return childViewControllers[after: viewController.index]
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
