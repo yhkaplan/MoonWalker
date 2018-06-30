@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Example
 //
-//  Copyright © 2016 yhkaplan. All rights reserved.
+//  Copyright © 2018 yhkaplan. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ import MoonWalker
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -27,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return MWChildView(viewModel: viewModel, layoutSettings: settings)
         }
 
-        let coordinator = MWCoordinator(childViews: views)
-        let walkthroughVC = coordinator.walkthroughViewController
+        let walkthroughVC = createWalkthroughViewController(from: views)
 
         window.rootViewController = walkthroughVC
         window.makeKeyAndVisible()
