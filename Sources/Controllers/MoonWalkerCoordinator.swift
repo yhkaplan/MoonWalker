@@ -51,7 +51,7 @@ public extension MoonWalkerCoordinator {
         
         //TODO: Add PageViewControllerDelegate for callbacks
         
-        let dataSource = MoonWalkerPageVCDataSource(childVCs: childViewControllers)
+        let dataSource = PageVCDataSource(childVCs: childViewControllers)
         pageViewController.dataSource = dataSource
         
         if let initiallyVisableVC = childViewControllers.first {

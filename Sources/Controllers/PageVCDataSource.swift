@@ -1,11 +1,11 @@
 //
-//  MoonWalkerPageVCDataSource.swift
+//  PageVCDataSource.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/26.
 //
 
-class MoonWalkerPageVCDataSource: NSObject {
+class PageVCDataSource: NSObject {
 
     private var childViewControllers: [ChildViewController] = []
 
@@ -16,7 +16,7 @@ class MoonWalkerPageVCDataSource: NSObject {
     }
 }
 
-extension MoonWalkerPageVCDataSource: UIPageViewControllerDataSource {
+extension PageVCDataSource: UIPageViewControllerDataSource {
 
     // Before
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
