@@ -8,10 +8,10 @@
 
 public struct ChildView {
 
-    let childViewContents: WalkthroughChildView
+    let childViewContents: MWChildViewModel
     let viewSettings: WalkthroughViewSettings
 
-    public init(childViewContents: WalkthroughChildView, viewSettings: WalkthroughViewSettings) {
+    public init(childViewContents: MWChildViewModel, viewSettings: WalkthroughViewSettings) {
         self.childViewContents = childViewContents
         self.viewSettings = viewSettings
     }

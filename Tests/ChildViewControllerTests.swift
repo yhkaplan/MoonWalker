@@ -23,7 +23,7 @@ class ChildViewControllerTests: QuickSpec {
                 let mainImage = UIImage()
                 let backgroundImage = UIImage()
 
-                let walkView = WalkthroughChildView(
+                let walkView = MWChildViewModel(
                     upperLabelText: upperLabelText,
                     lowerLabelText: lowerLabelText,
                     childView: childView,

@@ -18,17 +18,17 @@ final class ChildViewController: UIViewController {
 
     var index = 0 //TODO: remove index from here?
 
-    private var walkthroughChildView = WalkthroughChildView()
+    private var childViewModel = MWChildViewModel()
     private var viewSettings = WalkthroughViewSettings()
 
     init(
-        childView: WalkthroughChildView,
+        childView: MWChildViewModel,
         index: Int,
         settings: WalkthroughViewSettings = WalkthroughViewSettings()
     ) {
         super.init(nibName: nil, bundle: nil)
 
-        self.walkthroughChildView = childView
+        self.childViewModel = childView
         self.viewSettings = settings
     }
 
@@ -39,11 +39,11 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        childView = walkthroughChildView.childView
-        mainImage = walkthroughChildView.mainImage
-        backgroundImage = walkthroughChildView.backgroundImage
+        childView = childViewModel.childView
+        mainImage = childViewModel.mainImage
+        backgroundImage = childViewModel.backgroundImage
 
-        setupLabelText(walkthroughChildView)
+        setupLabelText(childViewModel)
         setupLabelLayout()
     }
 
@@ -55,9 +55,9 @@ private extension ChildViewController {
 
     // MARK: - Label
 
-    func setupLabelText(_ walkthroughChildView: WalkthroughChildView) {
-        upperLabel.text = walkthroughChildView.upperLabelText
-        lowerLabel.text = walkthroughChildView.lowerLabelText
+    func setupLabelText(_ childViewModel: MWChildViewModel) {
+        upperLabel.text = childViewModel.upperLabelText
+        lowerLabel.text = childViewModel.lowerLabelText
     }
 
     func setupLabelLayout() {

@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError()
         }
 
-        let walkthroughChildView = WalkthroughChildView(upperLabelText: "Hey")
+        let childViewModel = MWChildViewModel(upperLabelText: "Hey")
         let settings = WalkthroughViewSettings()
 
         let views = [0...10].map { index -> ChildView in
-            return ChildView(childViewContents: walkthroughChildView, viewSettings: settings)
+            return ChildView(childViewContents: childViewModel, viewSettings: settings)
         }
 
         let coordinator = MoonWalkerCoordinator(childViews: views)

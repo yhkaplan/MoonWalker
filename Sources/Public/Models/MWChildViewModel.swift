@@ -1,5 +1,5 @@
 //
-//  WalkthroughChildView.swift
+//  MWChildViewModel.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/20.
@@ -9,7 +9,7 @@
 /**
  This struct represents the data that will fill your Walkthrough views
 */
-public struct WalkthroughChildView {
+public struct MWChildViewModel {
 
     let upperLabelText: String?
     let lowerLabelText: String?
