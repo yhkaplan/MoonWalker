@@ -38,7 +38,7 @@ class ChildViewControllerTests: QuickSpec {
                     height: 87.54
                 )
                 
-                let walkthroughViewSettings = WalkthroughViewSettings(
+                let childViewLayoutSettings = MWChildViewLayoutSettings(
                     upperLabel: upperLabelSettings
                 )
 
@@ -48,7 +48,7 @@ class ChildViewControllerTests: QuickSpec {
                     sut = ChildViewController(
                         childView: walkView,
                         index: 0,
-                        settings: walkthroughViewSettings
+                        settings: childViewLayoutSettings
                     )
                     sut.preloadView()
                 }

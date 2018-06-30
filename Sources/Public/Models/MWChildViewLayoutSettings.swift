@@ -1,5 +1,5 @@
 //
-//  WalkthroughViewSettings.swift
+//  MWChildViewLayoutSettings.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/20.
@@ -12,7 +12,7 @@ protocol SubviewAddable {
 /**
  This struct represents the layout and appearance for your Walkthrough views
  */
-public struct WalkthroughViewSettings {
+public struct MWChildViewLayoutSettings {
     let upperLabel: UpperLabel
     let lowerLabel: LowerLabel
 

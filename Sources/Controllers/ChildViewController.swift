@@ -19,12 +19,12 @@ final class ChildViewController: UIViewController {
     var index = 0 //TODO: remove index from here?
 
     private var childViewModel = MWChildViewModel()
-    private var viewSettings = WalkthroughViewSettings()
+    private var viewSettings = MWChildViewLayoutSettings()
 
     init(
         childView: MWChildViewModel,
         index: Int,
-        settings: WalkthroughViewSettings = WalkthroughViewSettings()
+        settings: MWChildViewLayoutSettings = MWChildViewLayoutSettings()
     ) {
         super.init(nibName: nil, bundle: nil)
 

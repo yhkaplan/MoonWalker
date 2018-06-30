@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let childViewModel = MWChildViewModel(upperLabelText: "Hey")
-        let settings = WalkthroughViewSettings()
+        let settings = MWChildViewLayoutSettings()
 
         let views = [0...10].map { index -> ChildView in
             return ChildView(childViewContents: childViewModel, viewSettings: settings)
