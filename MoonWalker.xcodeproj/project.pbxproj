@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
-		036F2FE820DBB0230089DA45 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F2FE720DBB0230089DA45 /* TestHelpers.swift */; };
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
@@ -22,6 +21,8 @@
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* MoonWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* MoonWalker.framework */; };
 		A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */; };
+		A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */; };
+		A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F2FE720DBB0230089DA45 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		28F828871C494B2C00330CF4 /* MoonWalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonWalkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F8288E1C494B2C00330CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				28F8288E1C494B2C00330CF4 /* Info.plist */,
 				287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */,
 				036F2FE720DBB0230089DA45 /* TestHelpers.swift */,
+				A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -289,7 +292,6 @@
 				039FDB6320DA7197003A9794 /* WalkthroughChildView.swift in Sources */,
 				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
 				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
-				036F2FE820DBB0230089DA45 /* TestHelpers.swift in Sources */,
 				039FDB6520DA7290003A9794 /* WalkthroughViewSettings.swift in Sources */,
 				0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */,
 				039FDB5E20DA64E7003A9794 /* MoonWalkerCoordinator.swift in Sources */,
@@ -304,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */,
+				A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */,
+				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
