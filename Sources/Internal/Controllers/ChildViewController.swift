@@ -16,10 +16,10 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
-    var index = 0 //TODO: remove index from here?
+    var index = 0
 
-    private var childViewModel = MWChildViewModel()
-    private var viewSettings = MWChildViewLayoutSettings()
+    private var viewModel = MWChildViewModel()
+    private var layoutSettings = MWChildViewLayoutSettings()
 
     init(
         childView: MWChildViewModel,
@@ -28,8 +28,8 @@ final class ChildViewController: UIViewController {
     ) {
         super.init(nibName: nil, bundle: nil)
 
-        self.childViewModel = childView
-        self.viewSettings = settings
+        self.viewModel = childView
+        self.layoutSettings = settings
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,11 +39,11 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        childView = childViewModel.childView
-        mainImage = childViewModel.mainImage
-        backgroundImage = childViewModel.backgroundImage
+        childView = viewModel.childView
+        mainImage = viewModel.mainImage
+        backgroundImage = viewModel.backgroundImage
 
-        setupLabelText(childViewModel)
+        setupLabelText(viewModel)
         setupLabelLayout()
     }
 
@@ -55,17 +55,17 @@ private extension ChildViewController {
 
     // MARK: - Label
 
-    func setupLabelText(_ childViewModel: MWChildViewModel) {
-        upperLabel.text = childViewModel.upperLabelText
-        lowerLabel.text = childViewModel.lowerLabelText
+    func setupLabelText(_ viewModel: MWChildViewModel) {
+        upperLabel.text = viewModel.upperLabelText
+        lowerLabel.text = viewModel.lowerLabelText
     }
 
     func setupLabelLayout() {
         guard upperLabel.text != nil else { return }
-        viewSettings.upperLabel.addChildViewToParent(childView: upperLabel, parentView: self.view)
+        layoutSettings.upperLabel.addChildViewToParent(childView: upperLabel, parentView: self.view)
 
         guard lowerLabel.text != nil else { return }
-        viewSettings.lowerLabel.addChildViewToParent(childView: lowerLabel, parentView: self.view)
+        layoutSettings.lowerLabel.addChildViewToParent(childView: lowerLabel, parentView: self.view)
     }
 
 }

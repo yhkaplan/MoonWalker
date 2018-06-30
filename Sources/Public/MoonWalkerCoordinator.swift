@@ -5,35 +5,22 @@
 //  Created by josh on 2018/06/20.
 //
 
-
-public struct ChildView {
-
-    let childViewContents: MWChildViewModel
-    let viewSettings: MWChildViewLayoutSettings
-
-    public init(childViewContents: MWChildViewModel, viewSettings: MWChildViewLayoutSettings) {
-        self.childViewContents = childViewContents
-        self.viewSettings = viewSettings
-    }
-
-}
-
 public struct MoonWalkerCoordinator { //TODO: rename to ViewModel or something
     
-    var childViews: [ChildView] = []
+    var childViews: [MWChildView] = []
 
     private var childViewControllers: [ChildViewController] {
         
         return childViews.enumerated().map { index, childView in
             return ChildViewController(
-                childView: childView.childViewContents,
+                childView: childView.viewModel,
                 index: index,
-                settings: childView.viewSettings
+                settings: childView.layoutSettings
             )
         }
     }
     
-    public init(childViews: [ChildView]) {
+    public init(childViews: [MWChildView]) {
         self.childViews = childViews
     }
 

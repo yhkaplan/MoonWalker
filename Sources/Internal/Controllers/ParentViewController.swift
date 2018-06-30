@@ -12,10 +12,7 @@ final class ParentViewController: UIViewController {
     // MARK: - Properties
     private var pageVC: UIPageViewController! //TODO: MoonWalkerPageViewController
 
-    init(
-        //TODO: Add array of ViewSettings
-        pageVC: UIPageViewController
-    ) {
+    init(pageVC: UIPageViewController) {
         super.init(nibName: nil, bundle: nil)
 
         self.pageVC = pageVC
