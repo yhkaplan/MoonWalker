@@ -101,7 +101,6 @@
 			children = (
 				039FDB5B20DA64A6003A9794 /* ParentViewController.swift */,
 				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
-				039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */,
 				03F5A19B20E260A600431717 /* PageVCDataSource.swift */,
 			);
 			path = Controllers;
@@ -150,13 +149,22 @@
 		28F828971C494B4200330CF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A309967920E77031002DFE94 /* Public */,
 				039FDB5F20DA682E003A9794 /* Extensions */,
 				039FDB5820DA5AC2003A9794 /* Controllers */,
-				0375142620DA55CB00260C36 /* Models */,
-				28F828801C494B2C00330CF4 /* MoonWalker.h */,
 				28F828821C494B2C00330CF4 /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		A309967920E77031002DFE94 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				28F828801C494B2C00330CF4 /* MoonWalker.h */,
+				039FDB5D20DA64E7003A9794 /* MoonWalkerCoordinator.swift */,
+				0375142620DA55CB00260C36 /* Models */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
