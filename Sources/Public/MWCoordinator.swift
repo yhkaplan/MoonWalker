@@ -1,11 +1,11 @@
 //
-//  MoonWalkerCoordinator.swift
+//  MWCoordinator.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/20.
 //
 
-public struct MoonWalkerCoordinator { //TODO: rename to ViewModel or something
+public struct MWCoordinator {
     
     var childViews: [MWChildView] = []
 
@@ -26,7 +26,7 @@ public struct MoonWalkerCoordinator { //TODO: rename to ViewModel or something
 
 }
 
-public extension MoonWalkerCoordinator {
+public extension MWCoordinator {
 
     var walkthroughViewController: UIViewController {
         

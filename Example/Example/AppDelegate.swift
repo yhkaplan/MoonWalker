@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return MWChildView(viewModel: viewModel, layoutSettings: settings)
         }
 
-        let coordinator = MoonWalkerCoordinator(childViews: views)
+        let coordinator = MWCoordinator(childViews: views)
         let walkthroughVC = coordinator.walkthroughViewController
 
         window.rootViewController = walkthroughVC
