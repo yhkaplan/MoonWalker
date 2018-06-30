@@ -43,7 +43,7 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0 //TODO: defaults to zero?
+        return (pageViewController.viewControllers?.first as? ChildViewController)?.index ?? 0
     }
 
 }

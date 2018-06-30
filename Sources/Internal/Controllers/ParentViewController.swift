@@ -25,6 +25,7 @@ final class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
         embed(childVC: pageVC)
     }
 

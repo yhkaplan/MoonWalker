@@ -13,9 +13,9 @@ extension UIViewController {
     func embed(
         childVC: UIViewController,
         leadingConstant: CGFloat = 20.0,
-        trailingConstant: CGFloat = 20.0,
+        trailingConstant: CGFloat = -20.0,
         topConstant: CGFloat = 20.0,
-        bottomConstant: CGFloat = 20.0
+        bottomConstant: CGFloat = -20.0
     ) {
         addChildViewController(childVC)
         view.addSubviewWithConstraints(

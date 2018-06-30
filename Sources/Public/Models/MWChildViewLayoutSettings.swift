@@ -33,7 +33,7 @@ public class UpperLabel {
 
     public init(
         leadingConstant: CGFloat = 20.0,
-        trailingConstant: CGFloat = 20.0,
+        trailingConstant: CGFloat = -20.0,
         topConstant: CGFloat = 20.0,
         height: CGFloat = 40.0
     ) {
@@ -64,8 +64,8 @@ public struct LowerLabel {
 
     public init(
         leadingConstant: CGFloat = 20.0,
-        trailingConstant: CGFloat = 20.0,
-        bottomConstant: CGFloat = 20.0,
+        trailingConstant: CGFloat = -20.0,
+        bottomConstant: CGFloat = -20.0,
         height: CGFloat = 40.0
         ) {
         self.leadingConstant = leadingConstant

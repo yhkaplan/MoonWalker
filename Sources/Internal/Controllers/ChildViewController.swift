@@ -16,7 +16,7 @@ final class ChildViewController: UIViewController {
     var mainImage: UIImage?
     var backgroundImage: UIImage?
 
-    var index = 0
+    var index: Int!
 
     private var viewModel = MWChildViewModel()
     private var layoutSettings = MWChildViewLayoutSettings()
@@ -28,6 +28,7 @@ final class ChildViewController: UIViewController {
     ) {
         super.init(nibName: nil, bundle: nil)
 
+        self.index = index
         self.viewModel = childView
         self.layoutSettings = settings
     }

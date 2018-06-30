@@ -8,7 +8,7 @@
 public func createWalkthroughViewController(from childViews: [MWChildView]) -> UIViewController {
     
     let pageViewController = UIPageViewController(
-        transitionStyle: .pageCurl,
+        transitionStyle: .scroll,
         navigationOrientation: .horizontal,
         options: nil //TODO: check
     )
@@ -16,8 +16,8 @@ public func createWalkthroughViewController(from childViews: [MWChildView]) -> U
     //TODO: Add PageViewControllerDelegate for callbacks
     let childVCs = createChildViewControllers(from: childViews)
     
+    setInitialChildViewController(for: pageViewController, childVCs: childVCs)
     setDataSourceDelegate(for: pageViewController, childVCs: childVCs)
-    setChildViewControllers(for: pageViewController, childVCs: childVCs)
     
     return ParentViewController(pageVC: pageViewController)
 }
@@ -37,12 +37,14 @@ fileprivate func setDataSourceDelegate(for pageViewController: UIPageViewControl
     pageViewController.dataSource = dataSource
 }
 
-fileprivate func setChildViewControllers(for pageViewController: UIPageViewController, childVCs: [ChildViewController]) {
-    if let initiallyVisableVC = childVCs.first {
-        pageViewController.setViewControllers(
-            [initiallyVisableVC],
-            direction: .forward,
-            animated: true
-        )
+fileprivate func setInitialChildViewController(for pageViewController: UIPageViewController, childVCs: [ChildViewController]) {
+    guard let initiallyVisableVC = childVCs.first else {
+        return
     }
+    
+    pageViewController.setViewControllers(
+        [initiallyVisableVC],
+        direction: .forward,
+        animated: true
+    )
 }
