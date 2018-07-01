@@ -80,6 +80,8 @@ class PageVCDataSourceTests: QuickSpec {
                     expect(tested).to(equal(expected))
                 }
                 
+                // MARK: - Helper funcs //TODO: lookup best place for these in case of Quick and Nimble
+                
                 func setupChildViewControllers() {
                     childViewControllers = [0, 1, 2].map { index -> ChildViewController in
                         return ChildViewController(
