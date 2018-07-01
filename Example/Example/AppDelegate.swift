@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError()
         }
 
-        let viewModel = MWChildViewModel(upperLabelText: "Hey")
         let settings = MWChildViewLayoutSettings()
-
-        let views = [0...10].map { index -> MWChildView in
+        
+        let views = [0, 1, 2].map { index -> MWChildView in
+            let viewModel = MWChildViewModel(upperLabelText: "Screen \(index)")
             return MWChildView(viewModel: viewModel, layoutSettings: settings)
         }
 
