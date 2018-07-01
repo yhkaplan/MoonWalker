@@ -71,6 +71,15 @@ class PageVCDataSourceTests: QuickSpec {
                     expect(tested).to(equal(expected))
                 }
                 
+                it("presentationIndex returns correct value") {
+                    let expected = 1
+                    
+                    setVisibleViewController(to: expected)
+                    let tested = sut.presentationIndex(for: pageViewController)
+                    
+                    expect(tested).to(equal(expected))
+                }
+                
                 func setupChildViewControllers() {
                     childViewControllers = [0, 1, 2].map { index -> ChildViewController in
                         return ChildViewController(
@@ -85,6 +94,15 @@ class PageVCDataSourceTests: QuickSpec {
                         transitionStyle: .scroll,
                         navigationOrientation: .horizontal,
                         options: nil
+                    )
+                }
+                
+                func setVisibleViewController(to index: Int) {
+                    let childVC = childViewControllers[index]
+                    pageViewController.setViewControllers(
+                        [childVC],
+                        direction: .forward,
+                        animated: false
                     )
                 }
             }
