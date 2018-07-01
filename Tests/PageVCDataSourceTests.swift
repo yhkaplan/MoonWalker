@@ -48,6 +48,22 @@ class PageVCDataSourceTests: QuickSpec {
                     expect(tested).to(equal(expected))
                 }
                 
+                it("pageViewControllerAfter returns next value") {
+                    let expectedIndex = 1
+                    let expected = childViewControllers[expectedIndex]
+                    
+                    let childVC = childViewControllers[expectedIndex - 1]
+                    
+                    guard let tested = sut.pageViewController(
+                        pageViewController,
+                        viewControllerAfter: childVC
+                    ) as? ChildViewController else {
+                            fail(); return
+                    }
+                    
+                    expect(tested).to(equal(expected))
+                }
+                
                 func setupChildViewControllers() {
                     childViewControllers = [0, 1, 2].map { index -> ChildViewController in
                         return ChildViewController(
