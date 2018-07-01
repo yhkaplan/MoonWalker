@@ -9,7 +9,9 @@ import UIKit
 
 extension UIViewController {
 
-    // Calls viewDidLoad/Appear
+    /*
+     * Calls viewDidLoad/Appear for testing purposes
+     */
     func preloadView() {
         _ = view
     }
