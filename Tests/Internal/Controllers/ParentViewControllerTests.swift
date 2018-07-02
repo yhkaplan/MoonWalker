@@ -21,7 +21,14 @@ class ParentViewControllerTests: QuickSpec {
                     nibName: nil,
                     bundle: nil
                 )
-                let sut = ParentViewController(pageVC: pageViewController)
+                
+                let childVCs: [ChildViewController] = []
+                let dataSource = PageVCDataSource(childVCs: childVCs)
+                
+                let sut = ParentViewController(
+                    pageVC: pageViewController,
+                    dataSource: dataSource
+                )
                 
                 it("sets childVC view as a subview") {
                     sut.preloadView()
