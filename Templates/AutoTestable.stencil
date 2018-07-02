@@ -1,7 +1,31 @@
 
 {% macro declareProperties variables %}
     {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}
-            let {{variable.name}}: {{variable.typeName}}
+         {% if variable.typeName|contains:"String" %}
+            let {{variable.name}} = "test {{variable.typeName}}"
+         {% elif variable.typeName|contains:"Float" %} {# Covers Float, CGFloat etc #}
+            let {{variable.name}} = 2874.89 {# Find a more random method #}
+         {% else %}
+            {% if variable.typeName|contains:"UIView?" %}
+            let {{variable.name}} = UIView()
+            {% elif variable.typeName|contains:"UIImage?" %}
+            let {{variable.name}} = UIImage()
+            {% else %}
+            let {{variable.name}} = {{variable.typeName}}()
+            {% endif %}
+         {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro declareTests variables %}
+    {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}
+            it("{{variable.name}} is set") {
+                let expected = {{variable.name}}
+                let tested = sut.{{variable.name}}
+
+                expect(tested).to(equal(expected))
+            }
+
     {% endfor %}
 {% endmacro %}
 
@@ -14,22 +38,24 @@
 // sourcery:file:Generated/{{ type.name }}Tests
 // MARK: - {{ type.name }} AutoTestable
 
+import Foundation
 import Quick
 import Nimble
 @testable import MoonWalker
 
 class {{type.name}}Tests: QuickSpec {
-    
+
     override func spec() {
-    
+
         describe("{{type.name}}Tests") {
-    
+
             {% call declareProperties type.storedVariables %}
-            
+
             let sut = {{type.name}}(
                 {% call filloutInit type.storedVariables %}
             )
 
+            {% call declareTests type.storedVariables %}
         }
     }
 }
