@@ -3,8 +3,8 @@
     {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}
          {% if variable.typeName|contains:"String" %}
             let {{variable.name}} = "test {{variable.typeName}}"
-         {% elif variable.typeName|contains:"Float" %} {# Covers Float, CGFloat etc #}
-            let {{variable.name}} = 2874.89 {# Find a more random method #}
+         {% elif variable.typeName|contains:"CGFloat" %}
+            let {{variable.name}} = generateRandomCGFloat()
          {% else %}
             {% if variable.typeName|contains:"UIView?" %}
             let {{variable.name}} = UIView()
@@ -36,9 +36,8 @@
 
 {% for type in types.types|!enum where type.implements.AutoTestable or type|annotated:"AutoTestable" %}
 // sourcery:file:Generated/{{ type.name }}Tests
-// MARK: - {{ type.name }} AutoTestable
+// MARK: - {{ type.name }}Tests
 
-import Foundation
 import Quick
 import Nimble
 @testable import MoonWalker
