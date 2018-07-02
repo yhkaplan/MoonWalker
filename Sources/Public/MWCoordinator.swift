@@ -35,9 +35,9 @@ public struct MWParentViewModel {
         options: nil
     )
 
-    private weak var dataSource: UIPageViewControllerDataSource?
+    private var dataSource: UIPageViewControllerDataSource? //TODO: check for memory leaks here
 
-    init(childViews: [MWChildView]) {
+    public init(childViews: [MWChildView]) {
         self.childViews = childViews
         self.dataSource = PageVCDataSource(childVCs: childVCs)
     }
@@ -46,7 +46,7 @@ public struct MWParentViewModel {
 
 public extension MWParentViewModel {
 
-    mutating func makeParentViewController(with childViews: [MWChildView]) -> UIViewController {
+    mutating func getParentViewController() -> UIViewController {
         //TODO: Add PageViewControllerDelegate for callbacks
 
         pageVCConfigurator.setDataSource(dataSource)
