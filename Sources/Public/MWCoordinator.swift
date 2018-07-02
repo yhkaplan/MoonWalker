@@ -67,14 +67,21 @@ private extension MWParentViewModel {
 
 }
 
-fileprivate func setInitialChildViewController(for pageViewController: UIPageViewController, childVCs: [ChildViewController]) {
-    guard let initiallyVisableVC = childVCs.first else {
-        return
+// This struct is resposible for configuring UIPageViewController
+struct PageVCConfigurator {
+
+    let pageViewController: UIPageViewController
+
+    func setDataSource(_ dataSource: UIPageViewControllerDataSource?) {
+        pageViewController.dataSource = dataSource
     }
-    
-    pageViewController.setViewControllers(
-        [initiallyVisableVC],
-        direction: .forward,
-        animated: true
-    )
+
+    func setInitialChildViewController(to initiallyVisableVC: ChildViewController) {
+        pageViewController.setViewControllers(
+            [initiallyVisableVC],
+            direction: .forward,
+            animated: true
+        )
+    }
+
 }
