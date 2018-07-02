@@ -7,6 +7,10 @@
 
 import UIKit
 
+func generateRandomCGFloat() -> CGFloat {
+    return CGFloat(drand48())
+}
+
 extension UIViewController {
 
     /*
