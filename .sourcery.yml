@@ -1,0 +1,7 @@
+sources:
+  - Sources/
+  - Tests/
+templates:
+  - Templates/
+output:
+  path: Tests/Public/
