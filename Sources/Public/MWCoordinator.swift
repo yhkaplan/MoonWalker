@@ -5,21 +5,37 @@
 //  Created by josh on 2018/06/20.
 //
 
-public func createWalkthroughViewController(from childViews: [MWChildView]) -> UIViewController {
-    
-    let pageViewController = UIPageViewController(
+/*
+ * This struct is resposible for:
+ * 1. creating ParentViewController,
+ * 2. retaining a weak reference to dataSource
+ * 3. holding childVCs
+ */
+public struct MWParentViewModel {
+
+    public var childViews: [MWChildView]
+
+    private var childVCs: [ChildViewController] {
+        return createChildViewControllers
+    }
+
+    private let pageViewController = UIPageViewController(
         transitionStyle: .scroll,
         navigationOrientation: .horizontal,
-        options: nil //TODO: check
+        options: nil
     )
-    
-    //TODO: Add PageViewControllerDelegate for callbacks
-    let childVCs = createChildViewControllers(from: childViews)
-    
-    setInitialChildViewController(for: pageViewController, childVCs: childVCs)
-    setDataSourceDelegate(for: pageViewController, childVCs: childVCs)
-    
-    return ParentViewController(pageVC: pageViewController)
+
+    private lazy var pageVCConfigurator: PageVCConfigurator = {
+        return PageVCConfigurator(pageViewController: pageViewController)
+    }()
+
+    private weak var dataSource: UIPageViewControllerDataSource?
+
+    init(childViews: [MWChildView]) {
+        self.childViews = childViews
+        self.dataSource = PageVCDataSource(childVCs: childVCs)
+    }
+
 }
 
 fileprivate func createChildViewControllers(from childViews: [MWChildView]) -> [ChildViewController] {
