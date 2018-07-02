@@ -10,7 +10,7 @@ import UIKit
 final class ParentViewController: UIViewController {
 
     // MARK: - Properties
-    private var pageVC: UIPageViewController! //TODO: MoonWalkerPageViewController
+    private var pageVC: UIPageViewController!
 
     init(pageVC: UIPageViewController) {
         super.init(nibName: nil, bundle: nil)
@@ -36,5 +36,5 @@ final class ParentViewController: UIViewController {
 private extension ParentViewController {
 
     func addButtons() {}
-    
+
 }
