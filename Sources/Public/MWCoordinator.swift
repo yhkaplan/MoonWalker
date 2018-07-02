@@ -38,19 +38,33 @@ public struct MWParentViewModel {
 
 }
 
-fileprivate func createChildViewControllers(from childViews: [MWChildView]) -> [ChildViewController] {
-    return childViews.enumerated().map { index, childView in
-        return ChildViewController(
-            childView: childView.viewModel,
-            index: index,
-            settings: childView.layoutSettings
-        )
+public extension MWParentViewModel {
+
+    mutating func makeParentViewController(with childViews: [MWChildView]) -> UIViewController {
+        //TODO: Add PageViewControllerDelegate for callbacks
+
+        pageVCConfigurator.setDataSource(dataSource)
+        if let initialViewController = childVCs.first {
+            pageVCConfigurator.setInitialChildViewController(to: initialViewController)
+        }
+
+        return ParentViewController(pageVC: pageViewController)
     }
+
 }
 
-fileprivate func setDataSourceDelegate(for pageViewController: UIPageViewController, childVCs: [ChildViewController]) {
-    let dataSource = PageVCDataSource(childVCs: childVCs)
-    pageViewController.dataSource = dataSource
+private extension MWParentViewModel {
+
+    var createChildViewControllers: [ChildViewController] {
+        return childViews.enumerated().map { index, childView in
+            return ChildViewController(
+                childView: childView.viewModel,
+                index: index,
+                settings: childView.layoutSettings
+            )
+        }
+    }
+
 }
 
 fileprivate func setInitialChildViewController(for pageViewController: UIPageViewController, childVCs: [ChildViewController]) {
