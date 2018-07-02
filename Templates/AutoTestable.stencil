@@ -2,7 +2,7 @@
 {% macro declareProperties variables %}
     {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}
          {% if variable.typeName|contains:"String" %}
-            let {{variable.name}} = "test {{variable.typeName}}"
+            let {{variable.name}} = "test {{variable.name}}"
          {% elif variable.typeName|contains:"CGFloat" %}
             let {{variable.name}} = generateRandomCGFloat()
          {% else %}

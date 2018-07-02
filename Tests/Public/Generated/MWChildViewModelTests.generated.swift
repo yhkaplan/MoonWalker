@@ -13,8 +13,8 @@ class MWChildViewModelTests: QuickSpec {
 
         describe("MWChildViewModelTests") {
 
-            let upperLabelText = "test String?"
-            let lowerLabelText = "test String?"
+            let upperLabelText = "test upperLabelText"
+            let lowerLabelText = "test lowerLabelText"
             let childView = UIView()
             let mainImage = UIImage()
             let backgroundImage = UIImage()
