@@ -12,7 +12,6 @@ import MoonWalker
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var parentView: MWParentViewModel?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -27,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return MWChildView(viewModel: viewModel, layoutSettings: settings)
         }
 
-        parentView = MWParentViewModel(childViews: views)
-        let walkthroughVC = parentView!.getParentViewController()
+        let creator = MWParentViewCreator(childViews: views)
+        let walkthroughVC = creator.getParentViewController()
 
         window.rootViewController = walkthroughVC
         window.makeKeyAndVisible()
