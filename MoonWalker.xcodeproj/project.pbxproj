@@ -95,14 +95,6 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		031D1DF020E9D17C00902400 /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				031D1DF320E9D22000902400 /* Models */,
-			);
-			path = Public;
-			sourceTree = "<group>";
-		};
 		031D1DF120E9D18900902400 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,13 +111,6 @@
 				A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		031D1DF320E9D22000902400 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		0375141F20DA535100260C36 /* Frameworks */ = {
@@ -191,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				031D1DEF20E9D17000902400 /* Internal */,
-				031D1DF020E9D17C00902400 /* Public */,
 				28F8288E1C494B2C00330CF4 /* Info.plist */,
 				036F2FE720DBB0230089DA45 /* TestHelpers.swift */,
 			);
