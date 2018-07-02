@@ -15,19 +15,25 @@ public struct MWParentViewModel {
 
     public var childViews: [MWChildView]
 
-    private var childVCs: [ChildViewController] {
-        return createChildViewControllers
-    }
+    private lazy var childVCs: [ChildViewController] = {
+        return childViews.enumerated().map { index, childView in
+            return ChildViewController(
+                childView: childView.viewModel,
+                index: index,
+                settings: childView.layoutSettings
+            )
+        }
+    }()
+
+    private lazy var pageVCConfigurator: PageVCConfigurator = {
+        return PageVCConfigurator(pageViewController: pageViewController)
+    }()
 
     private let pageViewController = UIPageViewController(
         transitionStyle: .scroll,
         navigationOrientation: .horizontal,
         options: nil
     )
-
-    private lazy var pageVCConfigurator: PageVCConfigurator = {
-        return PageVCConfigurator(pageViewController: pageViewController)
-    }()
 
     private weak var dataSource: UIPageViewControllerDataSource?
 
@@ -49,20 +55,6 @@ public extension MWParentViewModel {
         }
 
         return ParentViewController(pageVC: pageViewController)
-    }
-
-}
-
-private extension MWParentViewModel {
-
-    var createChildViewControllers: [ChildViewController] {
-        return childViews.enumerated().map { index, childView in
-            return ChildViewController(
-                childView: childView.viewModel,
-                index: index,
-                settings: childView.layoutSettings
-            )
-        }
     }
 
 }
