@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
+		031D1DF520EA0EE900902400 /* PageVCConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* PageVCConfigurator.swift */; };
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		031D1DF420EA0EE900902400 /* PageVCConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCConfigurator.swift; sourceTree = "<group>"; };
 		036F2FE720DBB0230089DA45 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0375142020DA535100260C36 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0375142120DA535100260C36 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				039FDB5B20DA64A6003A9794 /* ParentViewController.swift */,
 				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
 				03F5A19B20E260A600431717 /* PageVCDataSource.swift */,
+				031D1DF420EA0EE900902400 /* PageVCConfigurator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				039FDB6320DA7197003A9794 /* MWChildViewModel.swift in Sources */,
 				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
+				031D1DF520EA0EE900902400 /* PageVCConfigurator.swift in Sources */,
 				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
 				039FDB6520DA7290003A9794 /* MWChildViewLayoutSettings.swift in Sources */,
 				0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */,
