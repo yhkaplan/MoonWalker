@@ -11,9 +11,9 @@
  */
 open class MWParentViewCreator {
 
-    public var childViews: [MWChildView]
+    public var childViews: [MWChildViewModel]
 
-    public init(childViews: [MWChildView]) {
+    public init(childViews: [MWChildViewModel]) {
         self.childViews = childViews
     }
 
@@ -38,9 +38,8 @@ private extension MWParentViewCreator {
     func makeChildViewControllers() -> [ChildViewController] {
         return childViews.enumerated().map { index, childView in
             return ChildViewController(
-                childView: childView.viewModel,
-                index: index,
-                settings: childView.layoutSettings
+                childView: childView,
+                index: index
             )
         }
     }

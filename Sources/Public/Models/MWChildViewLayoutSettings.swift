@@ -9,25 +9,8 @@ protocol SubviewAddable {
     func addChildViewToParent(childView: UIView, parentView: UIView)
 }
 
-/**
- This struct represents the layout and appearance for your Walkthrough views
- */
-public struct MWChildViewLayoutSettings { //TODO: delete this
-    let upperLabelLayout: UpperLabelLayout
-    let lowerLabelLayout: LowerLabelLayout
-
-    public init(
-        upperLabelLayout: UpperLabelLayout = UpperLabelLayout(),
-        lowerLabelLayout: LowerLabelLayout = LowerLabelLayout()
-    ) {
-        self.upperLabelLayout = upperLabelLayout
-        self.lowerLabelLayout = lowerLabelLayout
-    }
-}
-
-// All labels will conform to this
 protocol Label {
-    associatedtype T: SubviewAddable
+    associatedtype T: SubviewAddable //TODO: not clear if these constraints work
 
     var text: String? { get set }
     var layout: T { get set }
@@ -48,9 +31,10 @@ public struct TextSettings {
 }
 
 /**
- This struct will contain text, textSettings, and UpperLabelLayout
+ This struct is used to configure contain text, textSettings, and UpperLabelLayout
+ for the upper label
  */
-public struct UpperLabel: Label {
+public struct UpperLabelSettings: Label {
     public var text: String?
     public var layout: UpperLabelLayout
     public var textSettings: TextSettings?
@@ -60,6 +44,22 @@ public struct UpperLabel: Label {
         layout: UpperLabelLayout = UpperLabelLayout(),
         textSettings: TextSettings? = nil
     ) {
+        self.text = text
+        self.layout = layout
+        self.textSettings = textSettings
+    }
+}
+
+public struct LowerLabelSettings: Label {
+    public var text: String?
+    public var layout: LowerLabelLayout
+    public var textSettings: TextSettings?
+
+    public init(
+        text: String? = nil,
+        layout: LowerLabelLayout = LowerLabelLayout(),
+        textSettings: TextSettings? = nil
+        ) {
         self.text = text
         self.layout = layout
         self.textSettings = textSettings

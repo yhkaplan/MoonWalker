@@ -19,18 +19,15 @@ final class ChildViewController: UIViewController {
     var index: Int!
 
     private var viewModel = MWChildViewModel()
-    private var layoutSettings = MWChildViewLayoutSettings()
 
     init(
         childView: MWChildViewModel,
-        index: Int,
-        settings: MWChildViewLayoutSettings = MWChildViewLayoutSettings()
+        index: Int
     ) {
         super.init(nibName: nil, bundle: nil)
 
         self.index = index
         self.viewModel = childView
-        self.layoutSettings = settings
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -57,16 +54,16 @@ private extension ChildViewController {
     // MARK: - Label
 
     func setupLabelText(_ viewModel: MWChildViewModel) {
-        upperLabel.text = viewModel.upperLabelText
-        lowerLabel.text = viewModel.lowerLabelText
+        upperLabel.text = viewModel.upperLabel.text
+        lowerLabel.text = viewModel.lowerLabel.text
     }
 
     func setupLabelLayout() {
         guard upperLabel.text != nil else { return }
-        layoutSettings.upperLabelLayout.addChildViewToParent(childView: upperLabel, parentView: self.view)
+        viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: self.view)
 
         guard lowerLabel.text != nil else { return }
-        layoutSettings.lowerLabelLayout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
+        viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
     }
 
 }

@@ -11,21 +11,21 @@
 */
 public struct MWChildViewModel {
 
-    let upperLabelText: String?
-    let lowerLabelText: String?
-    let childView: UIView?
-    let mainImage: UIImage?
-    let backgroundImage: UIImage?
+    public var upperLabel: UpperLabelSettings
+    public var lowerLabel: LowerLabelSettings
+    public var childView: UIView?
+    public var mainImage: UIImage?
+    public var backgroundImage: UIImage?
 
     public init(
-        upperLabelText: String? = nil,
-        lowerLabelText: String? = nil,
+        upperLabel: UpperLabelSettings = UpperLabelSettings(),
+        lowerLabel: LowerLabelSettings = LowerLabelSettings(),
         childView: UIView? = nil,
         mainImage: UIImage? = nil,
         backgroundImage: UIImage? = nil
     ) {
-        self.upperLabelText = upperLabelText
-        self.lowerLabelText = lowerLabelText
+        self.upperLabel = upperLabel
+        self.lowerLabel = lowerLabel
         self.childView = childView
         self.mainImage = mainImage
         self.backgroundImage = backgroundImage
