@@ -12,7 +12,7 @@ protocol SubviewAddable {
 /**
  This struct represents the layout and appearance for your Walkthrough views
  */
-public struct MWChildViewLayoutSettings {
+public struct MWChildViewLayoutSettings { //TODO: delete this
     let upperLabelLayout: UpperLabelLayout
     let lowerLabelLayout: LowerLabelLayout
 
@@ -22,6 +22,47 @@ public struct MWChildViewLayoutSettings {
     ) {
         self.upperLabelLayout = upperLabelLayout
         self.lowerLabelLayout = lowerLabelLayout
+    }
+}
+
+// All labels will conform to this
+protocol Label {
+    associatedtype T: SubviewAddable
+
+    var text: String? { get set }
+    var layout: T { get set }
+    var textSettings: TextSettings? { get set }
+}
+
+public struct TextSettings {
+    public var font: UIFont
+    public var color: UIColor
+
+    public init(
+        font: UIFont = UIFont.systemFont(ofSize: 18.0),
+        color: UIColor = .black
+    ) {
+        self.font = font
+        self.color = color
+    }
+}
+
+/**
+ This struct will contain text, textSettings, and UpperLabelLayout
+ */
+public struct UpperLabel: Label {
+    public var text: String?
+    public var layout: UpperLabelLayout
+    public var textSettings: TextSettings?
+
+    public init(
+        text: String? = nil,
+        layout: UpperLabelLayout = UpperLabelLayout(),
+        textSettings: TextSettings? = nil
+    ) {
+        self.text = text
+        self.layout = layout
+        self.textSettings = textSettings
     }
 }
 
