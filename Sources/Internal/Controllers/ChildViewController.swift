@@ -37,7 +37,7 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        childView = viewModel.childView
+        childView = viewModel.childView.view
         mainImage = viewModel.mainImage.image
         backgroundImage = viewModel.backgroundImage.image
 

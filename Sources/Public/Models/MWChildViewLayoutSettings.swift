@@ -205,8 +205,21 @@ public struct BackgroundImageSettings {
     public init(
         image: UIImage? = nil,
         layout: BackgroundImageLayout = BackgroundImageLayout()
-        ) {
+    ) {
         self.image = image
+        self.layout = layout
+    }
+}
+
+public struct ChildView {
+    public var view: UIView?
+    public var layout: CenteredObjectLayout
+
+    public init(
+        view: UIView? = nil,
+        layout: CenteredObjectLayout = CenteredObjectLayout()
+    ) {
+        self.view = view
         self.layout = layout
     }
 }

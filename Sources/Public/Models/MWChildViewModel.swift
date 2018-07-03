@@ -13,14 +13,14 @@ public struct MWChildViewModel {
 
     public var upperLabel: UpperLabelSettings
     public var lowerLabel: LowerLabelSettings
-    public var childView: UIView?
+    public var childView: ChildView
     public var mainImage: MainImageSettings
     public var backgroundImage: BackgroundImageSettings
 
     public init(
         upperLabel: UpperLabelSettings = UpperLabelSettings(),
         lowerLabel: LowerLabelSettings = LowerLabelSettings(),
-        childView: UIView? = nil,
+        childView: ChildView = ChildView(),
         mainImage: MainImageSettings = MainImageSettings(),
         backgroundImage: BackgroundImageSettings = BackgroundImageSettings()
     ) {
