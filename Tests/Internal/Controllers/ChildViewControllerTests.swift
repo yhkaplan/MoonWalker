@@ -31,7 +31,7 @@ class ChildViewControllerTests: QuickSpec {
                     backgroundImage: backgroundImage
                 )
 
-                let upperLabelSettings = UpperLabel(
+                let upperLabelSettings = UpperLabelLayout(
                     leadingConstant: 20.45,
                     trailingConstant: 14.4,
                     topConstant: 53.54,
@@ -39,7 +39,7 @@ class ChildViewControllerTests: QuickSpec {
                 )
                 
                 let childViewLayoutSettings = MWChildViewLayoutSettings(
-                    upperLabel: upperLabelSettings
+                    upperLabelLayout: upperLabelSettings
                 )
 
                 var sut: ChildViewController!

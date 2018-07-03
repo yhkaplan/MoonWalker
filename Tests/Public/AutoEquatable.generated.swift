@@ -26,9 +26,9 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 
 // MARK: - AutoEquatable for classes, protocols, structs
-// MARK: - LowerLabel AutoEquatable
-extension LowerLabel: Equatable {}
-public func == (lhs: LowerLabel, rhs: LowerLabel) -> Bool {
+// MARK: - LowerLabelLayout AutoEquatable
+extension LowerLabelLayout: Equatable {}
+public func == (lhs: LowerLabelLayout, rhs: LowerLabelLayout) -> Bool {
     guard lhs.leadingConstant == rhs.leadingConstant else { return false }
     guard lhs.trailingConstant == rhs.trailingConstant else { return false }
     guard lhs.bottomConstant == rhs.bottomConstant else { return false }
@@ -38,8 +38,8 @@ public func == (lhs: LowerLabel, rhs: LowerLabel) -> Bool {
 // MARK: - MWChildViewLayoutSettings AutoEquatable
 extension MWChildViewLayoutSettings: Equatable {}
 public func == (lhs: MWChildViewLayoutSettings, rhs: MWChildViewLayoutSettings) -> Bool {
-    guard lhs.upperLabel == rhs.upperLabel else { return false }
-    guard lhs.lowerLabel == rhs.lowerLabel else { return false }
+    guard lhs.upperLabelLayout == rhs.upperLabelLayout else { return false }
+    guard lhs.lowerLabelLayout == rhs.lowerLabelLayout else { return false }
     return true
 }
 // MARK: - MWChildViewModel AutoEquatable
@@ -52,9 +52,9 @@ public func == (lhs: MWChildViewModel, rhs: MWChildViewModel) -> Bool {
     guard compareOptionals(lhs: lhs.backgroundImage, rhs: rhs.backgroundImage, compare: ==) else { return false }
     return true
 }
-// MARK: - UpperLabel AutoEquatable
-extension UpperLabel: Equatable {}
-public func == (lhs: UpperLabel, rhs: UpperLabel) -> Bool {
+// MARK: - UpperLabelLayout AutoEquatable
+extension UpperLabelLayout: Equatable {}
+public func == (lhs: UpperLabelLayout, rhs: UpperLabelLayout) -> Bool {
     guard lhs.leadingConstant == rhs.leadingConstant else { return false }
     guard lhs.trailingConstant == rhs.trailingConstant else { return false }
     guard lhs.topConstant == rhs.topConstant else { return false }

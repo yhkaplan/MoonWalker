@@ -13,23 +13,23 @@ class MWChildViewLayoutSettingsTests: QuickSpec {
 
         describe("MWChildViewLayoutSettingsTests") {
 
-            let upperLabel = UpperLabel()
-            let lowerLabel = LowerLabel()
+            let upperLabelLayout = UpperLabelLayout()
+            let lowerLabelLayout = LowerLabelLayout()
 
             let sut = MWChildViewLayoutSettings(
-                upperLabel: upperLabel, lowerLabel: lowerLabel
+                upperLabelLayout: upperLabelLayout, lowerLabelLayout: lowerLabelLayout
             )
 
-            it("upperLabel is set") {
-                let expected = upperLabel
-                let tested = sut.upperLabel
+            it("upperLabelLayout is set") {
+                let expected = upperLabelLayout
+                let tested = sut.upperLabelLayout
 
                 expect(tested).to(equal(expected))
             }
 
-            it("lowerLabel is set") {
-                let expected = lowerLabel
-                let tested = sut.lowerLabel
+            it("lowerLabelLayout is set") {
+                let expected = lowerLabelLayout
+                let tested = sut.lowerLabelLayout
 
                 expect(tested).to(equal(expected))
             }

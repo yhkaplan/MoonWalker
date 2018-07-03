@@ -11,11 +11,11 @@ protocol AutoTestable {}
 extension MWChildView: AutoTestable {}
 extension MWChildViewModel: AutoTestable {}
 extension MWChildViewLayoutSettings: AutoTestable {}
-extension UpperLabel: AutoTestable {}
-extension LowerLabel: AutoTestable {}
+extension UpperLabelLayout: AutoTestable {}
+extension LowerLabelLayout: AutoTestable {}
 
 protocol AutoEquatable {}
-extension UpperLabel: AutoEquatable {}
-extension LowerLabel: AutoEquatable {}
+extension UpperLabelLayout: AutoEquatable {}
+extension LowerLabelLayout: AutoEquatable {}
 extension MWChildViewModel: AutoEquatable {}
 extension MWChildViewLayoutSettings: AutoEquatable {}

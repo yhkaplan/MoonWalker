@@ -13,19 +13,19 @@ protocol SubviewAddable {
  This struct represents the layout and appearance for your Walkthrough views
  */
 public struct MWChildViewLayoutSettings {
-    let upperLabel: UpperLabel
-    let lowerLabel: LowerLabel
+    let upperLabelLayout: UpperLabelLayout
+    let lowerLabelLayout: LowerLabelLayout
 
     public init(
-        upperLabel: UpperLabel = UpperLabel(),
-        lowerLabel: LowerLabel = LowerLabel()
+        upperLabelLayout: UpperLabelLayout = UpperLabelLayout(),
+        lowerLabelLayout: LowerLabelLayout = LowerLabelLayout()
     ) {
-        self.upperLabel = upperLabel
-        self.lowerLabel = lowerLabel
+        self.upperLabelLayout = upperLabelLayout
+        self.lowerLabelLayout = lowerLabelLayout
     }
 }
 
-public class UpperLabel {
+public struct UpperLabelLayout {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let topConstant: CGFloat
@@ -44,7 +44,7 @@ public class UpperLabel {
     }
 }
 
-extension UpperLabel: SubviewAddable {
+extension UpperLabelLayout: SubviewAddable {
     func addChildViewToParent(childView: UIView, parentView: UIView) {
          parentView.addSubviewWithConstraints(
             childView,
@@ -56,7 +56,7 @@ extension UpperLabel: SubviewAddable {
     }
 }
 
-public struct LowerLabel {
+public struct LowerLabelLayout {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let bottomConstant: CGFloat
@@ -75,7 +75,7 @@ public struct LowerLabel {
     }
 }
 
-extension LowerLabel: SubviewAddable {
+extension LowerLabelLayout: SubviewAddable {
     func addChildViewToParent(childView: UIView, parentView: UIView) {
         parentView.addSubviewWithConstraints(
             childView,
