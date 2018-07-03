@@ -15,15 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        guard let window = window else {
-            fatalError()
-        }
+        guard let window = window else { fatalError() }
 
-        let settings = MWChildViewLayoutSettings()
-        
-        let views = [0, 1, 2].map { index -> MWChildView in
-            let viewModel = MWChildViewModel(upperLabelText: "Screen \(index)")
-            return MWChildView(viewModel: viewModel, layoutSettings: settings)
+        let views = [0, 1, 2].map { index -> MWChildViewModel in
+
+            let upperLabel = UpperLabelSettings(text: "Screen \(index)")
+            let image = UIImage(named: "screen\(index)")
+            let backgroundImage = BackgroundImageSettings(image: image)
+
+            return MWChildViewModel(upperLabel: upperLabel, backgroundImage: backgroundImage)
         }
 
         let creator = MWParentViewCreator(childViews: views)
