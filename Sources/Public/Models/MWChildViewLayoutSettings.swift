@@ -184,3 +184,29 @@ public struct BackgroundImageLayout: RegularLayout, SubviewAddable {
         self.topConstant = topConstant
     }
 }
+
+public struct MainImageSettings {
+    public var image: UIImage?
+    public var layout: CenteredObjectLayout
+
+    public init(
+        image: UIImage? = nil,
+        layout: CenteredObjectLayout = CenteredObjectLayout()
+    ) {
+        self.image = image
+        self.layout = layout
+    }
+}
+
+public struct BackgroundImageSettings {
+    public var image: UIImage?
+    public var layout: BackgroundImageLayout
+
+    public init(
+        image: UIImage? = nil,
+        layout: BackgroundImageLayout = BackgroundImageLayout()
+        ) {
+        self.image = image
+        self.layout = layout
+    }
+}

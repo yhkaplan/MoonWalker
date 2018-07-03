@@ -38,8 +38,8 @@ final class ChildViewController: UIViewController {
         super.viewDidLoad()
 
         childView = viewModel.childView
-        mainImage = viewModel.mainImage
-        backgroundImage = viewModel.backgroundImage
+        mainImage = viewModel.mainImage.image
+        backgroundImage = viewModel.backgroundImage.image
 
         setupLabelText(viewModel)
         setupLabelLayout()
