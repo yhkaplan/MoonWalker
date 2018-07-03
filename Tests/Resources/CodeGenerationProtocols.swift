@@ -16,6 +16,8 @@ extension UpperLabelSettings: AutoTestable {}
 extension LowerLabelSettings: AutoTestable {}
 extension CenteredObjectLayout: AutoTestable {}
 extension BackgroundImageLayout: AutoTestable {}
+extension MainImageSettings: AutoTestable {}
+extension BackgroundImageSettings: AutoTestable {}
 
 protocol AutoEquatable {}
 extension UpperLabelLayout: AutoEquatable {}
@@ -26,3 +28,5 @@ extension UpperLabelSettings: AutoEquatable {}
 extension LowerLabelSettings: AutoEquatable {}
 extension CenteredObjectLayout: AutoEquatable {}
 extension BackgroundImageLayout: AutoEquatable {}
+extension MainImageSettings: AutoEquatable {}
+extension BackgroundImageSettings: AutoEquatable {}

@@ -35,6 +35,13 @@ public func == (lhs: BackgroundImageLayout, rhs: BackgroundImageLayout) -> Bool 
     guard lhs.topConstant == rhs.topConstant else { return false }
     return true
 }
+// MARK: - BackgroundImageSettings AutoEquatable
+extension BackgroundImageSettings: Equatable {}
+public func == (lhs: BackgroundImageSettings, rhs: BackgroundImageSettings) -> Bool {
+    guard compareOptionals(lhs: lhs.image, rhs: rhs.image, compare: ==) else { return false }
+    guard lhs.layout == rhs.layout else { return false }
+    return true
+}
 // MARK: - CenteredObjectLayout AutoEquatable
 extension CenteredObjectLayout: Equatable {}
 public func == (lhs: CenteredObjectLayout, rhs: CenteredObjectLayout) -> Bool {
@@ -67,8 +74,15 @@ public func == (lhs: MWChildViewModel, rhs: MWChildViewModel) -> Bool {
     guard lhs.upperLabel == rhs.upperLabel else { return false }
     guard lhs.lowerLabel == rhs.lowerLabel else { return false }
     guard compareOptionals(lhs: lhs.childView, rhs: rhs.childView, compare: ==) else { return false }
-    guard compareOptionals(lhs: lhs.mainImage, rhs: rhs.mainImage, compare: ==) else { return false }
-    guard compareOptionals(lhs: lhs.backgroundImage, rhs: rhs.backgroundImage, compare: ==) else { return false }
+    guard lhs.mainImage == rhs.mainImage else { return false }
+    guard lhs.backgroundImage == rhs.backgroundImage else { return false }
+    return true
+}
+// MARK: - MainImageSettings AutoEquatable
+extension MainImageSettings: Equatable {}
+public func == (lhs: MainImageSettings, rhs: MainImageSettings) -> Bool {
+    guard compareOptionals(lhs: lhs.image, rhs: rhs.image, compare: ==) else { return false }
+    guard lhs.layout == rhs.layout else { return false }
     return true
 }
 // MARK: - TextSettings AutoEquatable

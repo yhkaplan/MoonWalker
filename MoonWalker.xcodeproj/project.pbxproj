@@ -16,6 +16,8 @@
 		0358377320EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */; };
 		0358377620EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377420EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift */; };
 		0358377720EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */; };
+		0358377A20EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377820EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift */; };
+		0358377B20EB675A007D22F3 /* MainImageSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377920EB675A007D22F3 /* MainImageSettingsTests.generated.swift */; };
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
@@ -58,6 +60,8 @@
 		0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358377420EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredObjectLayoutTests.generated.swift; sourceTree = "<group>"; };
+		0358377820EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageSettingsTests.generated.swift; sourceTree = "<group>"; };
+		0358377920EB675A007D22F3 /* MainImageSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainImageSettingsTests.generated.swift; sourceTree = "<group>"; };
 		036F2FE720DBB0230089DA45 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0375142020DA535100260C36 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0375142120DA535100260C36 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				0358377420EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift */,
 				0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */,
 				0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */,
+				0358377820EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift */,
+				0358377920EB675A007D22F3 /* MainImageSettingsTests.generated.swift */,
 				0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */,
 				0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */,
 				A309968720EA75E2002DFE94 /* MWChildViewModelTests.generated.swift */,
@@ -420,10 +426,12 @@
 				0358377720EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift in Sources */,
 				A309967F20E8B720002DFE94 /* PageVCDataSourceTests.swift in Sources */,
 				0358377320EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift in Sources */,
+				0358377A20EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift in Sources */,
 				0358377620EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift in Sources */,
 				0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */,
 				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
 				0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */,
+				0358377B20EB675A007D22F3 /* MainImageSettingsTests.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
