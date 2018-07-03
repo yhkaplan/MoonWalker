@@ -51,6 +51,13 @@ public func == (lhs: CenteredObjectLayout, rhs: CenteredObjectLayout) -> Bool {
     guard lhs.topConstant == rhs.topConstant else { return false }
     return true
 }
+// MARK: - ChildView AutoEquatable
+extension ChildView: Equatable {}
+public func == (lhs: ChildView, rhs: ChildView) -> Bool {
+    guard compareOptionals(lhs: lhs.view, rhs: rhs.view, compare: ==) else { return false }
+    guard lhs.layout == rhs.layout else { return false }
+    return true
+}
 // MARK: - LowerLabelLayout AutoEquatable
 extension LowerLabelLayout: Equatable {}
 public func == (lhs: LowerLabelLayout, rhs: LowerLabelLayout) -> Bool {
@@ -73,7 +80,7 @@ extension MWChildViewModel: Equatable {}
 public func == (lhs: MWChildViewModel, rhs: MWChildViewModel) -> Bool {
     guard lhs.upperLabel == rhs.upperLabel else { return false }
     guard lhs.lowerLabel == rhs.lowerLabel else { return false }
-    guard compareOptionals(lhs: lhs.childView, rhs: rhs.childView, compare: ==) else { return false }
+    guard lhs.childView == rhs.childView else { return false }
     guard lhs.mainImage == rhs.mainImage else { return false }
     guard lhs.backgroundImage == rhs.backgroundImage else { return false }
     return true

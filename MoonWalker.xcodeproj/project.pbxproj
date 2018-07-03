@@ -18,6 +18,7 @@
 		0358377720EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */; };
 		0358377A20EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377820EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift */; };
 		0358377B20EB675A007D22F3 /* MainImageSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377920EB675A007D22F3 /* MainImageSettingsTests.generated.swift */; };
+		0358377D20EB6873007D22F3 /* ChildViewTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358377C20EB6873007D22F3 /* ChildViewTests.generated.swift */; };
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
@@ -62,6 +63,7 @@
 		0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredObjectLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358377820EB675A007D22F3 /* BackgroundImageSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageSettingsTests.generated.swift; sourceTree = "<group>"; };
 		0358377920EB675A007D22F3 /* MainImageSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainImageSettingsTests.generated.swift; sourceTree = "<group>"; };
+		0358377C20EB6873007D22F3 /* ChildViewTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewTests.generated.swift; sourceTree = "<group>"; };
 		036F2FE720DBB0230089DA45 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0375142020DA535100260C36 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0375142120DA535100260C36 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */,
 				0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */,
+				0358377C20EB6873007D22F3 /* ChildViewTests.generated.swift */,
 				0358377420EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift */,
 				0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */,
 				0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */,
@@ -419,6 +422,7 @@
 				0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */,
 				A309968120E8C1F4002DFE94 /* ParentViewControllerTests.swift in Sources */,
 				287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */,
+				0358377D20EB6873007D22F3 /* ChildViewTests.generated.swift in Sources */,
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
 				A309969220EA77CC002DFE94 /* AutoEquatable.generated.swift in Sources */,

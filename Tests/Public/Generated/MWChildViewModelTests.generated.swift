@@ -15,7 +15,7 @@ class MWChildViewModelTests: QuickSpec {
 
             let upperLabel = UpperLabelSettings()
             let lowerLabel = LowerLabelSettings()
-            let childView = UIView()
+            let childView = ChildView()
             let mainImage = MainImageSettings()
             let backgroundImage = BackgroundImageSettings()
 

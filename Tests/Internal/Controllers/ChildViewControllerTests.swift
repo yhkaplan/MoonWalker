@@ -17,15 +17,18 @@ class ChildViewControllerTests: QuickSpec {
 
             context("When the VC is loaded") {
 
-                let childView = UIView()
+                let childUIView = UIView()
                 let mainUIImage = UIImage()
                 let backgroundUIImage = UIImage()
 
                 let upperLabel = UpperLabelSettings(text: "upperTestyMcTestFace")
                 let lowerLabel = LowerLabelSettings(text: "lowerTestyMcTestFace")
+
                 let mainImage = MainImageSettings(image: mainUIImage)
                 let backgroundImage = BackgroundImageSettings(image: backgroundUIImage)
 
+                let childView = ChildView(view: childUIView)
+                
                 let viewModel = MWChildViewModel(
                     upperLabel: upperLabel,
                     lowerLabel: lowerLabel,
@@ -57,7 +60,7 @@ class ChildViewControllerTests: QuickSpec {
                 }
 
                 it("childView is set") {
-                    expect(sut.childView).to(equal(childView))
+                    expect(sut.childView).to(equal(childUIView))
                 }
 
                 it("mainImage image is set") {
