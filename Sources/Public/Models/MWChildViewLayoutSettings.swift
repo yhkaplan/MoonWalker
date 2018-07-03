@@ -59,7 +59,7 @@ public struct LowerLabelSettings: Label {
         text: String? = nil,
         layout: LowerLabelLayout = LowerLabelLayout(),
         textSettings: TextSettings = TextSettings()
-        ) {
+    ) {
         self.text = text
         self.layout = layout
         self.textSettings = textSettings
@@ -108,7 +108,7 @@ public struct LowerLabelLayout {
         trailingConstant: CGFloat = -20.0,
         bottomConstant: CGFloat = -20.0,
         height: CGFloat = 40.0
-        ) {
+    ) {
         self.leadingConstant = leadingConstant
         self.trailingConstant = trailingConstant
         self.bottomConstant = bottomConstant
@@ -125,5 +125,62 @@ extension LowerLabelLayout: SubviewAddable {
             trailingConstant: trailingConstant,
             bottomConstant: bottomConstant
         )
+    }
+}
+
+protocol RegularLayout {
+    var leadingConstant: CGFloat { get set }
+    var trailingConstant: CGFloat { get set }
+    var bottomConstant: CGFloat { get set }
+    var topConstant: CGFloat { get set }
+}
+
+extension SubviewAddable where Self: RegularLayout {
+    func addChildViewToParent(childView: UIView, parentView: UIView) {
+        parentView.addSubviewWithConstraints(
+            childView,
+            leadingConstant: leadingConstant,
+            trailingConstant: trailingConstant,
+            topConstant: topConstant,
+            bottomConstant: bottomConstant
+        )
+    }
+}
+
+public struct CenteredObjectLayout: RegularLayout, SubviewAddable {
+    var leadingConstant: CGFloat
+    var trailingConstant: CGFloat
+    var bottomConstant: CGFloat
+    var topConstant: CGFloat
+
+    public init(
+        leadingConstant: CGFloat = 20.0,
+        trailingConstant: CGFloat = -20.0,
+        bottomConstant: CGFloat = -40.0,
+        topConstant: CGFloat = 40.0
+    ) {
+        self.leadingConstant = leadingConstant
+        self.trailingConstant = trailingConstant
+        self.bottomConstant = bottomConstant
+        self.topConstant = topConstant
+    }
+}
+
+public struct BackgroundImageLayout: RegularLayout, SubviewAddable {
+    var leadingConstant: CGFloat
+    var trailingConstant: CGFloat
+    var bottomConstant: CGFloat
+    var topConstant: CGFloat
+
+    public init(
+        leadingConstant: CGFloat = 0.0,
+        trailingConstant: CGFloat = 0.0,
+        bottomConstant: CGFloat = -40.0,
+        topConstant: CGFloat = 0.0
+    ) {
+        self.leadingConstant = leadingConstant
+        self.trailingConstant = trailingConstant
+        self.bottomConstant = bottomConstant
+        self.topConstant = topConstant
     }
 }
