@@ -26,6 +26,24 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 
 // MARK: - AutoEquatable for classes, protocols, structs
+// MARK: - BackgroundImageLayout AutoEquatable
+extension BackgroundImageLayout: Equatable {}
+public func == (lhs: BackgroundImageLayout, rhs: BackgroundImageLayout) -> Bool {
+    guard lhs.leadingConstant == rhs.leadingConstant else { return false }
+    guard lhs.trailingConstant == rhs.trailingConstant else { return false }
+    guard lhs.bottomConstant == rhs.bottomConstant else { return false }
+    guard lhs.topConstant == rhs.topConstant else { return false }
+    return true
+}
+// MARK: - CenteredObjectLayout AutoEquatable
+extension CenteredObjectLayout: Equatable {}
+public func == (lhs: CenteredObjectLayout, rhs: CenteredObjectLayout) -> Bool {
+    guard lhs.leadingConstant == rhs.leadingConstant else { return false }
+    guard lhs.trailingConstant == rhs.trailingConstant else { return false }
+    guard lhs.bottomConstant == rhs.bottomConstant else { return false }
+    guard lhs.topConstant == rhs.topConstant else { return false }
+    return true
+}
 // MARK: - LowerLabelLayout AutoEquatable
 extension LowerLabelLayout: Equatable {}
 public func == (lhs: LowerLabelLayout, rhs: LowerLabelLayout) -> Bool {
