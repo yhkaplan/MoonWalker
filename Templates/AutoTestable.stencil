@@ -5,6 +5,10 @@
             let {{variable.name}} = "test {{variable.name}}"
          {% elif variable.typeName|contains:"CGFloat" %}
             let {{variable.name}} = generateRandomCGFloat()
+         {% elif variable.typeName|contains:"UIFont" %}
+            let {{variable.name}} = UIFont.boldSystemFont(ofSize: 20.0)
+         {% elif variable.typeName|contains:"UIColor" %}
+            let {{variable.name}} = UIColor.green
          {% else %}
             {% if variable.typeName|contains:"UIView?" %}
             let {{variable.name}} = UIView()

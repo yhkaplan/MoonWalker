@@ -13,26 +13,26 @@ class MWChildViewModelTests: QuickSpec {
 
         describe("MWChildViewModelTests") {
 
-            let upperLabelText = "test upperLabelText"
-            let lowerLabelText = "test lowerLabelText"
+            let upperLabel = UpperLabelSettings()
+            let lowerLabel = LowerLabelSettings()
             let childView = UIView()
             let mainImage = UIImage()
             let backgroundImage = UIImage()
 
             let sut = MWChildViewModel(
-                upperLabelText: upperLabelText, lowerLabelText: lowerLabelText, childView: childView, mainImage: mainImage, backgroundImage: backgroundImage
+                upperLabel: upperLabel, lowerLabel: lowerLabel, childView: childView, mainImage: mainImage, backgroundImage: backgroundImage
             )
 
-            it("upperLabelText is set") {
-                let expected = upperLabelText
-                let tested = sut.upperLabelText
+            it("upperLabel is set") {
+                let expected = upperLabel
+                let tested = sut.upperLabel
 
                 expect(tested).to(equal(expected))
             }
 
-            it("lowerLabelText is set") {
-                let expected = lowerLabelText
-                let tested = sut.lowerLabelText
+            it("lowerLabel is set") {
+                let expected = lowerLabel
+                let tested = sut.lowerLabel
 
                 expect(tested).to(equal(expected))
             }

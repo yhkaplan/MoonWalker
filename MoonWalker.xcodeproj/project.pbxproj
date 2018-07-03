@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
 		031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */; };
+		0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */; };
+		0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */; };
+		0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */; };
+		0358377220EB5A80007D22F3 /* TextSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */; };
+		0358377320EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */; };
 		0375142220DA535100260C36 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142020DA535100260C36 /* Quick.framework */; };
 		0375142320DA535100260C36 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375142120DA535100260C36 /* Nimble.framework */; };
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
@@ -25,10 +30,6 @@
 		A309968120E8C1F4002DFE94 /* ParentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968020E8C1F4002DFE94 /* ParentViewControllerTests.swift */; };
 		A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968220EA746A002DFE94 /* CodeGenerationProtocols.swift */; };
 		A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968720EA75E2002DFE94 /* MWChildViewModelTests.generated.swift */; };
-		A309968D20EA75E2002DFE94 /* UpperLabelTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968820EA75E2002DFE94 /* UpperLabelTests.generated.swift */; };
-		A309968E20EA75E2002DFE94 /* LowerLabelTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968920EA75E2002DFE94 /* LowerLabelTests.generated.swift */; };
-		A309968F20EA75E2002DFE94 /* MWChildViewTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968A20EA75E2002DFE94 /* MWChildViewTests.generated.swift */; };
-		A309969020EA75E2002DFE94 /* MWChildViewLayoutSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309968B20EA75E2002DFE94 /* MWChildViewLayoutSettingsTests.generated.swift */; };
 		A309969220EA77CC002DFE94 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A309969120EA77CB002DFE94 /* AutoEquatable.generated.swift */; };
 		A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */; };
 		A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */; };
@@ -48,6 +49,11 @@
 /* Begin PBXFileReference section */
 		0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
+		0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
+		0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
+		0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
+		0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSettingsTests.generated.swift; sourceTree = "<group>"; };
+		0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		036F2FE720DBB0230089DA45 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0375142020DA535100260C36 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0375142120DA535100260C36 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -68,10 +74,6 @@
 		A309968020E8C1F4002DFE94 /* ParentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewControllerTests.swift; sourceTree = "<group>"; };
 		A309968220EA746A002DFE94 /* CodeGenerationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGenerationProtocols.swift; sourceTree = "<group>"; };
 		A309968720EA75E2002DFE94 /* MWChildViewModelTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWChildViewModelTests.generated.swift; sourceTree = "<group>"; };
-		A309968820EA75E2002DFE94 /* UpperLabelTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelTests.generated.swift; sourceTree = "<group>"; };
-		A309968920EA75E2002DFE94 /* LowerLabelTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelTests.generated.swift; sourceTree = "<group>"; };
-		A309968A20EA75E2002DFE94 /* MWChildViewTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWChildViewTests.generated.swift; sourceTree = "<group>"; };
-		A309968B20EA75E2002DFE94 /* MWChildViewLayoutSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWChildViewLayoutSettingsTests.generated.swift; sourceTree = "<group>"; };
 		A309969120EA77CB002DFE94 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 		A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
@@ -244,11 +246,12 @@
 		A309968620EA75E2002DFE94 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */,
+				0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */,
+				0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */,
+				0358376E20EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift */,
+				0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */,
 				A309968720EA75E2002DFE94 /* MWChildViewModelTests.generated.swift */,
-				A309968820EA75E2002DFE94 /* UpperLabelTests.generated.swift */,
-				A309968920EA75E2002DFE94 /* LowerLabelTests.generated.swift */,
-				A309968A20EA75E2002DFE94 /* MWChildViewTests.generated.swift */,
-				A309968B20EA75E2002DFE94 /* MWChildViewLayoutSettingsTests.generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -400,18 +403,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A309968E20EA75E2002DFE94 /* LowerLabelTests.generated.swift in Sources */,
+				0358377220EB5A80007D22F3 /* TextSettingsTests.generated.swift in Sources */,
+				0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */,
 				A309968120E8C1F4002DFE94 /* ParentViewControllerTests.swift in Sources */,
 				287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */,
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
-				A309968F20EA75E2002DFE94 /* MWChildViewTests.generated.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
 				A309969220EA77CC002DFE94 /* AutoEquatable.generated.swift in Sources */,
 				A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */,
 				A309967F20E8B720002DFE94 /* PageVCDataSourceTests.swift in Sources */,
-				A309968D20EA75E2002DFE94 /* UpperLabelTests.generated.swift in Sources */,
-				A309969020EA75E2002DFE94 /* MWChildViewLayoutSettingsTests.generated.swift in Sources */,
+				0358377320EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift in Sources */,
+				0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */,
 				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
+				0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

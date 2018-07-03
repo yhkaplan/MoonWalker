@@ -35,21 +35,29 @@ public func == (lhs: LowerLabelLayout, rhs: LowerLabelLayout) -> Bool {
     guard lhs.height == rhs.height else { return false }
     return true
 }
-// MARK: - MWChildViewLayoutSettings AutoEquatable
-extension MWChildViewLayoutSettings: Equatable {}
-public func == (lhs: MWChildViewLayoutSettings, rhs: MWChildViewLayoutSettings) -> Bool {
-    guard lhs.upperLabelLayout == rhs.upperLabelLayout else { return false }
-    guard lhs.lowerLabelLayout == rhs.lowerLabelLayout else { return false }
+// MARK: - LowerLabelSettings AutoEquatable
+extension LowerLabelSettings: Equatable {}
+public func == (lhs: LowerLabelSettings, rhs: LowerLabelSettings) -> Bool {
+    guard compareOptionals(lhs: lhs.text, rhs: rhs.text, compare: ==) else { return false }
+    guard lhs.layout == rhs.layout else { return false }
+    guard lhs.textSettings == rhs.textSettings else { return false }
     return true
 }
 // MARK: - MWChildViewModel AutoEquatable
 extension MWChildViewModel: Equatable {}
 public func == (lhs: MWChildViewModel, rhs: MWChildViewModel) -> Bool {
-    guard compareOptionals(lhs: lhs.upperLabelText, rhs: rhs.upperLabelText, compare: ==) else { return false }
-    guard compareOptionals(lhs: lhs.lowerLabelText, rhs: rhs.lowerLabelText, compare: ==) else { return false }
+    guard lhs.upperLabel == rhs.upperLabel else { return false }
+    guard lhs.lowerLabel == rhs.lowerLabel else { return false }
     guard compareOptionals(lhs: lhs.childView, rhs: rhs.childView, compare: ==) else { return false }
     guard compareOptionals(lhs: lhs.mainImage, rhs: rhs.mainImage, compare: ==) else { return false }
     guard compareOptionals(lhs: lhs.backgroundImage, rhs: rhs.backgroundImage, compare: ==) else { return false }
+    return true
+}
+// MARK: - TextSettings AutoEquatable
+extension TextSettings: Equatable {}
+public func == (lhs: TextSettings, rhs: TextSettings) -> Bool {
+    guard lhs.font == rhs.font else { return false }
+    guard lhs.color == rhs.color else { return false }
     return true
 }
 // MARK: - UpperLabelLayout AutoEquatable
@@ -59,6 +67,14 @@ public func == (lhs: UpperLabelLayout, rhs: UpperLabelLayout) -> Bool {
     guard lhs.trailingConstant == rhs.trailingConstant else { return false }
     guard lhs.topConstant == rhs.topConstant else { return false }
     guard lhs.height == rhs.height else { return false }
+    return true
+}
+// MARK: - UpperLabelSettings AutoEquatable
+extension UpperLabelSettings: Equatable {}
+public func == (lhs: UpperLabelSettings, rhs: UpperLabelSettings) -> Bool {
+    guard compareOptionals(lhs: lhs.text, rhs: rhs.text, compare: ==) else { return false }
+    guard lhs.layout == rhs.layout else { return false }
+    guard lhs.textSettings == rhs.textSettings else { return false }
     return true
 }
 

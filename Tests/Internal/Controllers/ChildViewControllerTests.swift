@@ -17,38 +17,27 @@ class ChildViewControllerTests: QuickSpec {
 
             context("When the VC is loaded") {
 
-                let upperLabelText = "upperTestyMcTestFace"
-                let lowerLabelText = "lowerTestyMcTestFace"
                 let childView = UIView()
                 let mainImage = UIImage()
                 let backgroundImage = UIImage()
 
-                let walkView = MWChildViewModel(
-                    upperLabelText: upperLabelText,
-                    lowerLabelText: lowerLabelText,
+                let upperLabel = UpperLabelSettings(text: "upperTestyMcTestFace")
+                let lowerLabel = LowerLabelSettings(text: "lowerTestyMcTestFace")
+
+                let viewModel = MWChildViewModel(
+                    upperLabel: upperLabel,
+                    lowerLabel: lowerLabel,
                     childView: childView,
                     mainImage: mainImage,
                     backgroundImage: backgroundImage
-                )
-
-                let upperLabelSettings = UpperLabelLayout(
-                    leadingConstant: 20.45,
-                    trailingConstant: 14.4,
-                    topConstant: 53.54,
-                    height: 87.54
-                )
-                
-                let childViewLayoutSettings = MWChildViewLayoutSettings(
-                    upperLabelLayout: upperLabelSettings
                 )
 
                 var sut: ChildViewController!
 
                 beforeEach {
                     sut = ChildViewController(
-                        childView: walkView,
-                        index: 0,
-                        settings: childViewLayoutSettings
+                        childView: viewModel,
+                        index: 0
                     )
                     sut.preloadView()
                 }
@@ -58,11 +47,11 @@ class ChildViewControllerTests: QuickSpec {
                 }
 
                 it("upperLabelText is set") {
-                    expect(sut.upperLabel.text).to(equal(upperLabelText))
+                    expect(sut.upperLabel.text).to(equal(upperLabel.text))
                 }
 
                 it("lowerLabelText is set") {
-                    expect(sut.lowerLabel.text).to(equal(lowerLabelText))
+                    expect(sut.lowerLabel.text).to(equal(lowerLabel.text))
                 }
 
                 it("childView is set") {

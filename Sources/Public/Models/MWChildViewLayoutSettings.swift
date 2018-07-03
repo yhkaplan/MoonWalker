@@ -14,7 +14,7 @@ protocol Label {
 
     var text: String? { get set }
     var layout: T { get set }
-    var textSettings: TextSettings? { get set }
+    var textSettings: TextSettings { get set }
 }
 
 public struct TextSettings {
@@ -37,12 +37,12 @@ public struct TextSettings {
 public struct UpperLabelSettings: Label {
     public var text: String?
     public var layout: UpperLabelLayout
-    public var textSettings: TextSettings?
+    public var textSettings: TextSettings
 
     public init(
         text: String? = nil,
         layout: UpperLabelLayout = UpperLabelLayout(),
-        textSettings: TextSettings? = nil
+        textSettings: TextSettings = TextSettings()
     ) {
         self.text = text
         self.layout = layout
@@ -53,12 +53,12 @@ public struct UpperLabelSettings: Label {
 public struct LowerLabelSettings: Label {
     public var text: String?
     public var layout: LowerLabelLayout
-    public var textSettings: TextSettings?
+    public var textSettings: TextSettings
 
     public init(
         text: String? = nil,
         layout: LowerLabelLayout = LowerLabelLayout(),
-        textSettings: TextSettings? = nil
+        textSettings: TextSettings = TextSettings()
         ) {
         self.text = text
         self.layout = layout
