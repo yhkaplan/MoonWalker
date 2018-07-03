@@ -52,23 +52,23 @@ class ChildViewControllerTests: QuickSpec {
                 }
 
                 it("upperLabelText is set") {
-                    expect(sut.upperLabel.text).to(equal(upperLabel.text))
+                    expect(sut.hasLabel(with: upperLabel.text)).to(beTrue())
                 }
 
                 it("lowerLabelText is set") {
-                    expect(sut.lowerLabel.text).to(equal(lowerLabel.text))
+                    expect(sut.hasLabel(with: lowerLabel.text)).to(beTrue())
                 }
 
                 it("childView is set") {
-                    expect(sut.childView).to(equal(childUIView))
+                    expect(sut.containsSubview(childUIView)).to(beTrue())
                 }
 
                 it("mainImage image is set") {
-                    expect(sut.mainImage).to(equal(mainUIImage))
+                    expect(sut.hasImage(with: mainUIImage)).to(beTrue())
                 }
 
                 it("backgroundImage image is set") {
-                    expect(sut.backgroundImage).to(equal(backgroundUIImage))
+                    expect(sut.hasImage(with: backgroundUIImage)).to(beTrue())
                 }
             }
         }
