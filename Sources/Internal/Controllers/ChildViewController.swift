@@ -9,13 +9,6 @@ import UIKit
 
 final class ChildViewController: UIViewController {
 
-    let upperLabel = UILabel() //TODO: set all as lazy?
-    let lowerLabel = UILabel()
-
-    var childView: UIView?
-    var mainImage: UIImage?
-    var backgroundImage: UIImage?
-
     var index: Int!
 
     private var viewModel = MWChildViewModel()
@@ -37,12 +30,7 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        childView = viewModel.childView.view
-        mainImage = viewModel.mainImage.image
-        backgroundImage = viewModel.backgroundImage.image
-
-        setupLabelText(viewModel)
-        setupLabelLayout()
+        setupLayout()
     }
 
 }
@@ -51,19 +39,36 @@ final class ChildViewController: UIViewController {
 
 private extension ChildViewController {
 
-    // MARK: - Label
+    func setupLayout() {//TODO: optimize these into procotol funcs
 
-    func setupLabelText(_ viewModel: MWChildViewModel) {
-        upperLabel.text = viewModel.upperLabel.text
-        lowerLabel.text = viewModel.lowerLabel.text
-    }
+        if viewModel.backgroundImage.image != nil {
+            let backgroundImage = UIImageView()
+            backgroundImage.image = viewModel.backgroundImage.image
+            viewModel.mainImage.layout.addChildViewToParent(childView: backgroundImage, parentView: self.view)
+        }
 
-    func setupLabelLayout() {
-        guard upperLabel.text != nil else { return }
-        viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: self.view)
+        if viewModel.mainImage.image != nil {
+            let mainImage = UIImageView()
+            mainImage.image = viewModel.mainImage.image
+            viewModel.mainImage.layout.addChildViewToParent(childView: mainImage, parentView: self.view)
+        }
 
-        guard lowerLabel.text != nil else { return }
-        viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
+        if let view = viewModel.childView.view {
+            viewModel.childView.layout.addChildViewToParent(childView: view, parentView: self.view)
+        }
+
+        if viewModel.upperLabel.text != nil {
+            let upperLabel = UILabel()
+            upperLabel.text = viewModel.upperLabel.text
+            viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: self.view)
+        }
+
+        if viewModel.lowerLabel.text != nil {
+            let lowerLabel = UILabel()
+            lowerLabel.text = viewModel.lowerLabel.text
+            viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
+        }
+
     }
 
 }
