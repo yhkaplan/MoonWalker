@@ -44,7 +44,8 @@ private extension ChildViewController {
         if viewModel.backgroundImage.image != nil {
             let backgroundImage = UIImageView()
             backgroundImage.image = viewModel.backgroundImage.image
-            viewModel.mainImage.layout.addChildViewToParent(childView: backgroundImage, parentView: self.view)
+            backgroundImage.contentMode = .scaleToFill //TODO: make this customizable
+            viewModel.backgroundImage.layout.addChildViewToParent(childView: backgroundImage, parentView: self.view)
         }
 
         if viewModel.mainImage.image != nil {

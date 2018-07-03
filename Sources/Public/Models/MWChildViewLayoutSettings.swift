@@ -175,7 +175,7 @@ public struct BackgroundImageLayout: RegularLayout, SubviewAddable {
     public init(
         leadingConstant: CGFloat = 0.0,
         trailingConstant: CGFloat = 0.0,
-        bottomConstant: CGFloat = -40.0,
+        bottomConstant: CGFloat = 0.0,
         topConstant: CGFloat = 0.0
     ) {
         self.leadingConstant = leadingConstant
