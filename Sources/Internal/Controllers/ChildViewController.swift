@@ -14,13 +14,13 @@ final class ChildViewController: UIViewController {
     private var viewModel = MWChildViewModel()
 
     init(
-        childView: MWChildViewModel,
+        childViewModel: MWChildViewModel,
         index: Int
     ) {
         super.init(nibName: nil, bundle: nil)
 
         self.index = index
-        self.viewModel = childView
+        self.viewModel = childViewModel
     }
 
     required init?(coder aDecoder: NSCoder) {
