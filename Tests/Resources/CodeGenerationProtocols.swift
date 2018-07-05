@@ -19,16 +19,3 @@ extension BackgroundImageLayout: AutoTestable {}
 extension MainImageSettings: AutoTestable {}
 extension BackgroundImageSettings: AutoTestable {}
 extension ChildView: AutoTestable {}
-
-protocol AutoEquatable {}
-extension UpperLabelLayout: AutoEquatable {}
-extension LowerLabelLayout: AutoEquatable {}
-extension MWChildViewModel: AutoEquatable {}
-extension TextSettings: AutoEquatable {}
-extension UpperLabelSettings: AutoEquatable {}
-extension LowerLabelSettings: AutoEquatable {}
-extension CenteredObjectLayout: AutoEquatable {}
-extension BackgroundImageLayout: AutoEquatable {}
-extension MainImageSettings: AutoEquatable {}
-extension BackgroundImageSettings: AutoEquatable {}
-extension ChildView: AutoEquatable {}

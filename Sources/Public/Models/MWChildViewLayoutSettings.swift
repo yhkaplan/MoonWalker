@@ -17,7 +17,7 @@ protocol Label {
     var textSettings: TextSettings { get set }
 }
 
-public struct TextSettings {
+public struct TextSettings: Equatable {
     public var font: UIFont
     public var color: UIColor
 
@@ -34,7 +34,7 @@ public struct TextSettings {
  This struct is used to configure contain text, textSettings, and UpperLabelLayout
  for the upper label
  */
-public struct UpperLabelSettings: Label {
+public struct UpperLabelSettings: Label, Equatable {
     public var text: String?
     public var layout: UpperLabelLayout
     public var textSettings: TextSettings
@@ -50,7 +50,7 @@ public struct UpperLabelSettings: Label {
     }
 }
 
-public struct LowerLabelSettings: Label {
+public struct LowerLabelSettings: Label, Equatable {
     public var text: String?
     public var layout: LowerLabelLayout
     public var textSettings: TextSettings
@@ -66,7 +66,7 @@ public struct LowerLabelSettings: Label {
     }
 }
 
-public struct UpperLabelLayout {
+public struct UpperLabelLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let topConstant: CGFloat
@@ -97,7 +97,7 @@ extension UpperLabelLayout: SubviewAddable {
     }
 }
 
-public struct LowerLabelLayout {
+public struct LowerLabelLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let bottomConstant: CGFloat
@@ -147,7 +147,7 @@ extension SubviewAddable where Self: RegularLayout {
     }
 }
 
-public struct CenteredObjectLayout: RegularLayout, SubviewAddable {
+public struct CenteredObjectLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
     var trailingConstant: CGFloat
     var bottomConstant: CGFloat
@@ -166,7 +166,7 @@ public struct CenteredObjectLayout: RegularLayout, SubviewAddable {
     }
 }
 
-public struct BackgroundImageLayout: RegularLayout, SubviewAddable {
+public struct BackgroundImageLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
     var trailingConstant: CGFloat
     var bottomConstant: CGFloat
@@ -185,7 +185,7 @@ public struct BackgroundImageLayout: RegularLayout, SubviewAddable {
     }
 }
 
-public struct MainImageSettings {
+public struct MainImageSettings: Equatable {
     public var image: UIImage?
     public var layout: CenteredObjectLayout
 
@@ -198,7 +198,7 @@ public struct MainImageSettings {
     }
 }
 
-public struct BackgroundImageSettings {
+public struct BackgroundImageSettings: Equatable {
     public var image: UIImage?
     public var layout: BackgroundImageLayout
 
@@ -211,7 +211,7 @@ public struct BackgroundImageSettings {
     }
 }
 
-public struct ChildView {
+public struct ChildView: Equatable {
     public var view: UIView?
     public var layout: CenteredObjectLayout
 
