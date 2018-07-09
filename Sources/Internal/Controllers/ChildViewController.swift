@@ -61,12 +61,14 @@ private extension ChildViewController {
         if viewModel.upperLabel.text != nil {
             let upperLabel = UILabel()
             upperLabel.text = viewModel.upperLabel.text
+            upperLabel.textAlignment = viewModel.upperLabel.textSettings.textAlignment
             viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: self.view)
         }
 
         if viewModel.lowerLabel.text != nil {
             let lowerLabel = UILabel()
             lowerLabel.text = viewModel.lowerLabel.text
+            lowerLabel.textAlignment = viewModel.lowerLabel.textSettings.textAlignment
             viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
         }
 

@@ -56,16 +56,18 @@ public struct LowerLabelSettings: Label, Equatable {
 public struct TextSettings: Equatable {
     public var font: UIFont
     public var color: UIColor
+    public var textAlignment: NSTextAlignment
 
     public init(
         font: UIFont = UIFont.systemFont(ofSize: 18.0),
-        color: UIColor = .black
+        color: UIColor = .black,
+        textAlignment: NSTextAlignment = .center
     ) {
         self.font = font
         self.color = color
+        self.textAlignment = textAlignment
     }
 }
-
 
 // MARK: - SubviewAddable conformance
 
