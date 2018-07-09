@@ -299,6 +299,7 @@
 				28F828791C494B2C00330CF4 /* Frameworks */,
 				28F8287A1C494B2C00330CF4 /* Headers */,
 				28F8287B1C494B2C00330CF4 /* Resources */,
+				03C57D0F20F3432500CFD419 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -399,6 +400,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		03C57D0F20F3432500CFD419 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which sourcery >/dev/null; then\n    sourcery --config .sourcery.yml\nelse\n    echo \"Warning: Sourcery not installed, install with brew sourcery. https://github.com/krzysztofzablocki/Sourcery\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
