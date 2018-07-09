@@ -45,31 +45,29 @@ private extension ChildViewController {
             let backgroundImage = UIImageView()
             backgroundImage.image = viewModel.backgroundImage.image
             backgroundImage.contentMode = .scaleToFill //TODO: make this customizable
-            viewModel.backgroundImage.layout.addChildViewToParent(childView: backgroundImage, parentView: self.view)
+            viewModel.backgroundImage.layout.addChildViewToParent(childView: backgroundImage, parentView: view)
         }
 
         if viewModel.mainImage.image != nil {
             let mainImage = UIImageView()
             mainImage.image = viewModel.mainImage.image
-            viewModel.mainImage.layout.addChildViewToParent(childView: mainImage, parentView: self.view)
+            viewModel.mainImage.layout.addChildViewToParent(childView: mainImage, parentView: view)
         }
 
-        if let view = viewModel.childView.view {
-            viewModel.childView.layout.addChildViewToParent(childView: view, parentView: self.view)
+        if let childView = viewModel.childView.view {
+            viewModel.childView.layout.addChildViewToParent(childView: childView, parentView: view)
         }
 
         if viewModel.upperLabel.text != nil {
             let upperLabel = UILabel()
-            upperLabel.text = viewModel.upperLabel.text
-            upperLabel.textAlignment = viewModel.upperLabel.textSettings.textAlignment
-            viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: self.view)
+            upperLabel.textSettings = viewModel.upperLabel.textSettings
+            viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: view)
         }
 
         if viewModel.lowerLabel.text != nil {
             let lowerLabel = UILabel()
-            lowerLabel.text = viewModel.lowerLabel.text
-            lowerLabel.textAlignment = viewModel.lowerLabel.textSettings.textAlignment
-            viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: self.view)
+            lowerLabel.textSettings = viewModel.lowerLabel.textSettings
+            viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: view)
         }
 
     }
