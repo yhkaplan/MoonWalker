@@ -50,14 +50,26 @@ public struct CenteredObjectLayout: RegularLayout, SubviewAddable, Equatable {
 }
 
 public struct ChildView: Equatable {
-    public var view: UIView?
+    public var viewController: UIViewController?
     public var layout: CenteredObjectLayout
 
     public init(
-        view: UIView? = nil,
+        viewController: UIViewController? = nil,
         layout: CenteredObjectLayout = CenteredObjectLayout()
     ) {
-        self.view = view
+        self.viewController = viewController
         self.layout = layout
+    }
+
+    func embed(in parentVC: UIViewController) {
+        guard let viewController = viewController else { return }
+
+        parentVC.embed(
+            childVC: viewController,
+            leadingConstant: layout.leadingConstant,
+            trailingConstant: layout.trailingConstant,
+            topConstant: layout.topConstant,
+            bottomConstant: layout.bottomConstant
+        )
     }
 }
