@@ -38,7 +38,7 @@ private extension MWParentViewCreator {
     func makeChildViewControllers() -> [ChildViewController] {
         return childViews.enumerated().map { index, childView in
             return ChildViewController(
-                childView: childView,
+                childViewModel: childView,
                 index: index
             )
         }
