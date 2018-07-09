@@ -60,12 +60,14 @@ private extension ChildViewController {
 
         if viewModel.upperLabel.text != nil {
             let upperLabel = UILabel()
+            upperLabel.text = viewModel.upperLabel.text
             upperLabel.textSettings = viewModel.upperLabel.textSettings
             viewModel.upperLabel.layout.addChildViewToParent(childView: upperLabel, parentView: view)
         }
 
         if viewModel.lowerLabel.text != nil {
             let lowerLabel = UILabel()
+            lowerLabel.text = viewModel.lowerLabel.text
             lowerLabel.textSettings = viewModel.lowerLabel.textSettings
             viewModel.lowerLabel.layout.addChildViewToParent(childView: lowerLabel, parentView: view)
         }
