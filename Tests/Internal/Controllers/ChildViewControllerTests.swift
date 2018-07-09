@@ -102,14 +102,14 @@ class ChildViewControllerTests: QuickSpec {
 
             context("UIView and images") {
 
-                let childUIView = UIView()
+                let childUIViewController = UIViewController()
                 let mainUIImage = UIImage()
                 let backgroundUIImage = UIImage()
 
                 let mainImage = MainImageSettings(image: mainUIImage)
                 let backgroundImage = BackgroundImageSettings(image: backgroundUIImage)
 
-                let childView = ChildView(view: childUIView)
+                let childView = ChildView(viewController: childUIViewController)
 
                 let viewModel = MWChildViewModel(
                     childView: childView,

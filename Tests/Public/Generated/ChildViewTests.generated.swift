@@ -13,16 +13,16 @@ class ChildViewTests: QuickSpec {
 
         describe("ChildViewTests") {
 
-            let view = UIView()
+            let viewController = UIViewController()
             let layout = CenteredObjectLayout()
 
             let sut = ChildView(
-                view: view, layout: layout
+                viewController: viewController, layout: layout
             )
 
-            it("view is set") {
-                let expected = view
-                let tested = sut.view
+            it("viewController is set") {
+                let expected = viewController
+                let tested = sut.viewController
 
                 expect(tested).to(equal(expected))
             }

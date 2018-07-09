@@ -15,9 +15,10 @@ class TextSettingsTests: QuickSpec {
 
             let font = UIFont.boldSystemFont(ofSize: 20.0)
             let color = UIColor.green
+            let textAlignment = NSTextAlignment.right
 
             let sut = TextSettings(
-                font: font, color: color
+                font: font, color: color, textAlignment: textAlignment
             )
 
             it("font is set") {
@@ -30,6 +31,13 @@ class TextSettingsTests: QuickSpec {
             it("color is set") {
                 let expected = color
                 let tested = sut.color
+
+                expect(tested).to(equal(expected))
+            }
+
+            it("textAlignment is set") {
+                let expected = textAlignment
+                let tested = sut.textAlignment
 
                 expect(tested).to(equal(expected))
             }

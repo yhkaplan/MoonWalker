@@ -5,6 +5,8 @@
             let {{variable.name}} = "test {{variable.name}}"
          {% elif variable.typeName|contains:"CGFloat" %}
             let {{variable.name}} = generateRandomCGFloat()
+         {% elif variable.typeName|contains:"NSTextAlignment" %}
+            let {{variable.name}} = NSTextAlignment.right
          {% elif variable.typeName|contains:"UIFont" %}
             let {{variable.name}} = UIFont.boldSystemFont(ofSize: 20.0)
          {% elif variable.typeName|contains:"UIColor" %}
@@ -14,6 +16,8 @@
             let {{variable.name}} = UIView()
             {% elif variable.typeName|contains:"UIImage?" %}
             let {{variable.name}} = UIImage()
+            {% elif variable.typeName|contains:"UIViewController?" %}
+            let {{variable.name}} = UIViewController()
             {% else %}
             let {{variable.name}} = {{variable.typeName}}()
             {% endif %}
