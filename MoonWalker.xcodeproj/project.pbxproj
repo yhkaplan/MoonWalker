@@ -28,6 +28,7 @@
 		039FDB6320DA7197003A9794 /* MWChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6220DA7197003A9794 /* MWChildViewModel.swift */; };
 		039FDB6520DA7290003A9794 /* MWChildViewLayoutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */; };
 		03C57D0920F2FA9800CFD419 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0820F2FA9800CFD419 /* Images.swift */; };
+		03C57D0C20F2FE7B00CFD419 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0B20F2FE7B00CFD419 /* Labels.swift */; };
 		03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; };
 		287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +75,7 @@
 		039FDB6220DA7197003A9794 /* MWChildViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWChildViewModel.swift; sourceTree = "<group>"; };
 		039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWChildViewLayoutSettings.swift; sourceTree = "<group>"; };
 		03C57D0820F2FA9800CFD419 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		03C57D0B20F2FE7B00CFD419 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		03F5A19B20E260A600431717 /* PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDataSource.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewControllerTests.swift; path = Tests/Internal/Controllers/ChildViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* MoonWalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoonWalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				039FDB6220DA7197003A9794 /* MWChildViewModel.swift */,
 				039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */,
 				03C57D0820F2FA9800CFD419 /* Images.swift */,
+				03C57D0B20F2FE7B00CFD419 /* Labels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				039FDB6320DA7197003A9794 /* MWChildViewModel.swift in Sources */,
 				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
+				03C57D0C20F2FE7B00CFD419 /* Labels.swift in Sources */,
 				031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */,
 				03C57D0920F2FA9800CFD419 /* Images.swift in Sources */,
 				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
