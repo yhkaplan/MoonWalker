@@ -41,7 +41,7 @@ class ChildViewControllerTests: QuickSpec {
 
                 beforeEach {
                     sut = ChildViewController(
-                        childView: viewModel,
+                        childViewModel: viewModel,
                         index: 0
                     )
                     sut.preloadView()

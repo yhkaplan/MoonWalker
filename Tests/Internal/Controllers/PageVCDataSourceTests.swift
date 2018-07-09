@@ -85,7 +85,7 @@ class PageVCDataSourceTests: QuickSpec {
                 func setupChildViewControllers() {
                     childViewControllers = [0, 1, 2].map { index -> ChildViewController in
                         return ChildViewController(
-                            childView: MWChildViewModel(),
+                            childViewModel: MWChildViewModel(),
                             index: index
                         )
                     }
