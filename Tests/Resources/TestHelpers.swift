@@ -11,13 +11,30 @@ func generateRandomCGFloat() -> CGFloat {
     return CGFloat(drand48())
 }
 
+extension Collection where Element: Equatable {
+
+    typealias FilterHandler = (Element) -> Bool
+
+    // Returns nil if not unique
+    func filterUnique(_ isIncluded: @escaping FilterHandler) -> Element? {
+        let elements = filter(isIncluded)
+
+        if elements.count != 1 {
+            return nil
+        }
+
+        return elements.first
+    }
+
+}
+
 extension UIViewController {
 
-    func hasLabel(with text: String?) -> Bool {
-        guard text != nil else { return false }
+    func getLabelWithText(_ text: String?) -> UILabel? {
+        guard text != nil else { return nil }
 
         return getAllSubviews(of: UILabel.self)
-            .contains(where: { $0.text == text })
+            .filterUnique { $0.text == text }
     }
 
     func hasImage(with image: UIImage?) -> Bool {
