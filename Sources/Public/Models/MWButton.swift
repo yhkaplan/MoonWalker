@@ -26,16 +26,7 @@ public struct MWButton: Equatable {
     }
 }
 
-// TODO: see if this is needed
-public protocol ButtonLayout {
-    var leading: CGFloat? { get set }
-    var trailing: CGFloat? { get set }
-    var bottom: CGFloat { get set }
-    var height: CGFloat { get set }
-    var width: CGFloat { get set }
-}
-
-public struct MWButtonLayout: ButtonLayout, Equatable {
+public struct MWButtonLayout: Equatable {
     public var leading: CGFloat?
     public var trailing: CGFloat?
     public var bottom: CGFloat
@@ -54,5 +45,44 @@ public struct MWButtonLayout: ButtonLayout, Equatable {
         self.bottom = bottom
         self.height = height
         self.width = width
+    }
+}
+
+enum ButtonOrientation {
+    case left(leading: CGFloat)
+    case right(trailing: CGFloat)
+}
+
+extension MWButtonLayout {
+    var buttonOrientation: ButtonOrientation {
+        if let leading = leading {
+            return .left(leading: leading)
+        } else if let trailing = trailing {
+            return .right(trailing: trailing)
+        }
+
+        assertionFailure("Neither trailing nor leading are set")
+    }
+
+    func addChildViewToParent(childView: UIView, parentView: UIView) {
+        switch buttonOrientation {
+        case .left(let leading):
+            parentView.addSubviewWithConstraints(
+                childView,
+                height: height,
+                width: width,
+                leadingConstant: leading,
+                bottomConstant: bottom
+            )
+
+        case .right(let trailing):
+            parentView.addSubviewWithConstraints(
+                childView,
+                height: height,
+                width: width,
+                trailingConstant: trailing,
+                bottomConstant: bottom
+            )
+        }
     }
 }
