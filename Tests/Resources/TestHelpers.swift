@@ -17,8 +17,10 @@ extension Collection where Element: Equatable {
 
     // Returns nil if not unique
     func filterUnique(_ isIncluded: @escaping FilterHandler) -> Element? {
-        let elements = filter(isIncluded)
-        return elements.count == 1 ? elements.first : nil
+        let filteredElements = filter(isIncluded)
+        let isUnique = filteredElements.count == 1
+
+        return isUnique ? filteredElements.first : nil
     }
 
 }
