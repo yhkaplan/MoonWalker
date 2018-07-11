@@ -10,14 +10,20 @@ import UIKit
 final class ParentViewController: UIViewController {
 
     // MARK: - Properties
-    private var pageVC: UIPageViewController!
+    private var pageVC = UIPageViewController()
     private var dataSource: UIPageViewControllerDataSource!
+    private var viewModel = MWParentViewModel()
 
-    init(pageVC: UIPageViewController, dataSource: UIPageViewControllerDataSource) {
+    init(
+        pageVC: UIPageViewController,
+        dataSource: UIPageViewControllerDataSource,
+        viewModel: MWParentViewModel = MWParentViewModel()
+    ) {
         super.init(nibName: nil, bundle: nil)
 
         self.pageVC = pageVC
         self.dataSource = dataSource
+        self.viewModel = viewModel
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -29,6 +35,7 @@ final class ParentViewController: UIViewController {
 
         view.backgroundColor = .white
         embed(childVC: pageVC)
+        addButtons()
     }
 
 }
@@ -37,6 +44,15 @@ final class ParentViewController: UIViewController {
 
 private extension ParentViewController {
 
-    func addButtons() {}
+    func addButtons() {
+        [viewModel.leftButton, viewModel.rightButton]
+            .compactMap { $0 }
+            .forEach { buttonModel in
+                let button = UIButton()
+                button.setTitle(buttonModel.label, for: .normal)
+                //set image, etc
+                buttonModel.layout.addChildViewToParent(childView: button, parentView: view)
+            }
+    }
 
 }
