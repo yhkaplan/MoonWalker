@@ -32,6 +32,8 @@
 		03C57D0E20F3086200CFD419 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0D20F3086200CFD419 /* UILabelExtensions.swift */; };
 		03DD9A1820F6007300D4E542 /* MWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1720F6007300D4E542 /* MWButton.swift */; };
 		03DD9A1A20F609C400D4E542 /* MWParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1920F609C400D4E542 /* MWParentViewModel.swift */; };
+		03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */; };
+		03DD9A2020F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */; };
 		03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; };
 		287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +84,8 @@
 		03C57D0D20F3086200CFD419 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		03DD9A1720F6007300D4E542 /* MWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWButton.swift; sourceTree = "<group>"; };
 		03DD9A1920F609C400D4E542 /* MWParentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWParentViewModel.swift; sourceTree = "<group>"; };
+		03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWButtonTests.generated.swift; sourceTree = "<group>"; };
+		03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWButtonLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03F5A19B20E260A600431717 /* PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDataSource.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewControllerTests.swift; path = Tests/Internal/Controllers/ChildViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* MoonWalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoonWalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,6 +272,8 @@
 		A309968620EA75E2002DFE94 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */,
+				03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */,
 				0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */,
 				0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */,
 				0358377C20EB6873007D22F3 /* ChildViewTests.generated.swift */,
@@ -457,6 +463,7 @@
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
 				A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */,
+				03DD9A2020F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift in Sources */,
 				0358377720EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift in Sources */,
 				A309967F20E8B720002DFE94 /* PageVCDataSourceTests.swift in Sources */,
 				0358377320EB5A80007D22F3 /* UpperLabelLayoutTests.generated.swift in Sources */,
@@ -465,6 +472,7 @@
 				0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */,
 				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
 				0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */,
+				03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */,
 				0358377B20EB675A007D22F3 /* MainImageSettingsTests.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

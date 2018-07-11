@@ -8,14 +8,22 @@
 import MoonWalker
 
 protocol AutoTestable {}
+
 extension MWChildViewModel: AutoTestable {}
+
 extension UpperLabelLayout: AutoTestable {}
 extension LowerLabelLayout: AutoTestable {}
 extension TextSettings: AutoTestable {}
 extension UpperLabelSettings: AutoTestable {}
 extension LowerLabelSettings: AutoTestable {}
+
 extension CenteredObjectLayout: AutoTestable {}
+
 extension BackgroundImageLayout: AutoTestable {}
 extension MainImageSettings: AutoTestable {}
 extension BackgroundImageSettings: AutoTestable {}
+
 extension ChildView: AutoTestable {}
+
+extension MWButton: AutoTestable {}
+extension MWButtonLayout: AutoTestable {}
