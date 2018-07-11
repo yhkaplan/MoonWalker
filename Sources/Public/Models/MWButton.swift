@@ -36,9 +36,9 @@ public struct MWButtonLayout: Equatable {
     public init(
         leading: CGFloat? = nil,
         trailing: CGFloat? = nil,
-        bottom: CGFloat = 20.0,
+        bottom: CGFloat = -20.0,
         height: CGFloat = 50.0,
-        width: CGFloat = 20.0
+        width: CGFloat = 100.0
     ) {
         self.leading = leading
         self.trailing = trailing
@@ -54,17 +54,22 @@ enum ButtonOrientation {
 }
 
 extension MWButtonLayout {
-    var buttonOrientation: ButtonOrientation {
+    var buttonOrientation: ButtonOrientation? {
         if let leading = leading {
             return .left(leading: leading)
         } else if let trailing = trailing {
             return .right(trailing: trailing)
         }
 
-        assertionFailure("Neither trailing nor leading are set")
+        return nil
     }
 
     func addChildViewToParent(childView: UIView, parentView: UIView) {
+        guard let buttonOrientation = buttonOrientation else {
+            assertionFailure("Neither trailing nor leading are set")
+            return
+        }
+
         switch buttonOrientation {
         case .left(let leading):
             parentView.addSubviewWithConstraints(
