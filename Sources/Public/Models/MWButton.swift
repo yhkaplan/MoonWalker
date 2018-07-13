@@ -11,6 +11,8 @@ public struct MWButton: Equatable {
     public var label: String?
     public var labelColor: UIColor
     public var backgroundImage: UIImage?
+    // font
+    //TODO: make labelColor, backgroundImage, and font into a struct called MWButtonTextSettings
     public var layout: MWButtonLayout
 
     public init(

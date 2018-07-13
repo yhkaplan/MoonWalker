@@ -50,8 +50,10 @@ private extension ParentViewController {
             .forEach { buttonModel in
                 let button = UIButton()
                 button.setTitle(buttonModel.label, for: .normal)
-                button.setTitleColor(.black, for: .normal)
-                //set image, etc
+                button.setTitleColor(buttonModel.labelColor, for: .normal)
+                if let image = buttonModel.backgroundImage {
+                    button.setBackgroundImage(image, for: .normal)
+                }
                 buttonModel.layout.addChildViewToParent(childView: button, parentView: view)
             }
     }
