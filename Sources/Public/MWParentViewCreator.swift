@@ -24,11 +24,20 @@ public extension MWParentViewCreator {
     func getParentViewController() -> UIViewController { //TODO: make this throwing
         let childViewControllers = makeChildViewControllers()
         let dataSource = PageVCDataSource(childVCs: childViewControllers)
+        let delegate = PageVCDelegate()
 
         let pageViewController = UIPageViewController.build()
-        pageViewController.setup(with: childViewControllers, dataSource: dataSource)
+        pageViewController.setup(
+            with: childViewControllers,
+            dataSource: dataSource,
+            delegate: delegate
+        )
 
-        return ParentViewController(pageVC: pageViewController, pageVCDataSource: dataSource)
+        return ParentViewController(
+            pageVC: pageViewController,
+            dataSource: dataSource,
+            delegate: delegate
+        )
     }
 
 }

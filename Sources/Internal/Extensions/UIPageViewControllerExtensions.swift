@@ -19,8 +19,12 @@ extension UIPageViewController {
         )
     }
 
-    func setup(with childVCs: [UIViewController], dataSource: UIPageViewControllerDataSource) {
-        //TODO: Add PageViewControllerDelegate for callbacks
+    func setup(
+        with childVCs: [UIViewController],
+        dataSource: UIPageViewControllerDataSource,
+        delegate: UIPageViewControllerDelegate
+    ) {
+        self.delegate = delegate
         self.dataSource = dataSource
         setInitialViewController(from: childVCs)
     }

@@ -5,7 +5,7 @@
 //  Created by josh on 2018/06/26.
 //
 
-final class PageVCDataSource: NSObject {
+class PageVCDataSource: NSObject {
 
     private var childViewControllers: [ChildViewController] = []
 

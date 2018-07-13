@@ -11,21 +11,21 @@ final class ParentViewController: UIViewController {
 
     // MARK: - Properties
     private var pageVC = UIPageViewController()
-    private var pageVCDataSource: UIPageViewControllerDataSource!
+    private var pageVCDataSource: PageVCDataSource!
     private var pageVCDelegate = PageVCDelegate() //TODO: should be weak?
     private var viewModel = MWParentViewModel()
 
     init(
         pageVC: UIPageViewController,
-        pageVCDataSource: UIPageViewControllerDataSource,
-        pageVCDelegate: PageVCDelegate = PageVCDelegate(),
+        dataSource: PageVCDataSource,
+        delegate: PageVCDelegate,
         viewModel: MWParentViewModel = MWParentViewModel()
     ) {
         super.init(nibName: nil, bundle: nil)
 
         self.pageVC = pageVC
-        self.pageVCDataSource = pageVCDataSource
-        self.pageVCDelegate = pageVCDelegate
+        self.pageVCDataSource = dataSource
+        self.pageVCDelegate = delegate
         self.viewModel = viewModel
     }
 
@@ -48,19 +48,18 @@ final class ParentViewController: UIViewController {
 private extension ParentViewController {
 
     typealias CompletionHandler = () -> Void
-    typealias BoolCompletionHandler = (Bool) -> Void
 
     @objc func dismissSelf(completion: CompletionHandler?) {
-        dismiss(animated: true, completion: completion)
+        dismiss(animated: true, completion: completion) //TODO: passing completion may cause crash
     }
 
-    @objc func showNextPage(completion: BoolCompletionHandler?) {
+    @objc func showNextPage() {
         guard
-            let currentVC = pageVCDelegate.currentViewController,
+            let currentVC = pageVC.viewControllers?.first,
             let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC)
         else { return }
 
-        pageVC.setViewControllers([nextVC], direction: .forward, animated: true, completion: completion)
+        pageVC.setViewControllers([nextVC], direction: .forward, animated: true)
     }
 }
 
@@ -79,6 +78,14 @@ private extension ParentViewController {
                     button.setBackgroundImage(image, for: .normal)
                 }
                 buttonModel.layout.addChildViewToParent(childView: button, parentView: view)
+
+                // TODO: implementing this in static way first, to impelement in configurable way
+                // as MWButton property
+                if button.titleLabel?.text == "Next" {
+                    button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
+                } else {
+                    button.addTarget(self, action: #selector(dismissSelf(completion:)), for: .touchUpInside)
+                }
             }
     }
 
