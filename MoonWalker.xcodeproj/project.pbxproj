@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
 		031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */; };
+		0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C020F8B540008AD970 /* PageVCDelegate.swift */; };
 		0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */; };
 		0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */; };
 		0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
+		0356F3C020F8B540008AD970 /* PageVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDelegate.swift; sourceTree = "<group>"; };
 		0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				039FDB5B20DA64A6003A9794 /* ParentViewController.swift */,
 				039FDB5920DA5AE1003A9794 /* ChildViewController.swift */,
 				03F5A19B20E260A600431717 /* PageVCDataSource.swift */,
+				0356F3C020F8B540008AD970 /* PageVCDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				039FDB6320DA7197003A9794 /* MWChildViewModel.swift in Sources */,
 				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
 				03C57D0C20F2FE7B00CFD419 /* Labels.swift in Sources */,
+				0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */,
 				03C57D0E20F3086200CFD419 /* UILabelExtensions.swift in Sources */,
 				031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */,
 				03DD9A1820F6007300D4E542 /* MWButton.swift in Sources */,
