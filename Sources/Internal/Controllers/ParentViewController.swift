@@ -43,6 +43,27 @@ final class ParentViewController: UIViewController {
 
 }
 
+// Button actions
+
+private extension ParentViewController {
+
+    typealias CompletionHandler = () -> Void
+    typealias BoolCompletionHandler = (Bool) -> Void
+
+    @objc func dismissSelf(completion: CompletionHandler?) {
+        dismiss(animated: true, completion: completion)
+    }
+
+    @objc func showNextPage(completion: BoolCompletionHandler?) {
+        guard
+            let currentVC = pageVCDelegate.currentViewController,
+            let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC)
+        else { return }
+
+        pageVC.setViewControllers([nextVC], direction: .forward, animated: true, completion: completion)
+    }
+}
+
 // MARK: - Private methods
 
 private extension ParentViewController {
