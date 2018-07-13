@@ -28,7 +28,7 @@ public extension MWParentViewCreator {
         let pageViewController = UIPageViewController.build()
         pageViewController.setup(with: childViewControllers, dataSource: dataSource)
 
-        return ParentViewController(pageVC: pageViewController, dataSource: dataSource)
+        return ParentViewController(pageVC: pageViewController, pageVCDataSource: dataSource)
     }
 
 }

@@ -11,18 +11,21 @@ final class ParentViewController: UIViewController {
 
     // MARK: - Properties
     private var pageVC = UIPageViewController()
-    private var dataSource: UIPageViewControllerDataSource!
+    private var pageVCDataSource: UIPageViewControllerDataSource!
+    private var pageVCDelegate = PageVCDelegate() //TODO: should be weak?
     private var viewModel = MWParentViewModel()
 
     init(
         pageVC: UIPageViewController,
-        dataSource: UIPageViewControllerDataSource,
+        pageVCDataSource: UIPageViewControllerDataSource,
+        pageVCDelegate: PageVCDelegate = PageVCDelegate(),
         viewModel: MWParentViewModel = MWParentViewModel()
     ) {
         super.init(nibName: nil, bundle: nil)
 
         self.pageVC = pageVC
-        self.dataSource = dataSource
+        self.pageVCDataSource = pageVCDataSource
+        self.pageVCDelegate = pageVCDelegate
         self.viewModel = viewModel
     }
 
