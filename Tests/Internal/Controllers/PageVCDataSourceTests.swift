@@ -138,7 +138,7 @@ class PageVCDataSourceTests: QuickSpec {
                     it("returns correct value") {
                         let expected = 1
                         let childVC = childViewControllers[expected]
-                        setVisibleViewController(to: childVC)
+                        setVisibleViewController(to: [childVC])
 
                         let tested = sut.presentationIndex(for: pageViewController)
 
@@ -147,13 +147,48 @@ class PageVCDataSourceTests: QuickSpec {
 
                     it("returns zero when childViewControllers array is empty") {
                         let expected = 0
-                        setVisibleViewController(to: UIViewController())
+                        setVisibleViewController(to: [UIViewController()])
 
                         let tested = sut.presentationIndex(for: pageViewController)
 
                         expect(tested).to(equal(expected))
                     }
 
+                }
+
+                context("isLastPage") {
+
+                    it("returns true for last page") {
+                        guard let lastVC = childViewControllers.last else {
+                            fail(); return
+                        }
+                        setVisibleViewController(to: [lastVC])
+
+                        let tested = sut.isLastPage(for: pageViewController)
+
+                        expect(tested).to(beTrue())
+                    }
+
+                    it("returns true for zero length") {
+                        //TODO: find out why this test is failing
+                        setVisibleViewController(to: [])
+                        let emptySUT = PageVCDataSource(childVCs: [])
+
+                        let tested = emptySUT.isLastPage(for: pageViewController)
+
+                        expect(tested).to(beTrue())
+                    }
+
+                    it("returns false for first page") {
+                        guard let firstVC = childViewControllers.first else {
+                            fail(); return
+                        }
+                        setVisibleViewController(to: [firstVC])
+
+                        let tested = sut.isLastPage(for: pageViewController)
+
+                        expect(tested).to(beFalse())
+                    }
                 }
 
                 // MARK: - Helper funcs //TODO: lookup best place for these in case of Quick and Nimble
@@ -171,9 +206,9 @@ class PageVCDataSourceTests: QuickSpec {
                     pageViewController = UIPageViewController.default
                 }
 
-                func setVisibleViewController(to viewController: UIViewController) {
+                func setVisibleViewController(to viewControllers: [UIViewController]) {
                     pageViewController.setViewControllers(
-                        [viewController],
+                        viewControllers,
                         direction: .forward,
                         animated: false
                     )
@@ -181,7 +216,5 @@ class PageVCDataSourceTests: QuickSpec {
             }
 
         }
-
     }
-
 }
