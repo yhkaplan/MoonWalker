@@ -24,7 +24,6 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
     // Before
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewController = viewController as? ChildViewController else {
-            assertionFailure("Not ChildViewController")
             return nil
         }
 
@@ -34,7 +33,6 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
     // After
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewController = viewController as? ChildViewController else {
-            assertionFailure("Not ChildViewController")
             return nil
         }
 
