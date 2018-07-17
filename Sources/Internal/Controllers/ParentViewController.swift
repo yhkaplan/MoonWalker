@@ -130,9 +130,7 @@ private extension ParentViewController {
         pageControl.pageIndicatorTintColor = pageControlModel.pageIndicatorTintColor
 
         pageControl.currentPage = 0
-        pageControl.numberOfPages = pageVCDataSource.presentationCount(for: pageVC)
-
-        //        pageControl.updateCurrentPageDisplay() TODO: may need this
+        pageControl.numberOfPages = pageVCDataSource.viewControllerCount
 
         pageControlModel.layout.addChildViewToParent(childView: pageControl, parentView: view)
     }
