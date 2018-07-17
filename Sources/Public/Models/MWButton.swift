@@ -13,17 +13,20 @@ public struct MWButton: Equatable {
     public var backgroundImage: UIImage?
     // font
     //TODO: make labelColor, backgroundImage, and font into a struct called MWButtonTextSettings
+    public var action: MWButtonAction
     public var layout: MWButtonLayout
 
     public init(
         label: String,
         labelColor: UIColor = .black,
         backgroundImage: UIImage? = nil,
+        action: MWButtonAction,
         layout: MWButtonLayout
     ) {
         self.label = label
         self.labelColor = labelColor
         self.backgroundImage = backgroundImage
+        self.action = action
         self.layout = layout
     }
 }
@@ -48,6 +51,11 @@ public struct MWButtonLayout: Equatable {
         self.height = height
         self.width = width
     }
+}
+
+public enum MWButtonAction: Equatable {
+    case nextPage
+    case dismissWalkthrough
 }
 
 enum ButtonOrientation {

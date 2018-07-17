@@ -68,10 +68,8 @@ extension ParentViewController: PageControlUpdateDelegate {
 
 private extension ParentViewController {
 
-    typealias CompletionHandler = () -> Void
-
-    @objc func dismissSelf(completion: CompletionHandler?) {
-        dismiss(animated: true, completion: completion) //TODO: passing completion may cause crash
+    @objc func dismissSelf() {
+        dismiss(animated: true) { }//TODO: call delegateWasSkipped here
     }
 
     @objc func showNextPage() {
@@ -112,10 +110,12 @@ private extension ParentViewController {
 
                 // TODO: implementing this in static way first, to impelement in configurable way
                 // as MWButton property
-                if button.titleLabel?.text == "Next" {
+                switch buttonModel.action {
+                case .dismissWalkthrough:
+                    button.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
+
+                case .nextPage:
                     button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
-                } else {
-                    button.addTarget(self, action: #selector(dismissSelf(completion:)), for: .touchUpInside)
                 }
             }
     }
