@@ -15,10 +15,11 @@ class MWPageControlTests: QuickSpec {
 
             let pageIndicatorTintColor = UIColor.green
             let currentPageIndicatorTintColor = UIColor.green
+            let isHiddenOnLastScreen = Bool()
             let layout = MWPageControlLayout()
 
             let sut = MWPageControl(
-                pageIndicatorTintColor: pageIndicatorTintColor, currentPageIndicatorTintColor: currentPageIndicatorTintColor, layout: layout
+                pageIndicatorTintColor: pageIndicatorTintColor, currentPageIndicatorTintColor: currentPageIndicatorTintColor, isHiddenOnLastScreen: isHiddenOnLastScreen, layout: layout
             )
 
             it("pageIndicatorTintColor is set") {
@@ -31,6 +32,13 @@ class MWPageControlTests: QuickSpec {
             it("currentPageIndicatorTintColor is set") {
                 let expected = currentPageIndicatorTintColor
                 let tested = sut.currentPageIndicatorTintColor
+
+                expect(tested).to(equal(expected))
+            }
+
+            it("isHiddenOnLastScreen is set") {
+                let expected = isHiddenOnLastScreen
+                let tested = sut.isHiddenOnLastScreen
 
                 expect(tested).to(equal(expected))
             }

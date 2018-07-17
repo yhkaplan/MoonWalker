@@ -18,7 +18,7 @@ class PageVCDelegateTests: QuickSpec {
             context("When pageViewController didFinishAnimating is called") {
 
                 var sut: PageVCDelegate!
-                var pageControlUpdateDelegateMock: PageControlUpdateDelegateMock!
+                var pageChangeDelegateMock: PageChangeDelegateMock!
                 var pageVC: UIPageViewController!
                 var randomIndex: Int!
 
@@ -34,8 +34,8 @@ class PageVCDelegateTests: QuickSpec {
 
                     randomIndex = Int(arc4random_uniform(UInt32(randomNumberSeed)))
 
-                    pageControlUpdateDelegateMock = PageControlUpdateDelegateMock(index: randomNumberSeed)
-                    sut.pageControlUpdateDelegate = pageControlUpdateDelegateMock
+                    pageChangeDelegateMock = PageChangeDelegateMock(index: randomNumberSeed)
+                    sut.pageChangeDelegate = pageChangeDelegateMock
 
                     let viewModel = MWChildViewModel()
                     childVC1 = ChildViewController(childViewModel: viewModel, index: 0)
@@ -64,7 +64,7 @@ class PageVCDelegateTests: QuickSpec {
 
                     randomIndex = nil
 
-                    pageControlUpdateDelegateMock = nil
+                    pageChangeDelegateMock = nil
                     childVC1 = nil
                     childVC2 = nil
                 }
@@ -78,7 +78,7 @@ class PageVCDelegateTests: QuickSpec {
                     )
 
                     let expected = randomIndex
-                    let tested = pageControlUpdateDelegateMock.index
+                    let tested = pageChangeDelegateMock.index
 
                     expect(tested).to(equal(expected))
                 }
@@ -92,7 +92,7 @@ class PageVCDelegateTests: QuickSpec {
                     )
 
                     let expected = randomNumberSeed
-                    let tested = pageControlUpdateDelegateMock.index
+                    let tested = pageChangeDelegateMock.index
 
                     expect(tested).to(equal(expected))
                 }
@@ -104,14 +104,14 @@ class PageVCDelegateTests: QuickSpec {
 
 }
 
-class PageControlUpdateDelegateMock: PageControlUpdateDelegate {
+class PageChangeDelegateMock: PageChangeDelegate {
     var index: Int
 
     init(index: Int) {
         self.index = index
     }
 
-    func updatePageControl(to index: Int) {
+    func pageDidChange(to index: Int) {
         self.index = index
     }
 }
