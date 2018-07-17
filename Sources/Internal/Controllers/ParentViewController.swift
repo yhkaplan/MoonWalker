@@ -80,10 +80,12 @@ private extension ParentViewController {
             let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC)
         else { return }
 
-        pageVC.setViewControllers([nextVC], direction: .forward, animated: true) {
+        pageVC.setViewControllers([nextVC], direction: .forward, animated: true) { isFinished in
+            guard isFinished else { return }
+
             //TODO: this code is needed both here and in the delegate
-            let index = pageVCDataSource.presentationIndex(for: pageVC)
-            updatePageControl(to: index)
+            let index = self.pageVCDataSource.presentationIndex(for: self.pageVC)
+            self.updatePageControl(to: index)
         }
     }
 }
