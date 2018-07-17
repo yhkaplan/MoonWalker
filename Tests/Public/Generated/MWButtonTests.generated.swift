@@ -16,10 +16,11 @@ class MWButtonTests: QuickSpec {
             let label = "test label"
             let labelColor = UIColor.green
             let backgroundImage = UIImage()
+            let action = MWButtonAction.nextPage
             let layout = MWButtonLayout()
 
             let sut = MWButton(
-                label: label, labelColor: labelColor, backgroundImage: backgroundImage, layout: layout
+                label: label, labelColor: labelColor, backgroundImage: backgroundImage, action: action, layout: layout
             )
 
             it("label is set") {
@@ -39,6 +40,13 @@ class MWButtonTests: QuickSpec {
             it("backgroundImage is set") {
                 let expected = backgroundImage
                 let tested = sut.backgroundImage
+
+                expect(tested).to(equal(expected))
+            }
+
+            it("action is set") {
+                let expected = action
+                let tested = sut.action
 
                 expect(tested).to(equal(expected))
             }

@@ -17,7 +17,8 @@ final class ParentViewController: UIViewController {
 
     private var pageVC = UIPageViewController()
     private var pageVCDataSource: PageVCDataSource!
-    private var pageVCDelegate = PageVCDelegate() //TODO: should be weak?
+    // swiftlint:disable:next weak_delegate
+    private var pageVCDelegate = PageVCDelegate()
     private var viewModel = MWParentViewModel()
 
     private lazy var pageControl = UIPageControl()

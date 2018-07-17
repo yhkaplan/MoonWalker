@@ -64,9 +64,9 @@ class PageVCDataSourceTests: QuickSpec {
                     expect(tested).to(equal(expected))
                 }
                 
-                it("presentationCount returns correct count") {
+                it("viewControllerCount returns correct count") {
                     let expected = childViewControllers.count
-                    let tested = sut.presentationCount(for: pageViewController)
+                    let tested = sut.viewControllerCount
                     
                     expect(tested).to(equal(expected))
                 }

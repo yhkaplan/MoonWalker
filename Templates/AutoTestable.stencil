@@ -11,6 +11,8 @@
             let {{variable.name}} = UIFont.boldSystemFont(ofSize: 20.0)
          {% elif variable.typeName|contains:"UIColor" %}
             let {{variable.name}} = UIColor.green
+         {% elif variable.typeName|contains:"MWButtonAction" %}
+            let {{variable.name}} = MWButtonAction.nextPage
          {% else %}
             {% if variable.typeName|contains:"UIView?" %}
             let {{variable.name}} = UIView()
