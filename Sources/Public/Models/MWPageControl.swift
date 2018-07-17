@@ -10,15 +10,18 @@ import UIKit
 public struct MWPageControl: Equatable {
     public var pageIndicatorTintColor: UIColor?
     public var currentPageIndicatorTintColor: UIColor?
+    public var isHiddenOnLastScreen: Bool
     public var layout: MWPageControlLayout
 
     public init(
         pageIndicatorTintColor: UIColor? = nil,
         currentPageIndicatorTintColor: UIColor? = nil,
+        isHiddenOnLastScreen: Bool = false,
         layout: MWPageControlLayout = MWPageControlLayout()
     ) {
         self.pageIndicatorTintColor = pageIndicatorTintColor
         self.currentPageIndicatorTintColor = currentPageIndicatorTintColor
+        self.isHiddenOnLastScreen = isHiddenOnLastScreen
         self.layout = layout
     }
 }

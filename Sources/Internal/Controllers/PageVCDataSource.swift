@@ -17,6 +17,10 @@ class PageVCDataSource: NSObject {
         self.childViewControllers = childVCs
     }
 
+    func isLastPage(for pageViewController: UIPageViewController) -> Bool {
+        return presentationIndex(for: pageViewController) == childViewControllers.finalValidIndex
+    }
+
 }
 
 extension PageVCDataSource: UIPageViewControllerDataSource {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol PageControlUpdateDelegate: AnyObject {
-    func updatePageControl(to index: Int)
+protocol PageChangeDelegate: AnyObject {
+    func pageDidChange(to index: Int)
 }
 
 final class ParentViewController: UIViewController {
@@ -16,10 +16,13 @@ final class ParentViewController: UIViewController {
     // MARK: - Properties
 
     private var pageVC = UIPageViewController()
-    private var pageVCDataSource: PageVCDataSource!
+    private var pageVCDataSource = PageVCDataSource(childVCs: [])
     // swiftlint:disable:next weak_delegate
     private var pageVCDelegate = PageVCDelegate()
     private var viewModel = MWParentViewModel()
+
+    private lazy var leftButton = UIButton()
+    private lazy var rightButton = UIButton()
 
     private lazy var pageControl = UIPageControl()
 
@@ -56,13 +59,33 @@ final class ParentViewController: UIViewController {
 
 // MARK: - PageControlUpdateDelegate
 
-extension ParentViewController: PageControlUpdateDelegate {
+extension ParentViewController: PageChangeDelegate {
 
-    func updatePageControl(to index: Int) {
+    func pageDidChange(to index: Int) {
+        updatePageControl(with: index)
+        updateIsHiddenViews()
+    }
+
+    private func updatePageControl(with index: Int) {
         pageControl.currentPage = index
         pageControl.updateCurrentPageDisplay()
     }
 
+    private func updateIsHiddenViews() {
+        guard pageVCDataSource.isLastPage(for: pageVC) else { return }
+
+        if let leftButtonModel = viewModel.leftButton {
+            leftButton.isHidden = leftButtonModel.isHiddenOnLastScreen
+        }
+
+        if let rightButtonModel = viewModel.rightButton {
+            rightButton.isHidden = rightButtonModel.isHiddenOnLastScreen
+        }
+
+        if let pageControlModel = viewModel.pageControl {
+            pageControl.isHidden = pageControlModel.isHiddenOnLastScreen
+        }
+    }
 }
 
 // MARK: - Button actions
@@ -84,12 +107,13 @@ private extension ParentViewController {
 
             //TODO: this code is needed both here and in the delegate
             let index = self.pageVCDataSource.presentationIndex(for: self.pageVC)
-            self.updatePageControl(to: index)
+            self.pageDidChange(to: index)
         }
     }
 }
 
-// MARK: - Private methods
+
+// MARK: - Setup methods
 
 private extension ParentViewController {
 
@@ -97,6 +121,10 @@ private extension ParentViewController {
         [viewModel.leftButton, viewModel.rightButton]
             .compactMap { $0 }
             .forEach { buttonModel in
+
+                guard let buttonOrientation = buttonModel.layout.buttonOrientation else {
+                    return
+                }
 
                 let button = UIButton()
 
@@ -118,14 +146,21 @@ private extension ParentViewController {
                 case .nextPage:
                     button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
                 }
+
+                switch buttonOrientation {
+                case .left:
+                    leftButton = button
+
+                case .right:
+                    rightButton = button
+                }
             }
     }
 
     func addPageControl() {
         guard let pageControlModel = viewModel.pageControl else { return }
 
-        // Set delegate to receive updates
-        pageVCDelegate.pageControlUpdateDelegate = self
+        pageVCDelegate.pageChangeDelegate = self
 
         pageControl.currentPageIndicatorTintColor = pageControlModel.currentPageIndicatorTintColor
         pageControl.pageIndicatorTintColor = pageControlModel.pageIndicatorTintColor

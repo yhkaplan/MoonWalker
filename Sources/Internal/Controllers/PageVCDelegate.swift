@@ -9,7 +9,7 @@ import UIKit
 
 class PageVCDelegate: NSObject, UIPageViewControllerDelegate {
 
-    weak var pageControlUpdateDelegate: PageControlUpdateDelegate?
+    weak var pageChangeDelegate: PageChangeDelegate?
 
     // didFinishAnimating
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -23,7 +23,7 @@ class PageVCDelegate: NSObject, UIPageViewControllerDelegate {
             let currentIndex = currentVC.index
         else { return }
 
-        pageControlUpdateDelegate?.updatePageControl(to: currentIndex)
+        pageChangeDelegate?.pageDidChange(to: currentIndex)
 
         //TODO: call didChangeToIndex here
     }
