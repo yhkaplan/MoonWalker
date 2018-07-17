@@ -24,10 +24,12 @@ class ParentViewControllerTests: QuickSpec {
                 
                 let childVCs: [ChildViewController] = []
                 let dataSource = PageVCDataSource(childVCs: childVCs)
-                
+                let delegate = PageVCDelegate()
+
                 let sut = ParentViewController(
                     pageVC: pageViewController,
-                    dataSource: dataSource
+                    dataSource: dataSource,
+                    delegate: delegate
                 )
                 
                 it("sets childVC view as a subview") {
