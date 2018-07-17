@@ -10,6 +10,7 @@
 		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
 		031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */; };
 		0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C020F8B540008AD970 /* PageVCDelegate.swift */; };
+		0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C320FD898E008AD970 /* MWPageControl.swift */; };
 		0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */; };
 		0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */; };
 		0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */; };
@@ -63,6 +64,7 @@
 		0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0356F3C020F8B540008AD970 /* PageVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDelegate.swift; sourceTree = "<group>"; };
+		0356F3C320FD898E008AD970 /* MWPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPageControl.swift; sourceTree = "<group>"; };
 		0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				03C57D0820F2FA9800CFD419 /* Images.swift */,
 				03C57D0B20F2FE7B00CFD419 /* Labels.swift */,
 				03DD9A1720F6007300D4E542 /* MWButton.swift */,
+				0356F3C320FD898E008AD970 /* MWPageControl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				039FDB5E20DA64E7003A9794 /* MWParentViewCreator.swift in Sources */,
 				03DD9A1A20F609C400D4E542 /* MWParentViewModel.swift in Sources */,
 				039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */,
+				0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */,
 				03DD9A2320F6220700D4E542 /* UIButtonExtensions.swift in Sources */,
 				03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */,
 				039FDB5C20DA64A6003A9794 /* ParentViewController.swift in Sources */,

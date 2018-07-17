@@ -94,4 +94,17 @@ extension UIView {
         ].forEach { $0.isActive = true }
     }
 
+    func addSubviewWithConstraints(
+        _ subView: UIView,
+        centerXConstant: CGFloat = 0.0,
+        bottomConstant: CGFloat = -20.0
+    ) {
+        addSubview(subView)
+        subView.translatesAutoresizingMaskIntoConstraints = false
+
+        [subView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: centerXConstant),
+         subView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant)
+        ].forEach { $0.isActive = true }
+    }
+
 }
