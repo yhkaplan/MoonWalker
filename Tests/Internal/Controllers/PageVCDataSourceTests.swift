@@ -16,7 +16,7 @@ class PageVCDataSourceTests: QuickSpec {
         describe("PageVCDataSource") {
             
             context("protocol funcs return proper values") {
-                // Properties
+
                 var sut: PageVCDataSource!
                 var pageViewController: UIPageViewController!
                 var childViewControllers: [ChildViewController]!
@@ -92,11 +92,7 @@ class PageVCDataSourceTests: QuickSpec {
                 }
                 
                 func setupPageViewController() {
-                    pageViewController = UIPageViewController(
-                        transitionStyle: .scroll,
-                        navigationOrientation: .horizontal,
-                        options: nil
-                    )
+                    pageViewController = UIPageViewController.default
                 }
                 
                 func setVisibleViewController(to index: Int) {

@@ -22,11 +22,11 @@ open class MWParentViewCreator {
 public extension MWParentViewCreator {
 
     func getParentViewController() -> UIViewController { //TODO: make this throwing
-        let childViewControllers = makeChildViewControllers()
+        let childViewControllers = getChildViewControllers()
         let dataSource = PageVCDataSource(childVCs: childViewControllers)
         let delegate = PageVCDelegate()
 
-        let pageViewController = UIPageViewController.build()
+        let pageViewController = UIPageViewController.default
         pageViewController.setup(
             with: childViewControllers,
             dataSource: dataSource,
@@ -44,7 +44,7 @@ public extension MWParentViewCreator {
 
 private extension MWParentViewCreator {
 
-    func makeChildViewControllers() -> [ChildViewController] {
+    func getChildViewControllers() -> [ChildViewController] {
         return childViews.enumerated().map { index, childView in
             return ChildViewController(
                 childViewModel: childView,

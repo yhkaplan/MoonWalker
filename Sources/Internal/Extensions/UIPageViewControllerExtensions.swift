@@ -7,7 +7,7 @@
 
 extension UIPageViewController {
 
-    func setInitialViewController(from viewControllers: [UIViewController]) {
+    func setInitialViewController(from viewControllers: [UIViewController], animated: Bool) {
         guard let initialViewController = viewControllers.first else {
             assertionFailure("Empty array"); return
         }
@@ -22,14 +22,15 @@ extension UIPageViewController {
     func setup(
         with childVCs: [UIViewController],
         dataSource: UIPageViewControllerDataSource,
-        delegate: UIPageViewControllerDelegate
+        delegate: UIPageViewControllerDelegate,
+        animated: Bool = true
     ) {
         self.delegate = delegate
         self.dataSource = dataSource
-        setInitialViewController(from: childVCs)
+        setInitialViewController(from: childVCs, animated: animated)
     }
 
-    static func build() -> UIPageViewController {
+    static var `default`: UIPageViewController {
         return  UIPageViewController(
             transitionStyle: .scroll,
             navigationOrientation: .horizontal,
