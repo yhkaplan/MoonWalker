@@ -13,6 +13,7 @@
 		0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C320FD898E008AD970 /* MWPageControl.swift */; };
 		0356F3C720FDA168008AD970 /* MWPageControlTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */; };
 		0356F3C820FDA168008AD970 /* MWPageControlLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C620FDA168008AD970 /* MWPageControlLayoutTests.generated.swift */; };
+		0356F3CA20FDD325008AD970 /* PageVCDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C920FDD325008AD970 /* PageVCDelegateTests.swift */; };
 		0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */; };
 		0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */; };
 		0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */; };
@@ -69,6 +70,7 @@
 		0356F3C320FD898E008AD970 /* MWPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPageControl.swift; sourceTree = "<group>"; };
 		0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPageControlTests.generated.swift; sourceTree = "<group>"; };
 		0356F3C620FDA168008AD970 /* MWPageControlLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPageControlLayoutTests.generated.swift; sourceTree = "<group>"; };
+		0356F3C920FDD325008AD970 /* PageVCDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDelegateTests.swift; sourceTree = "<group>"; };
 		0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				A309968020E8C1F4002DFE94 /* ParentViewControllerTests.swift */,
 				287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */,
 				A309967E20E8B720002DFE94 /* PageVCDataSourceTests.swift */,
+				0356F3C920FDD325008AD970 /* PageVCDelegateTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				A309968120E8C1F4002DFE94 /* ParentViewControllerTests.swift in Sources */,
 				287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */,
 				0358377D20EB6873007D22F3 /* ChildViewTests.generated.swift in Sources */,
+				0356F3CA20FDD325008AD970 /* PageVCDelegateTests.swift in Sources */,
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
 				0356F3C720FDA168008AD970 /* MWPageControlTests.generated.swift in Sources */,
