@@ -27,3 +27,6 @@ extension ChildView: AutoTestable {}
 
 extension MWButton: AutoTestable {}
 extension MWButtonLayout: AutoTestable {}
+
+extension MWPageControl: AutoTestable {}
+extension MWPageControlLayout: AutoTestable {}

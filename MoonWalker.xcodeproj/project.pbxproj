@@ -11,6 +11,8 @@
 		031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */; };
 		0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C020F8B540008AD970 /* PageVCDelegate.swift */; };
 		0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C320FD898E008AD970 /* MWPageControl.swift */; };
+		0356F3C720FDA168008AD970 /* MWPageControlTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */; };
+		0356F3C820FDA168008AD970 /* MWPageControlLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C620FDA168008AD970 /* MWPageControlLayoutTests.generated.swift */; };
 		0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */; };
 		0358377020EB5A80007D22F3 /* LowerLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */; };
 		0358377120EB5A80007D22F3 /* UpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */; };
@@ -65,6 +67,8 @@
 		031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0356F3C020F8B540008AD970 /* PageVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDelegate.swift; sourceTree = "<group>"; };
 		0356F3C320FD898E008AD970 /* MWPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPageControl.swift; sourceTree = "<group>"; };
+		0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPageControlTests.generated.swift; sourceTree = "<group>"; };
+		0356F3C620FDA168008AD970 /* MWPageControlLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPageControlLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowerLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
 		0358376C20EB5A7F007D22F3 /* UpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				0358376B20EB5A7F007D22F3 /* LowerLabelLayoutTests.generated.swift */,
 				0358376A20EB5A7F007D22F3 /* LowerLabelSettingsTests.generated.swift */,
 				0358377C20EB6873007D22F3 /* ChildViewTests.generated.swift */,
+				0356F3C620FDA168008AD970 /* MWPageControlLayoutTests.generated.swift */,
+				0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */,
 				0358377420EB636A007D22F3 /* BackgroundImageLayoutTests.generated.swift */,
 				0358377520EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift */,
 				0358376D20EB5A80007D22F3 /* TextSettingsTests.generated.swift */,
@@ -467,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0356F3C820FDA168008AD970 /* MWPageControlLayoutTests.generated.swift in Sources */,
 				0358377220EB5A80007D22F3 /* TextSettingsTests.generated.swift in Sources */,
 				0358376F20EB5A80007D22F3 /* LowerLabelSettingsTests.generated.swift in Sources */,
 				A309968120E8C1F4002DFE94 /* ParentViewControllerTests.swift in Sources */,
@@ -474,6 +481,7 @@
 				0358377D20EB6873007D22F3 /* ChildViewTests.generated.swift in Sources */,
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
+				0356F3C720FDA168008AD970 /* MWPageControlTests.generated.swift in Sources */,
 				A3E104AF20E753720064E76F /* ArrayExtensionsTests.swift in Sources */,
 				03DD9A2020F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift in Sources */,
 				0358377720EB636A007D22F3 /* CenteredObjectLayoutTests.generated.swift in Sources */,
