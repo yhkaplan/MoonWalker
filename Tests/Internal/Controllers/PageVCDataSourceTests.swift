@@ -23,13 +23,14 @@ class PageVCDataSourceTests: QuickSpec {
 
                 beforeEach {
                     setupChildViewControllers()
-                    setupPageViewController() //TODO: may need to set initial page
+                    pageViewController = UIPageViewController.default
                     sut = PageVCDataSource(childVCs: childViewControllers)
                 }
 
                 afterEach {
-                    sut = nil
                     childViewControllers = nil
+                    pageViewController = nil
+                    sut = nil
                 }
 
                 context("pageViewControllerBefore") {
@@ -170,8 +171,9 @@ class PageVCDataSourceTests: QuickSpec {
                     }
 
                     it("returns true for zero length") {
-                        //TODO: find out why this test is failing
-                        setVisibleViewController(to: [])
+                        // calling setViewControllers() with zero length array
+                        // causes exception so instead no setup is necessary for
+                        // pageViewController
                         let emptySUT = PageVCDataSource(childVCs: [])
 
                         let tested = emptySUT.isLastPage(for: pageViewController)
@@ -200,10 +202,6 @@ class PageVCDataSourceTests: QuickSpec {
                             index: index
                         )
                     }
-                }
-
-                func setupPageViewController() {
-                    pageViewController = UIPageViewController.default
                 }
 
                 func setVisibleViewController(to viewControllers: [UIViewController]) {
