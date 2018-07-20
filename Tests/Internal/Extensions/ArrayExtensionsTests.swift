@@ -40,7 +40,6 @@ class ArrayExtensionsTests: QuickSpec {
             context("When subscript after is called") {
                 
                 it("returns the first value for endIndex") {
-                    
                     guard
                         let expected = array.first,
                         let tested = array[after: array.finalValidIndex]
@@ -52,7 +51,6 @@ class ArrayExtensionsTests: QuickSpec {
                 }
              
                 it("returns the value after for regular index") {
-                    
                     let arrayIndex = 1
                     
                     let expected = array[arrayIndex + 1]
@@ -65,7 +63,6 @@ class ArrayExtensionsTests: QuickSpec {
                 }
 
                 it("returns nil for empty array") {
-                    
                     let arrayIndex = 0
                     let emptyArray: [Int] = []
                     
@@ -79,19 +76,17 @@ class ArrayExtensionsTests: QuickSpec {
             context("When subscript before is called") {
                 
                 it("returns the last value for startIndex") {
-
                     guard
                         let expected = array.last,
                         let tested = array[before: array.startIndex]
                     else {
-                            fail(); return
+                        fail(); return
                     }
 
                     expect(tested).to(equal(expected))
                 }
 
                 it("returns the value after for regular index") {
-
                     let arrayIndex = 1
 
                     let expected = array[arrayIndex - 1]
@@ -104,7 +99,6 @@ class ArrayExtensionsTests: QuickSpec {
                 }
                 
                 it("returns nil for empty array") {
-                    
                     let arrayIndex = 0
                     let emptyArray: [Int] = []
                     
