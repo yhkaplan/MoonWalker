@@ -1,25 +1,25 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - LowerLabelLayoutTests
+// MARK: - MWUpperLabelLayoutTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class LowerLabelLayoutTests: QuickSpec {
+class MWUpperLabelLayoutTests: QuickSpec {
 
     override func spec() {
 
-        describe("LowerLabelLayoutTests") {
+        describe("MWUpperLabelLayoutTests") {
 
             let leadingConstant = generateRandomCGFloat()
             let trailingConstant = generateRandomCGFloat()
-            let bottomConstant = generateRandomCGFloat()
+            let topConstant = generateRandomCGFloat()
             let height = generateRandomCGFloat()
 
-            let sut = LowerLabelLayout(
-                leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, height: height
+            let sut = MWUpperLabelLayout(
+                leadingConstant: leadingConstant, trailingConstant: trailingConstant, topConstant: topConstant, height: height
             )
 
             it("leadingConstant is set") {
@@ -36,9 +36,9 @@ class LowerLabelLayoutTests: QuickSpec {
                 expect(tested).to(equal(expected))
             }
 
-            it("bottomConstant is set") {
-                let expected = bottomConstant
-                let tested = sut.bottomConstant
+            it("topConstant is set") {
+                let expected = topConstant
+                let tested = sut.topConstant
 
                 expect(tested).to(equal(expected))
             }

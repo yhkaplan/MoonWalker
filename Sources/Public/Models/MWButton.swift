@@ -13,7 +13,7 @@ public struct MWButton: Equatable {
     public var backgroundImage: UIImage?
     public var isHiddenOnLastScreen: Bool
     // font
-    //TODO: make labelColor, backgroundImage, and font into a struct called MWButtonTextSettings
+    //TODO: make labelColor, backgroundImage, and font into a struct called MWButtonMWTextSettings
     public var action: MWButtonAction
     public var layout: MWButtonLayout
 

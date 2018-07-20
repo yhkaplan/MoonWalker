@@ -1,5 +1,5 @@
 //
-//  Labels.swift
+//  MWLabels.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/07/09.
@@ -12,24 +12,24 @@ protocol Label {
 
     var text: String? { get set }
     var layout: T { get set }
-    var textSettings: TextSettings { get set }
+    var textSettings: MWTextSettings { get set }
 }
 
 // MARK: - LabelSettings
 
 /**
- This struct is used to configure contain text, textSettings, and UpperLabelLayout
+ This struct is used to configure contain text, textSettings, and MWUpperLabelLayout
  for the upper label
  */
-public struct UpperLabelSettings: Label, Equatable {
+public struct MWUpperLabelSettings: Label, Equatable {
     public var text: String?
-    public var layout: UpperLabelLayout
-    public var textSettings: TextSettings
+    public var layout: MWUpperLabelLayout
+    public var textSettings: MWTextSettings
 
     public init(
         text: String? = nil,
-        layout: UpperLabelLayout = UpperLabelLayout(),
-        textSettings: TextSettings = TextSettings()
+        layout: MWUpperLabelLayout = MWUpperLabelLayout(),
+        textSettings: MWTextSettings = MWTextSettings()
     ) {
         self.text = text
         self.layout = layout
@@ -37,15 +37,15 @@ public struct UpperLabelSettings: Label, Equatable {
     }
 }
 
-public struct LowerLabelSettings: Label, Equatable {
+public struct MWLowerLabelSettings: Label, Equatable {
     public var text: String?
-    public var layout: LowerLabelLayout
-    public var textSettings: TextSettings
+    public var layout: MWLowerLabelLayout
+    public var textSettings: MWTextSettings
 
     public init(
         text: String? = nil,
-        layout: LowerLabelLayout = LowerLabelLayout(),
-        textSettings: TextSettings = TextSettings()
+        layout: MWLowerLabelLayout = MWLowerLabelLayout(),
+        textSettings: MWTextSettings = MWTextSettings()
     ) {
         self.text = text
         self.layout = layout
@@ -53,7 +53,7 @@ public struct LowerLabelSettings: Label, Equatable {
     }
 }
 
-public struct TextSettings: Equatable {
+public struct MWTextSettings: Equatable {
     public var font: UIFont
     public var color: UIColor
     public var textAlignment: NSTextAlignment
@@ -71,7 +71,7 @@ public struct TextSettings: Equatable {
 
 // MARK: - SubviewAddable conformance
 
-extension UpperLabelLayout: SubviewAddable {
+extension MWUpperLabelLayout: SubviewAddable {
 
     func addChildViewToParent(childView: UIView, parentView: UIView) {
         parentView.addSubviewWithConstraints(
@@ -85,7 +85,7 @@ extension UpperLabelLayout: SubviewAddable {
 
 }
 
-extension LowerLabelLayout: SubviewAddable {
+extension MWLowerLabelLayout: SubviewAddable {
 
     func addChildViewToParent(childView: UIView, parentView: UIView) {
         parentView.addSubviewWithConstraints(
@@ -101,7 +101,7 @@ extension LowerLabelLayout: SubviewAddable {
 
 // MARK: - Layout
 
-public struct UpperLabelLayout: Equatable {
+public struct MWUpperLabelLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let topConstant: CGFloat
@@ -120,7 +120,7 @@ public struct UpperLabelLayout: Equatable {
     }
 }
 
-public struct LowerLabelLayout: Equatable {
+public struct MWLowerLabelLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let bottomConstant: CGFloat

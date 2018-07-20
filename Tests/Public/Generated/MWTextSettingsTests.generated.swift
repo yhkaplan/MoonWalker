@@ -1,23 +1,23 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - TextSettingsTests
+// MARK: - MWTextSettingsTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class TextSettingsTests: QuickSpec {
+class MWTextSettingsTests: QuickSpec {
 
     override func spec() {
 
-        describe("TextSettingsTests") {
+        describe("MWTextSettingsTests") {
 
             let font = UIFont.boldSystemFont(ofSize: 20.0)
             let color = UIColor.green
             let textAlignment = NSTextAlignment.right
 
-            let sut = TextSettings(
+            let sut = MWTextSettings(
                 font: font, color: color, textAlignment: textAlignment
             )
 

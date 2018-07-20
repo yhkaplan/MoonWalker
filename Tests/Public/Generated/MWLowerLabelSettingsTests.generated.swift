@@ -1,23 +1,23 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - UpperLabelSettingsTests
+// MARK: - MWLowerLabelSettingsTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class UpperLabelSettingsTests: QuickSpec {
+class MWLowerLabelSettingsTests: QuickSpec {
 
     override func spec() {
 
-        describe("UpperLabelSettingsTests") {
+        describe("MWLowerLabelSettingsTests") {
 
             let text = "test text"
-            let layout = UpperLabelLayout()
-            let textSettings = TextSettings()
+            let layout = MWLowerLabelLayout()
+            let textSettings = MWTextSettings()
 
-            let sut = UpperLabelSettings(
+            let sut = MWLowerLabelSettings(
                 text: text, layout: layout, textSettings: textSettings
             )
 

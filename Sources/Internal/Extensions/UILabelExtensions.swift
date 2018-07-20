@@ -9,9 +9,9 @@ import UIKit
 
 extension UILabel {
 
-    var textSettings: TextSettings {
+    var textSettings: MWTextSettings {
         get {
-            return TextSettings(
+            return MWTextSettings(
                 font: font,
                 color: textColor,
                 textAlignment: textAlignment

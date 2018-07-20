@@ -17,15 +17,15 @@ class ChildViewControllerTests: QuickSpec {
 
             context("Upper Label") {
 
-               let upperLabelTextSettings = TextSettings(
+               let upperLabelMWTextSettings = MWTextSettings(
                     font: UIFont.boldSystemFont(ofSize: 28.2),
                     color: .green,
                     textAlignment: .left
                 )
 
-                let upperLabel = UpperLabelSettings(
+                let upperLabel = MWUpperLabelSettings(
                     text: "upperTestyMcTestFace",
-                    textSettings: upperLabelTextSettings
+                    textSettings: upperLabelMWTextSettings
                 )
 
                 let viewModel = MWChildViewModel(upperLabel: upperLabel)
@@ -60,15 +60,15 @@ class ChildViewControllerTests: QuickSpec {
 
             context("Lower Label") {
 
-               let lowerLabelTextSettings = TextSettings(
+               let lowerLabelMWTextSettings = MWTextSettings(
                     font: UIFont.boldSystemFont(ofSize: 28.2),
                     color: .green,
                     textAlignment: .left
                 )
 
-                let lowerLabel = LowerLabelSettings(
+                let lowerLabel = MWLowerLabelSettings(
                     text: "lowerTestyMcTestFace",
-                    textSettings: lowerLabelTextSettings
+                    textSettings: lowerLabelMWTextSettings
                 )
 
                 let viewModel = MWChildViewModel(lowerLabel: lowerLabel)
