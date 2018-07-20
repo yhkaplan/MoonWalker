@@ -7,6 +7,16 @@
 
 import UIKit
 
+/*
+ * Calling this delegate allows you to dismiss the walkthrough
+ * or show the next page at will
+ */
+//TODO: move this somewhere else and apply to public class
+public protocol MWActionDelegate: AnyObject {
+    func dismissSelf()
+    func showNextPage()
+}
+
 protocol PageChangeDelegate: AnyObject {
     func pageDidChange(to index: Int)
 }
@@ -90,7 +100,8 @@ extension ParentViewController: PageChangeDelegate {
 
 // MARK: - Button actions
 
-private extension ParentViewController {
+//TODO: move this to public class
+extension ParentViewController: MWActionDelegate {
 
     @objc func dismissSelf() {
         dismiss(animated: true) { }//TODO: call delegateWasSkipped here
