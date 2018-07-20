@@ -1,5 +1,5 @@
 //
-//  UIViewControllerExtensions.swift
+//  ViewControllerExtensions.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/27.

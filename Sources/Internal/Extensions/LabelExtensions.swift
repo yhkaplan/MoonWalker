@@ -1,5 +1,5 @@
 //
-//  UILabelExtensions.swift
+//  LabelExtensions.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/07/09.

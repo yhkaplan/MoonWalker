@@ -1,5 +1,5 @@
 //
-//  UIViewExtensions.swift
+//  ViewExtensions.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/06/20.

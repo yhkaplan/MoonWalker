@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */; };
-		031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */; };
+		0304636F20E3838C008B48E3 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* ViewControllerExtensions.swift */; };
+		031D1DF520EA0EE900902400 /* PageViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* PageViewControllerExtensions.swift */; };
 		0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C020F8B540008AD970 /* PageVCDelegate.swift */; };
 		0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C320FD898E008AD970 /* MWPageControl.swift */; };
 		0356F3C720FDA168008AD970 /* MWPageControlTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */; };
@@ -19,17 +19,17 @@
 		039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; };
 		039FDB5C20DA64A6003A9794 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5B20DA64A6003A9794 /* ParentViewController.swift */; };
 		039FDB5E20DA64E7003A9794 /* MWParentViewCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB5D20DA64E7003A9794 /* MWParentViewCreator.swift */; };
-		039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6020DA6854003A9794 /* UIViewExtensions.swift */; };
+		039FDB6120DA6854003A9794 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6020DA6854003A9794 /* ViewExtensions.swift */; };
 		039FDB6320DA7197003A9794 /* MWChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6220DA7197003A9794 /* MWChildViewModel.swift */; };
 		039FDB6520DA7290003A9794 /* MWChildViewLayoutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */; };
 		03C57D0920F2FA9800CFD419 /* MWImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0820F2FA9800CFD419 /* MWImages.swift */; };
 		03C57D0C20F2FE7B00CFD419 /* MWLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0B20F2FE7B00CFD419 /* MWLabels.swift */; };
-		03C57D0E20F3086200CFD419 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0D20F3086200CFD419 /* UILabelExtensions.swift */; };
+		03C57D0E20F3086200CFD419 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C57D0D20F3086200CFD419 /* LabelExtensions.swift */; };
 		03DD9A1820F6007300D4E542 /* MWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1720F6007300D4E542 /* MWButton.swift */; };
 		03DD9A1A20F609C400D4E542 /* MWParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1920F609C400D4E542 /* MWParentViewModel.swift */; };
 		03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */; };
 		03DD9A2020F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */; };
-		03DD9A2320F6220700D4E542 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A2120F621B100D4E542 /* UIButtonExtensions.swift */; };
+		03DD9A2320F6220700D4E542 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A2120F621B100D4E542 /* ButtonExtensions.swift */; };
 		03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; };
 		03F630B02101C0EA00CCDE46 /* MWChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */; };
 		03F630B22101C40800CCDE46 /* MWChildViewControllerTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630B12101C40800CCDE46 /* MWChildViewControllerTests.generated.swift */; };
@@ -42,6 +42,7 @@
 		03F630C22101C7AF00CCDE46 /* MWLowerLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630BD2101C7AF00CCDE46 /* MWLowerLabelSettingsTests.generated.swift */; };
 		03F630C32101C7AF00CCDE46 /* MWUpperLabelSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630BE2101C7AF00CCDE46 /* MWUpperLabelSettingsTests.generated.swift */; };
 		03F630C42101C7AF00CCDE46 /* MWUpperLabelLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630BF2101C7AF00CCDE46 /* MWUpperLabelLayoutTests.generated.swift */; };
+		03F630C62101D99800CCDE46 /* PageViewControllerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630C52101D99800CCDE46 /* PageViewControllerExtensionsTests.swift */; };
 		287D0A6E1C4B73BD004566D6 /* ChildViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */; };
 		28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F828801C494B2C00330CF4 /* MoonWalker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28F828881C494B2C00330CF4 /* MoonWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F8287D1C494B2C00330CF4 /* MoonWalker.framework */; };
@@ -65,8 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtensions.swift; sourceTree = "<group>"; };
+		0304636E20E3838C008B48E3 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		031D1DF420EA0EE900902400 /* PageViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0356F3C020F8B540008AD970 /* PageVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDelegate.swift; sourceTree = "<group>"; };
 		0356F3C320FD898E008AD970 /* MWPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPageControl.swift; sourceTree = "<group>"; };
 		0356F3C520FDA168008AD970 /* MWPageControlTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPageControlTests.generated.swift; sourceTree = "<group>"; };
@@ -78,17 +79,17 @@
 		039FDB5920DA5AE1003A9794 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		039FDB5B20DA64A6003A9794 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		039FDB5D20DA64E7003A9794 /* MWParentViewCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWParentViewCreator.swift; sourceTree = "<group>"; };
-		039FDB6020DA6854003A9794 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		039FDB6020DA6854003A9794 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		039FDB6220DA7197003A9794 /* MWChildViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWChildViewModel.swift; sourceTree = "<group>"; };
 		039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWChildViewLayoutSettings.swift; sourceTree = "<group>"; };
 		03C57D0820F2FA9800CFD419 /* MWImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWImages.swift; sourceTree = "<group>"; };
 		03C57D0B20F2FE7B00CFD419 /* MWLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWLabels.swift; sourceTree = "<group>"; };
-		03C57D0D20F3086200CFD419 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		03C57D0D20F3086200CFD419 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		03DD9A1720F6007300D4E542 /* MWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWButton.swift; sourceTree = "<group>"; };
 		03DD9A1920F609C400D4E542 /* MWParentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWParentViewModel.swift; sourceTree = "<group>"; };
 		03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWButtonTests.generated.swift; sourceTree = "<group>"; };
 		03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWButtonLayoutTests.generated.swift; sourceTree = "<group>"; };
-		03DD9A2120F621B100D4E542 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		03DD9A2120F621B100D4E542 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		03F5A19B20E260A600431717 /* PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDataSource.swift; sourceTree = "<group>"; };
 		03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWChildViewController.swift; sourceTree = "<group>"; };
 		03F630B12101C40800CCDE46 /* MWChildViewControllerTests.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MWChildViewControllerTests.generated.swift; path = /Users/josh/dev/MoonWalker/Tests/Public/Generated/MWChildViewControllerTests.generated.swift; sourceTree = "<absolute>"; };
@@ -101,6 +102,7 @@
 		03F630BD2101C7AF00CCDE46 /* MWLowerLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWLowerLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		03F630BE2101C7AF00CCDE46 /* MWUpperLabelSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWUpperLabelSettingsTests.generated.swift; sourceTree = "<group>"; };
 		03F630BF2101C7AF00CCDE46 /* MWUpperLabelLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWUpperLabelLayoutTests.generated.swift; sourceTree = "<group>"; };
+		03F630C52101D99800CCDE46 /* PageViewControllerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerExtensionsTests.swift; sourceTree = "<group>"; };
 		287D0A6D1C4B73BD004566D6 /* ChildViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildViewControllerTests.swift; path = Tests/Internal/Controllers/ChildViewControllerTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* MoonWalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MoonWalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828801C494B2C00330CF4 /* MoonWalker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoonWalker.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A3E104AE20E753720064E76F /* ArrayExtensionsTests.swift */,
+				03F630C52101D99800CCDE46 /* PageViewControllerExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,12 +205,12 @@
 		039FDB5F20DA682E003A9794 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				031D1DF420EA0EE900902400 /* UIPageViewControllerExtensions.swift */,
-				039FDB6020DA6854003A9794 /* UIViewExtensions.swift */,
-				0304636E20E3838C008B48E3 /* UIViewControllerExtensions.swift */,
+				031D1DF420EA0EE900902400 /* PageViewControllerExtensions.swift */,
+				039FDB6020DA6854003A9794 /* ViewExtensions.swift */,
+				0304636E20E3838C008B48E3 /* ViewControllerExtensions.swift */,
 				A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */,
-				03C57D0D20F3086200CFD419 /* UILabelExtensions.swift */,
-				03DD9A2120F621B100D4E542 /* UIButtonExtensions.swift */,
+				03C57D0D20F3086200CFD419 /* LabelExtensions.swift */,
+				03DD9A2120F621B100D4E542 /* ButtonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -458,19 +461,19 @@
 				A3E104AD20E74C7F0064E76F /* ArrayExtensions.swift in Sources */,
 				03C57D0C20F2FE7B00CFD419 /* MWLabels.swift in Sources */,
 				0356F3C120F8B540008AD970 /* PageVCDelegate.swift in Sources */,
-				03C57D0E20F3086200CFD419 /* UILabelExtensions.swift in Sources */,
-				031D1DF520EA0EE900902400 /* UIPageViewControllerExtensions.swift in Sources */,
+				03C57D0E20F3086200CFD419 /* LabelExtensions.swift in Sources */,
+				031D1DF520EA0EE900902400 /* PageViewControllerExtensions.swift in Sources */,
 				03DD9A1820F6007300D4E542 /* MWButton.swift in Sources */,
 				03C57D0920F2FA9800CFD419 /* MWImages.swift in Sources */,
-				039FDB6120DA6854003A9794 /* UIViewExtensions.swift in Sources */,
+				039FDB6120DA6854003A9794 /* ViewExtensions.swift in Sources */,
 				039FDB6520DA7290003A9794 /* MWChildViewLayoutSettings.swift in Sources */,
-				0304636F20E3838C008B48E3 /* UIViewControllerExtensions.swift in Sources */,
+				0304636F20E3838C008B48E3 /* ViewControllerExtensions.swift in Sources */,
 				03F630B02101C0EA00CCDE46 /* MWChildViewController.swift in Sources */,
 				039FDB5E20DA64E7003A9794 /* MWParentViewCreator.swift in Sources */,
 				03DD9A1A20F609C400D4E542 /* MWParentViewModel.swift in Sources */,
 				039FDB5A20DA5AE1003A9794 /* ChildViewController.swift in Sources */,
 				0356F3C420FD898E008AD970 /* MWPageControl.swift in Sources */,
-				03DD9A2320F6220700D4E542 /* UIButtonExtensions.swift in Sources */,
+				03DD9A2320F6220700D4E542 /* ButtonExtensions.swift in Sources */,
 				03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */,
 				039FDB5C20DA64A6003A9794 /* ParentViewController.swift in Sources */,
 			);
@@ -501,6 +504,7 @@
 				03F630C42101C7AF00CCDE46 /* MWUpperLabelLayoutTests.generated.swift in Sources */,
 				A309967F20E8B720002DFE94 /* PageVCDataSourceTests.swift in Sources */,
 				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
+				03F630C62101D99800CCDE46 /* PageViewControllerExtensionsTests.swift in Sources */,
 				03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
