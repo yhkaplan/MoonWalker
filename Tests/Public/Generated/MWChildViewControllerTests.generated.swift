@@ -1,22 +1,22 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - ChildViewTests
+// MARK: - MWChildViewControllerTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class ChildViewTests: QuickSpec {
+class MWChildViewControllerTests: QuickSpec {
 
     override func spec() {
 
-        describe("ChildViewTests") {
+        describe("MWChildViewControllerTests") {
 
             let viewController = UIViewController()
             let layout = CenteredObjectLayout()
 
-            let sut = ChildView(
+            let sut = MWChildViewController(
                 viewController: viewController, layout: layout
             )
 

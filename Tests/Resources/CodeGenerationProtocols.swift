@@ -23,7 +23,7 @@ extension BackgroundImageLayout: AutoTestable {}
 extension MainImageSettings: AutoTestable {}
 extension BackgroundImageSettings: AutoTestable {}
 
-extension ChildView: AutoTestable {}
+extension MWChildViewController: AutoTestable {}
 
 extension MWButton: AutoTestable {}
 extension MWButtonLayout: AutoTestable {}

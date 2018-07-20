@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct ChildView: Equatable {
+public struct MWChildViewController: Equatable {
     public var viewController: UIViewController?
     public var layout: CenteredObjectLayout
 

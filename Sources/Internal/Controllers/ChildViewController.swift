@@ -54,7 +54,7 @@ private extension ChildViewController {
             viewModel.mainImage.layout.addChildViewToParent(childView: mainImage, parentView: view)
         }
 
-        viewModel.childView.embed(in: self)
+        viewModel.childViewController.embed(in: self)
 
         if viewModel.upperLabel.text != nil {
             let upperLabel = UILabel()
