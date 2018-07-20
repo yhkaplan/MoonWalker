@@ -1,5 +1,5 @@
 //
-//  Images.swift
+//  MWImages.swift
 //  MoonWalker
 //
 //  Created by josh on 2018/07/09.
@@ -7,26 +7,26 @@
 
 // MARK: - Image types
 
-public struct BackgroundImageSettings: Equatable {
+public struct MWBackgroundImageSettings: Equatable {
     public var image: UIImage?
-    public var layout: BackgroundImageLayout
+    public var layout: MWBackgroundImageLayout
 
     public init(
         image: UIImage? = nil,
-        layout: BackgroundImageLayout = BackgroundImageLayout()
+        layout: MWBackgroundImageLayout = MWBackgroundImageLayout()
     ) {
         self.image = image
         self.layout = layout
     }
 }
 
-public struct MainImageSettings: Equatable {
+public struct MWMainImageSettings: Equatable {
     public var image: UIImage?
-    public var layout: CenteredObjectLayout
+    public var layout: MWCenteredObjectLayout
 
     public init(
         image: UIImage? = nil,
-        layout: CenteredObjectLayout = CenteredObjectLayout()
+        layout: MWCenteredObjectLayout = MWCenteredObjectLayout()
     ) {
         self.image = image
         self.layout = layout
@@ -35,7 +35,7 @@ public struct MainImageSettings: Equatable {
 
 // MARK: - Image layout
 
-public struct BackgroundImageLayout: RegularLayout, SubviewAddable, Equatable {
+public struct MWBackgroundImageLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
     var trailingConstant: CGFloat
     var bottomConstant: CGFloat

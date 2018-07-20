@@ -17,11 +17,11 @@ extension TextSettings: AutoTestable {}
 extension UpperLabelSettings: AutoTestable {}
 extension LowerLabelSettings: AutoTestable {}
 
-extension CenteredObjectLayout: AutoTestable {}
+extension MWCenteredObjectLayout: AutoTestable {}
 
-extension BackgroundImageLayout: AutoTestable {}
-extension MainImageSettings: AutoTestable {}
-extension BackgroundImageSettings: AutoTestable {}
+extension MWBackgroundImageLayout: AutoTestable {}
+extension MWMainImageSettings: AutoTestable {}
+extension MWBackgroundImageSettings: AutoTestable {}
 
 extension MWChildViewController: AutoTestable {}
 

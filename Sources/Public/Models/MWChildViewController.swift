@@ -9,11 +9,11 @@ import UIKit
 
 public struct MWChildViewController: Equatable {
     public var viewController: UIViewController?
-    public var layout: CenteredObjectLayout
+    public var layout: MWCenteredObjectLayout
 
     public init(
         viewController: UIViewController? = nil,
-        layout: CenteredObjectLayout = CenteredObjectLayout()
+        layout: MWCenteredObjectLayout = MWCenteredObjectLayout()
         ) {
         self.viewController = viewController
         self.layout = layout

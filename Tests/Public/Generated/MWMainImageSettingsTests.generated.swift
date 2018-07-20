@@ -1,22 +1,22 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - MainImageSettingsTests
+// MARK: - MWMainImageSettingsTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class MainImageSettingsTests: QuickSpec {
+class MWMainImageSettingsTests: QuickSpec {
 
     override func spec() {
 
-        describe("MainImageSettingsTests") {
+        describe("MWMainImageSettingsTests") {
 
             let image = UIImage()
-            let layout = CenteredObjectLayout()
+            let layout = MWCenteredObjectLayout()
 
-            let sut = MainImageSettings(
+            let sut = MWMainImageSettings(
                 image: image, layout: layout
             )
 

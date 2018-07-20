@@ -1,24 +1,24 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - BackgroundImageLayoutTests
+// MARK: - MWBackgroundImageLayoutTests
 
 import Quick
 import Nimble
 @testable import MoonWalker
 
-class BackgroundImageLayoutTests: QuickSpec {
+class MWBackgroundImageLayoutTests: QuickSpec {
 
     override func spec() {
 
-        describe("BackgroundImageLayoutTests") {
+        describe("MWBackgroundImageLayoutTests") {
 
             let leadingConstant = generateRandomCGFloat()
             let trailingConstant = generateRandomCGFloat()
             let bottomConstant = generateRandomCGFloat()
             let topConstant = generateRandomCGFloat()
 
-            let sut = BackgroundImageLayout(
+            let sut = MWBackgroundImageLayout(
                 leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, topConstant: topConstant
             )
 
