@@ -3,7 +3,7 @@ osx_image: xcode9.4
 xcode_workspace: MoonWalker.xcworkspace
 xcode_scheme: MoonWalker
 env:
-  - DESTINATION="iOS=11.4,name=iPhone 8" SCHEME="MoonWalker" SDK=iphonesimulator11.4
+  - DESTINATION="platform=iOS Simulator,name=iPhone 8" SCHEME="MoonWalker" SDK=iphonesimulator11.4
 
 before_install:
   - brew update
