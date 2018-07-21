@@ -19,7 +19,7 @@ before_install:
 script:
 - set -o pipefail
 - xcodebuild -version
-- xcodebuild -showsdks
+- swiftlint lint --path Tests --reporter json > swiftlint-results.json
 - danger process danger-swift -v
 - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK"
   -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty
