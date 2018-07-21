@@ -1,5 +1,7 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode9.4
+xcode_workspace: MoonWalker.xcworkspace # path to your xcodeproj folder
+xcode_scheme: MoonWalker
 env:
   - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="MoonWalker" SDK=iphonesimulator
 
@@ -8,7 +10,7 @@ before_install:
   - brew outdated carthage || brew upgrade carthage
   - brew outdated npm || brew upgrade npm
   - npm install -g danger
-  - brew outdated danger/tap/danger-swift || brew upgrade danger/tap/danger-swift
+  - brew install danger/tap/danger-swift
   - brew install swiftlint # This is for the Danger SwiftLint plugin.
   - carthage update --platform iOS
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
