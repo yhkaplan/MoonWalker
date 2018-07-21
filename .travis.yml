@@ -17,5 +17,5 @@ before_install:
 
 script:
   - danger process danger-swift
-  - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
-  - xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c && exit ${PIPESTATUS[0]}
+  - xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c && exit ${PIPESTATUS[0]}
