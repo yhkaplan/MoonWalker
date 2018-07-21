@@ -28,5 +28,7 @@ script:
   "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
 - if [ $POD_LINT == "YES" ]; then pod lib lint; fi
 notifications:
+  email: false
   slack:
+    on_success: always
     secure: bdtFUPmuw9ms/Y9ohf9d6/eiWrj1XxtHJDkcBk28nm06m6+68qbblGQh7yVTJZua6Q9iKhmCn4p5YRwFixPq0QtfJJ4/wnLKlExH9FR0gxuy6rLxDWfnXxGjjp3VDjE+qG61cpiGEkyM+30BWsqFw7frJyMiWbBkA/wy4HmJ8o5XtWAaHIePuBgHDJcezJu6I87QPSq8N87yciNEzDbEerkAN0md2EHSkI/mTJI3h+aTAPICGuEx3+KdTlafushyGSGB5Yiq/hbHJRBUofWGdjCVDLdHQNIak0lYvd5SDbqjqEPPKxEOTPwTXfF3AvP0JyUU8o/+3ddFZoPACJgg/oHP4E6DYDrdPkqj9coXfwxGA69yfXQADcwDZLQN+vPSm7qjEvhWkL/JCvwAErsusLzV1bDswXFQQrNH4gSe0XTcReLdfWpHVTd+yeMXACY1Qlv2IoEm8/YiDqmSU2bbh0S8do42Dg6UQ+6F8J7FAxUFKHyj41nWafewJVmiCyXuQoAgAC1VzvAfhetTu2mmd38LrD3ThsLTgJtOadD/w4yI4m4Fcb3eP9anO8zinv+GhhcYAGOdQIwqItGwq44RbsexF9S3Ds9dMgoz7n8o621Isq5l+j6yj3D4r4WHlridaCIXOZL4WteYztLBnKr+KEIX4OmUqJH/Xs7fzY+oIyU=
