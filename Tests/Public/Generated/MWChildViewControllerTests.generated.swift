@@ -3,8 +3,8 @@
 
 // MARK: - MWChildViewControllerTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWChildViewControllerTests: QuickSpec {
@@ -24,14 +24,14 @@ class MWChildViewControllerTests: QuickSpec {
                 let expected = viewController
                 let tested = sut.viewController
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("layout is set") {
                 let expected = layout
                 let tested = sut.layout
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

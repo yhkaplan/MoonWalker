@@ -3,8 +3,8 @@
 
 // MARK: - MWMainImageSettingsTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWMainImageSettingsTests: QuickSpec {
@@ -24,14 +24,14 @@ class MWMainImageSettingsTests: QuickSpec {
                 let expected = image
                 let tested = sut.image
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("layout is set") {
                 let expected = layout
                 let tested = sut.layout
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

@@ -3,8 +3,8 @@
 
 // MARK: - MWPageControlTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWPageControlTests: QuickSpec {
@@ -26,28 +26,28 @@ class MWPageControlTests: QuickSpec {
                 let expected = pageIndicatorTintColor
                 let tested = sut.pageIndicatorTintColor
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("currentPageIndicatorTintColor is set") {
                 let expected = currentPageIndicatorTintColor
                 let tested = sut.currentPageIndicatorTintColor
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("isHiddenOnLastScreen is set") {
                 let expected = isHiddenOnLastScreen
                 let tested = sut.isHiddenOnLastScreen
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("layout is set") {
                 let expected = layout
                 let tested = sut.layout
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }
