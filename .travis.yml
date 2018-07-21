@@ -9,6 +9,7 @@ before_install:
   - brew outdated npm || brew upgrade npm
   - npm install -g danger
   - brew outdated danger/tap/danger-swift || brew upgrade danger/tap/danger-swift
+  - brew install swiftlint # This is for the Danger SwiftLint plugin.
   - carthage update --platform iOS
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
