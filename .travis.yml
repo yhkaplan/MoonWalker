@@ -1,14 +1,18 @@
 language: objective-c
 osx_image: xcode9
 env:
-- DESTINATION="OS=11.0,name=iPhone 7" SCHEME="MoonWalker" SDK=iphonesimulator
+  - DESTINATION="OS=11.0,name=iPhone 7" SCHEME="MoonWalker" SDK=iphonesimulator
 
 before_install:
-- brew update
-- brew outdated carthage || brew upgrade carthage
-- carthage update --platform iOS
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - brew outdated npm || brew upgrade npm
+  - npm install -g danger
+  - brew outdated danger/tap/danger-swift || brew upgrade danger/tap/danger-swift
+  - carthage update --platform iOS
+  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
-- xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - danger process danger-swift
+  - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
