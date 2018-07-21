@@ -11,11 +11,22 @@ before_install:
   - brew outdated npm || brew upgrade npm
   - npm install -g danger
   - brew install danger/tap/danger-swift
-  - brew install swiftlint # This is for the Danger SwiftLint plugin.
+  - brew install swiftlint
   - carthage update --platform iOS
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty cocoapods -no-rdoc --no-ri --no-document --quiet
 
 script:
+  - set -o pipefail  # To make sure error messages are piped
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
   - danger process danger-swift
-  - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c && exit ${PIPESTATUS[0]}
-  - xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c && exit ${PIPESTATUS[0]}
+
+  - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+
+  - xcodebuild test -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+
+  # Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
