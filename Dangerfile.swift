@@ -1,5 +1,5 @@
 import Danger
-import DangerSwiftLint // package: https://github.com/ashfurrow/DangerSwiftLint.git
+import DangerSwiftLint // package: git@github.com:ashfurrow/danger-swiftlint.git
 
 let danger = Danger()
 SwiftLint.lint(inline: true, directory: "Sources", configFile: ".swiftlint.yml")
