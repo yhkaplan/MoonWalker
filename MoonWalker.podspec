@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MoonWalker'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MoonWalker.'
+  s.summary          = 'An easy to use Walkthrough framework'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+I made this Walkthrough framework to provide a simple API
+to allow for rapidly implementing a walkthrough. It does
+many things for you, but remains fairly minimal. Also,
+I focus heavily on test coverage.
                        DESC
 
   s.homepage         = 'https://github.com/yhkaplan/MoonWalker'
@@ -30,7 +33,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Sources/**'
-  
+
   # s.resource_bundles = {
   #   'MoonWalker' => ['MoonWalker/Assets/*.png']
   # }
