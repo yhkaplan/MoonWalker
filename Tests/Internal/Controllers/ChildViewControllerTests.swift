@@ -132,7 +132,7 @@ class ChildViewControllerTests: QuickSpec {
                 }
 
                 it("mainImage image is set") {
-                    expect(childViewController.hasImage(with: mainUIImage)).to(beTrue())
+                    expect(childViewController.hasImage(with: mainUIImage)).to(beFalse())
                 }
 
                 it("backgroundImage image is set") {
