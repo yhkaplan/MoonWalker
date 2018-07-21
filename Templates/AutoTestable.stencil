@@ -35,7 +35,7 @@
                 let expected = {{variable.name}}
                 let tested = sut.{{variable.name}}
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
     {% endfor %}
@@ -50,8 +50,8 @@
 // sourcery:file:Generated/{{ type.name }}Tests
 // MARK: - {{ type.name }}Tests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class {{type.name}}Tests: QuickSpec {
