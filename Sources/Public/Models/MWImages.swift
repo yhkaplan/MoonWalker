@@ -43,6 +43,11 @@ public struct MWMainImageSettings: Equatable {
 
 // MARK: - Image layout
 
+/// This represents layout properties of the main image, which are
+/// implemented in MWCenteredObjectLayout (a common type for objects
+/// with similar layout properties)
+public typealias MWMainImageLayout = MWCenteredObjectLayout
+
 public struct MWBackgroundImageLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
     var trailingConstant: CGFloat
