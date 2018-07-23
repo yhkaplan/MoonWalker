@@ -1,11 +1,3 @@
-#
-# Be sure to run `pod lib lint MoonWalker.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'MoonWalker'
   s.version          = '0.0.2'
@@ -26,7 +18,8 @@ I focus heavily on test coverage.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Sources/**'
+  s.source_files = 'Sources/**/*.{h,swift}'
+  s.swift_version = '4.1'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
