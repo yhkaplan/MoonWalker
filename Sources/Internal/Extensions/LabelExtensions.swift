@@ -14,6 +14,7 @@ extension UILabel {
             return MWTextSettings(
                 font: font,
                 color: textColor,
+                numberOfLines: numberOfLines,
                 shadowColor: shadowColor,
                 shadowOffset: shadowOffset,
                 textAlignment: textAlignment
@@ -23,6 +24,7 @@ extension UILabel {
         set (settings) {
             font = settings.font
             textColor = settings.color
+            numberOfLines = settings.numberOfLines
             shadowColor = settings.shadowColor
             shadowOffset = settings.shadowOffset
             textAlignment = settings.textAlignment

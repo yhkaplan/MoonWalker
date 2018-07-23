@@ -56,6 +56,7 @@ public struct MWLowerLabelSettings: Label, Equatable {
 public struct MWTextSettings: Equatable {
     public var font: UIFont
     public var color: UIColor
+    public var numberOfLines: Int
     public var shadowColor: UIColor?
     public var shadowOffset: CGSize
     public var textAlignment: NSTextAlignment
@@ -63,12 +64,14 @@ public struct MWTextSettings: Equatable {
     public init(
         font: UIFont = UIFont.systemFont(ofSize: 22.0),
         color: UIColor = .black,
+        numberOfLines: Int = 1,
         shadowColor: UIColor? = nil,
         shadowOffset: CGSize = CGSize(width: 0, height: -1),
         textAlignment: NSTextAlignment = .center
     ) {
         self.font = font
         self.color = color
+        self.numberOfLines = numberOfLines
         self.shadowColor = shadowColor
         self.shadowOffset = shadowOffset
         self.textAlignment = textAlignment

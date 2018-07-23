@@ -15,12 +15,13 @@ class MWTextSettingsTests: QuickSpec {
 
             let font = UIFont.boldSystemFont(ofSize: 20.0)
             let color = UIColor.green
+            let numberOfLines = Int()
             let shadowColor = UIColor.green
             let shadowOffset = CGSize(width: generateRandomCGFloat(), height: generateRandomCGFloat())
             let textAlignment = NSTextAlignment.right
 
             let sut = MWTextSettings(
-                font: font, color: color, shadowColor: shadowColor, shadowOffset: shadowOffset, textAlignment: textAlignment
+                font: font, color: color, numberOfLines: numberOfLines, shadowColor: shadowColor, shadowOffset: shadowOffset, textAlignment: textAlignment
             )
 
             it("font is set") {
@@ -33,6 +34,13 @@ class MWTextSettingsTests: QuickSpec {
             it("color is set") {
                 let expected = color
                 let tested = sut.color
+
+                expect(tested) == expected
+            }
+
+            it("numberOfLines is set") {
+                let expected = numberOfLines
+                let tested = sut.numberOfLines
 
                 expect(tested) == expected
             }
