@@ -30,6 +30,25 @@
 		03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1B20F61E7B00D4E542 /* MWButtonTests.generated.swift */; };
 		03DD9A2020F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A1D20F61E7C00D4E542 /* MWButtonLayoutTests.generated.swift */; };
 		03DD9A2320F6220700D4E542 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD9A2120F621B100D4E542 /* ButtonExtensions.swift */; };
+		03E58FF62105CE550014199A /* ParentViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB5B20DA64A6003A9794 /* ParentViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FF72105CE550014199A /* ChildViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FF82105CE550014199A /* PageVCDataSource.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FF92105CE550014199A /* PageVCDelegate.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0356F3C020F8B540008AD970 /* PageVCDelegate.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFA2105CE550014199A /* PageViewControllerExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 031D1DF420EA0EE900902400 /* PageViewControllerExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFB2105CE550014199A /* ViewExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB6020DA6854003A9794 /* ViewExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFC2105CE550014199A /* ViewControllerExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0304636E20E3838C008B48E3 /* ViewControllerExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFD2105CE560014199A /* ArrayExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = A3E104AC20E74C7F0064E76F /* ArrayExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFE2105CE560014199A /* LabelExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03C57D0D20F3086200CFD419 /* LabelExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E58FFF2105CE560014199A /* ButtonExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03DD9A2120F621B100D4E542 /* ButtonExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590002105CE560014199A /* MWParentViewCreator.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB5D20DA64E7003A9794 /* MWParentViewCreator.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590012105CE560014199A /* MWParentViewModel.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03DD9A1920F609C400D4E542 /* MWParentViewModel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590022105CE560014199A /* MWChildViewModel.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB6220DA7197003A9794 /* MWChildViewModel.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590032105CE560014199A /* MWChildViewLayoutSettings.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB6420DA7290003A9794 /* MWChildViewLayoutSettings.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590042105CE560014199A /* MWImages.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03C57D0820F2FA9800CFD419 /* MWImages.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590052105CE560014199A /* MWLabels.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03C57D0B20F2FE7B00CFD419 /* MWLabels.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590062105CE560014199A /* MWButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03DD9A1720F6007300D4E542 /* MWButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590072105CE560014199A /* MWPageControl.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0356F3C320FD898E008AD970 /* MWPageControl.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E590082105CE560014199A /* MWChildViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; };
 		03F630B02101C0EA00CCDE46 /* MWChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */; };
 		03F630B72101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630B32101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift */; };
@@ -321,6 +340,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F828811C494B2C00330CF4 /* MoonWalker.h in Headers */,
+				03E58FF62105CE550014199A /* ParentViewController.swift in Headers */,
+				03E58FF72105CE550014199A /* ChildViewController.swift in Headers */,
+				03E58FF82105CE550014199A /* PageVCDataSource.swift in Headers */,
+				03E58FF92105CE550014199A /* PageVCDelegate.swift in Headers */,
+				03E58FFA2105CE550014199A /* PageViewControllerExtensions.swift in Headers */,
+				03E58FFB2105CE550014199A /* ViewExtensions.swift in Headers */,
+				03E58FFC2105CE550014199A /* ViewControllerExtensions.swift in Headers */,
+				03E58FFD2105CE560014199A /* ArrayExtensions.swift in Headers */,
+				03E58FFE2105CE560014199A /* LabelExtensions.swift in Headers */,
+				03E58FFF2105CE560014199A /* ButtonExtensions.swift in Headers */,
+				03E590002105CE560014199A /* MWParentViewCreator.swift in Headers */,
+				03E590012105CE560014199A /* MWParentViewModel.swift in Headers */,
+				03E590022105CE560014199A /* MWChildViewModel.swift in Headers */,
+				03E590032105CE560014199A /* MWChildViewLayoutSettings.swift in Headers */,
+				03E590042105CE560014199A /* MWImages.swift in Headers */,
+				03E590052105CE560014199A /* MWLabels.swift in Headers */,
+				03E590062105CE560014199A /* MWButton.swift in Headers */,
+				03E590072105CE560014199A /* MWPageControl.swift in Headers */,
+				03E590082105CE560014199A /* MWChildViewController.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
