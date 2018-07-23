@@ -32,7 +32,7 @@ public struct MWPageControlLayout: Equatable {
 
     public init(
         centerXConstant: CGFloat = 0.0,
-        bottomConstant: CGFloat = -20.0
+        bottomConstant: CGFloat = -12.0
     ) {
         self.centerXConstant = centerXConstant
         self.bottomConstant = bottomConstant

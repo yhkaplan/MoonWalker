@@ -44,8 +44,8 @@ public struct MWButtonLayout: Equatable {
     public init(
         leading: CGFloat? = nil,
         trailing: CGFloat? = nil,
-        bottom: CGFloat = -20.0,
-        height: CGFloat = 50.0,
+        bottom: CGFloat = -14.0,
+        height: CGFloat = 30.0,
         width: CGFloat = 100.0
     ) {
         self.leading = leading

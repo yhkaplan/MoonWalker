@@ -17,12 +17,12 @@ public struct MWParentViewModel: Equatable {
         leftButton: MWButton? = MWButton(
             label: "Skip",
             action: .dismissWalkthrough,
-            layout: MWButtonLayout(leading: 20.0)
+            layout: MWButtonLayout(leading: 16.0)
         ),
         rightButton: MWButton = MWButton(
             label: "Next",
             action: .nextPage,
-            layout: MWButtonLayout(trailing: -20.0)
+            layout: MWButtonLayout(trailing: -16.0)
         ),
         pageControl: MWPageControl = MWPageControl()
     ) {

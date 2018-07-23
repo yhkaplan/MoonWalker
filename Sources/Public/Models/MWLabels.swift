@@ -61,7 +61,7 @@ public struct MWTextSettings: Equatable {
     public var textAlignment: NSTextAlignment
 
     public init(
-        font: UIFont = UIFont.systemFont(ofSize: 18.0),
+        font: UIFont = UIFont.systemFont(ofSize: 22.0),
         color: UIColor = .black,
         shadowColor: UIColor? = nil,
         shadowOffset: CGSize = CGSize(width: 0, height: -1),
@@ -135,7 +135,7 @@ public struct MWLowerLabelLayout: Equatable {
     public init(
         leadingConstant: CGFloat = 20.0,
         trailingConstant: CGFloat = -20.0,
-        bottomConstant: CGFloat = -20.0,
+        bottomConstant: CGFloat = -60.0,
         height: CGFloat = 40.0
     ) {
         self.leadingConstant = leadingConstant
