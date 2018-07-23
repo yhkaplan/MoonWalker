@@ -5,30 +5,38 @@
 //  Created by josh on 2018/07/09.
 //
 
+import UIKit
+
 // MARK: - Image types
 
 public struct MWBackgroundImageSettings: Equatable {
     public var image: UIImage?
+    public var contentMode: UIViewContentMode
     public var layout: MWBackgroundImageLayout
 
     public init(
         image: UIImage? = nil,
+        contentMode: UIViewContentMode = .scaleAspectFill,
         layout: MWBackgroundImageLayout = MWBackgroundImageLayout()
     ) {
         self.image = image
+        self.contentMode = contentMode
         self.layout = layout
     }
 }
 
 public struct MWMainImageSettings: Equatable {
     public var image: UIImage?
+    public var contentMode: UIViewContentMode
     public var layout: MWCenteredObjectLayout
 
     public init(
         image: UIImage? = nil,
+        contentMode: UIViewContentMode = .scaleAspectFill,
         layout: MWCenteredObjectLayout = MWCenteredObjectLayout()
     ) {
         self.image = image
+        self.contentMode = contentMode
         self.layout = layout
     }
 }

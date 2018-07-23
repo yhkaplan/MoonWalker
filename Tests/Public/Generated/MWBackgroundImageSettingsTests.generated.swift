@@ -14,15 +14,23 @@ class MWBackgroundImageSettingsTests: QuickSpec {
         describe("MWBackgroundImageSettingsTests") {
 
             let image = UIImage()
+            let contentMode = UIViewContentMode()
             let layout = MWBackgroundImageLayout()
 
             let sut = MWBackgroundImageSettings(
-                image: image, layout: layout
+                image: image, contentMode: contentMode, layout: layout
             )
 
             it("image is set") {
                 let expected = image
                 let tested = sut.image
+
+                expect(tested) == expected
+            }
+
+            it("contentMode is set") {
+                let expected = contentMode
+                let tested = sut.contentMode
 
                 expect(tested) == expected
             }

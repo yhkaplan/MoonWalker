@@ -14,15 +14,23 @@ class MWMainImageSettingsTests: QuickSpec {
         describe("MWMainImageSettingsTests") {
 
             let image = UIImage()
+            let contentMode = UIViewContentMode()
             let layout = MWCenteredObjectLayout()
 
             let sut = MWMainImageSettings(
-                image: image, layout: layout
+                image: image, contentMode: contentMode, layout: layout
             )
 
             it("image is set") {
                 let expected = image
                 let tested = sut.image
+
+                expect(tested) == expected
+            }
+
+            it("contentMode is set") {
+                let expected = contentMode
+                let tested = sut.contentMode
 
                 expect(tested) == expected
             }
