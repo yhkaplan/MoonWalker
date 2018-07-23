@@ -3,8 +3,8 @@
 
 // MARK: - MWTextSettingsTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWTextSettingsTests: QuickSpec {
@@ -27,35 +27,35 @@ class MWTextSettingsTests: QuickSpec {
                 let expected = font
                 let tested = sut.font
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("color is set") {
                 let expected = color
                 let tested = sut.color
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("shadowColor is set") {
                 let expected = shadowColor
                 let tested = sut.shadowColor
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("shadowOffset is set") {
                 let expected = shadowOffset
                 let tested = sut.shadowOffset
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("textAlignment is set") {
                 let expected = textAlignment
                 let tested = sut.textAlignment
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

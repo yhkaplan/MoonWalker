@@ -3,8 +3,8 @@
 
 // MARK: - MWButtonTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWButtonTests: QuickSpec {
@@ -28,42 +28,42 @@ class MWButtonTests: QuickSpec {
                 let expected = label
                 let tested = sut.label
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("labelColor is set") {
                 let expected = labelColor
                 let tested = sut.labelColor
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("backgroundImage is set") {
                 let expected = backgroundImage
                 let tested = sut.backgroundImage
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("isHiddenOnLastScreen is set") {
                 let expected = isHiddenOnLastScreen
                 let tested = sut.isHiddenOnLastScreen
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("action is set") {
                 let expected = action
                 let tested = sut.action
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("layout is set") {
                 let expected = layout
                 let tested = sut.layout
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

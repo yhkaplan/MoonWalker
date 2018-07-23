@@ -3,8 +3,8 @@
 
 // MARK: - MWLowerLabelSettingsTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWLowerLabelSettingsTests: QuickSpec {
@@ -25,21 +25,21 @@ class MWLowerLabelSettingsTests: QuickSpec {
                 let expected = text
                 let tested = sut.text
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("layout is set") {
                 let expected = layout
                 let tested = sut.layout
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("textSettings is set") {
                 let expected = textSettings
                 let tested = sut.textSettings
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

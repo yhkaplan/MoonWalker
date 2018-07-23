@@ -3,8 +3,8 @@
 
 // MARK: - MWPageControlLayoutTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWPageControlLayoutTests: QuickSpec {
@@ -24,14 +24,14 @@ class MWPageControlLayoutTests: QuickSpec {
                 let expected = centerXConstant
                 let tested = sut.centerXConstant
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("bottomConstant is set") {
                 let expected = bottomConstant
                 let tested = sut.bottomConstant
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

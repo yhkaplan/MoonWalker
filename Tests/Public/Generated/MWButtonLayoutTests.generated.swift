@@ -3,8 +3,8 @@
 
 // MARK: - MWButtonLayoutTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWButtonLayoutTests: QuickSpec {
@@ -27,35 +27,35 @@ class MWButtonLayoutTests: QuickSpec {
                 let expected = leading
                 let tested = sut.leading
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("trailing is set") {
                 let expected = trailing
                 let tested = sut.trailing
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("bottom is set") {
                 let expected = bottom
                 let tested = sut.bottom
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("height is set") {
                 let expected = height
                 let tested = sut.height
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("width is set") {
                 let expected = width
                 let tested = sut.width
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

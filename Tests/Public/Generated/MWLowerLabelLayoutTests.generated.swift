@@ -3,8 +3,8 @@
 
 // MARK: - MWLowerLabelLayoutTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWLowerLabelLayoutTests: QuickSpec {
@@ -26,28 +26,28 @@ class MWLowerLabelLayoutTests: QuickSpec {
                 let expected = leadingConstant
                 let tested = sut.leadingConstant
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("trailingConstant is set") {
                 let expected = trailingConstant
                 let tested = sut.trailingConstant
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("bottomConstant is set") {
                 let expected = bottomConstant
                 let tested = sut.bottomConstant
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("height is set") {
                 let expected = height
                 let tested = sut.height
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }

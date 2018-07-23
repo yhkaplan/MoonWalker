@@ -3,8 +3,8 @@
 
 // MARK: - MWChildViewModelTests
 
-import Quick
 import Nimble
+import Quick
 @testable import MoonWalker
 
 class MWChildViewModelTests: QuickSpec {
@@ -27,35 +27,35 @@ class MWChildViewModelTests: QuickSpec {
                 let expected = upperLabel
                 let tested = sut.upperLabel
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("lowerLabel is set") {
                 let expected = lowerLabel
                 let tested = sut.lowerLabel
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("childViewController is set") {
                 let expected = childViewController
                 let tested = sut.childViewController
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("mainImage is set") {
                 let expected = mainImage
                 let tested = sut.mainImage
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
             it("backgroundImage is set") {
                 let expected = backgroundImage
                 let tested = sut.backgroundImage
 
-                expect(tested).to(equal(expected))
+                expect(tested) == expected
             }
 
         }
