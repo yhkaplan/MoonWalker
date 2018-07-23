@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        guard let window = window else { fatalError() }
-
         let views = [0, 1, 2].map { index -> MWChildViewModel in
 
             let upperLabel = MWUpperLabelSettings(text: "Screen \(index)")
@@ -29,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let creator = MWParentViewCreator(childViews: views)
         let walkthroughVC = creator.getParentViewController()
 
-        window.rootViewController = walkthroughVC
-        window.makeKeyAndVisible()
+        window!.rootViewController = walkthroughVC
+        window!.makeKeyAndVisible()
 
         return true
     }
