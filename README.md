@@ -36,11 +36,32 @@ import MoonWalker
 
 Before contribute check the [CONTRIBUTING](https://github.com/yhkaplan@gmail.com/MoonWalker/blob/master/CONTRIBUTING.md) file for more info.
 
+## Usage
+```swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        let views = [0, 1, 2].map { index -> MWChildViewModel in
+
+            let upperLabel = MWUpperLabelSettings(text: "Screen \(index)")
+            let image = UIImage(named: "screen\(index)")
+            let backgroundImage = MWBackgroundImageSettings(image: image)
+
+            return MWChildViewModel(upperLabel: upperLabel, backgroundImage: backgroundImage)
+        }
+
+        let creator = MWParentViewCreator(childViews: views)
+        let walkthroughVC = creator.getParentViewController()
+
+        window!.rootViewController = walkthroughVC
+        window!.makeKeyAndVisible()
+
+        return true
+    }
+```
+
 ## Examples
 
 Follow these 3 steps to run Example project: clone MoonWalker repository, open MoonWalker workspace and run the *Example* project.
-
-You can also experiment and learn with the *MoonWalker Playground* which is contained in *MoonWalker.workspace*.
 
 ## Installation
 
