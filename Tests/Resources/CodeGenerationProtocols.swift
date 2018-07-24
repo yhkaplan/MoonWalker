@@ -21,7 +21,7 @@ extension MWCenteredObjectLayout: AutoTestable {}
 
 extension MWBackgroundImageLayout: AutoTestable {}
 extension MWMainImageSettings: AutoTestable {}
-extension MWBackgroundImageSettings: AutoTestable {}
+extension MWBackgroundImage: AutoTestable {}
 
 extension MWChildViewController: AutoTestable {}
 

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             let upperLabel = MWLowerLabelSettings(text: "Screen \(index)")
             let image = UIImage(named: "screen\(index)")
-            let backgroundImage = MWBackgroundImageSettings(image: image)
+            let backgroundImage = MWBackgroundImage(image: image)
 
             return MWChildViewModel(lowerLabel: upperLabel, backgroundImage: backgroundImage)
         }

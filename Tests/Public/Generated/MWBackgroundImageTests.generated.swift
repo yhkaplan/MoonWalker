@@ -1,23 +1,23 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - MWBackgroundImageSettingsTests
+// MARK: - MWBackgroundImageTests
 
 import Nimble
 import Quick
 @testable import MoonWalker
 
-class MWBackgroundImageSettingsTests: QuickSpec {
+class MWBackgroundImageTests: QuickSpec {
 
     override func spec() {
 
-        describe("MWBackgroundImageSettingsTests") {
+        describe("MWBackgroundImageTests") {
 
             let image = UIImage()
             let contentMode = UIViewContentMode.bottom
             let layout = MWBackgroundImageLayout()
 
-            let sut = MWBackgroundImageSettings(
+            let sut = MWBackgroundImage(
                 image: image, contentMode: contentMode, layout: layout
             )
 

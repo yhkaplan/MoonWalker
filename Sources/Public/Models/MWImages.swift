@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Image types
 
-public struct MWBackgroundImageSettings: Equatable {
+public struct MWBackgroundImage: Equatable {
     public var image: UIImage?
     public var contentMode: UIViewContentMode
     public var layout: MWBackgroundImageLayout
