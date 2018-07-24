@@ -48,4 +48,3 @@ public struct MWCenteredObjectLayout: RegularLayout, SubviewAddable, Equatable {
         self.topConstant = topConstant
     }
 }
-
