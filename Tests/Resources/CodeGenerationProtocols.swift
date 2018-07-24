@@ -20,7 +20,7 @@ extension MWLowerLabelSettings: AutoTestable {}
 extension MWCenteredObjectLayout: AutoTestable {}
 
 extension MWBackgroundImageLayout: AutoTestable {}
-extension MWMainImageSettings: AutoTestable {}
+extension MWMainImage: AutoTestable {}
 extension MWBackgroundImage: AutoTestable {}
 
 extension MWChildViewController: AutoTestable {}

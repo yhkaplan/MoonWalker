@@ -25,7 +25,7 @@ public struct MWBackgroundImage: Equatable {
     }
 }
 
-public struct MWMainImageSettings: Equatable {
+public struct MWMainImage: Equatable {
     public var image: UIImage?
     public var contentMode: UIViewContentMode
     public var layout: MWCenteredObjectLayout
