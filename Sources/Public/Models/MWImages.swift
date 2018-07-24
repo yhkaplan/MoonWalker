@@ -28,12 +28,28 @@ public struct MWBackgroundImage: Equatable {
 public struct MWMainImage: Equatable {
     public var image: UIImage?
     public var contentMode: UIViewContentMode
-    public var layout: MWCenteredObjectLayout
+    public var layout: MWMainImageLayout
 
     public init(
         image: UIImage? = nil,
         contentMode: UIViewContentMode = .scaleAspectFill,
-        layout: MWCenteredObjectLayout = MWCenteredObjectLayout()
+        layout: MWMainImageLayout = MWMainImageLayout()
+    ) {
+        self.image = image
+        self.contentMode = contentMode
+        self.layout = layout
+    }
+}
+
+public struct MWLowerImage: Equatable {
+    public var image: UIImage?
+    public var contentMode: UIViewContentMode
+    public var layout: MWLowerItemLayout
+
+    public init(
+        image: UIImage? = nil,
+        contentMode: UIViewContentMode = .scaleAspectFill,
+        layout: MWLowerItemLayout = MWLowerItemLayout()
     ) {
         self.image = image
         self.contentMode = contentMode

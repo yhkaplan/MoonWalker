@@ -11,17 +11,19 @@ protocol AutoTestable {}
 
 extension MWChildViewModel: AutoTestable {}
 
-extension MWUpperLabelLayout: AutoTestable {}
-extension MWLowerLabelLayout: AutoTestable {}
-extension MWTextSettings: AutoTestable {}
+extension MWUpperItemLayout: AutoTestable {}
+extension MWLowerItemLayout: AutoTestable {}
+extension MWCenteredObjectLayout: AutoTestable {}
+
 extension MWUpperLabel: AutoTestable {}
 extension MWLowerLabel: AutoTestable {}
 
-extension MWCenteredObjectLayout: AutoTestable {}
+extension MWTextSettings: AutoTestable {}
 
 extension MWBackgroundImageLayout: AutoTestable {}
 extension MWMainImage: AutoTestable {}
 extension MWBackgroundImage: AutoTestable {}
+extension MWLowerImage: AutoTestable {}
 
 extension MWChildViewController: AutoTestable {}
 

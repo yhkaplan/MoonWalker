@@ -17,10 +17,11 @@ class MWChildViewModelTests: QuickSpec {
             let lowerLabel = MWLowerLabel()
             let childViewController = MWChildViewController()
             let mainImage = MWMainImage()
+            let lowerImage = MWLowerImage()
             let backgroundImage = MWBackgroundImage()
 
             let sut = MWChildViewModel(
-                upperLabel: upperLabel, lowerLabel: lowerLabel, childViewController: childViewController, mainImage: mainImage, backgroundImage: backgroundImage
+                upperLabel: upperLabel, lowerLabel: lowerLabel, childViewController: childViewController, mainImage: mainImage, lowerImage: lowerImage, backgroundImage: backgroundImage
             )
 
             it("upperLabel is set") {
@@ -47,6 +48,13 @@ class MWChildViewModelTests: QuickSpec {
             it("mainImage is set") {
                 let expected = mainImage
                 let tested = sut.mainImage
+
+                expect(tested) == expected
+            }
+
+            it("lowerImage is set") {
+                let expected = lowerImage
+                let tested = sut.lowerImage
 
                 expect(tested) == expected
             }

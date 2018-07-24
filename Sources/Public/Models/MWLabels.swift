@@ -77,7 +77,9 @@ public struct MWTextSettings: Equatable {
 
 // MARK: - SubviewAddable conformance
 
-extension MWUpperLabelLayout: SubviewAddable {
+public typealias MWUpperLabelLayout = MWUpperItemLayout
+
+extension MWUpperItemLayout: SubviewAddable {
 
     func addChildViewToParent(childView: UIView, parentView: UIView) {
         parentView.addSubviewWithConstraints(
@@ -91,7 +93,9 @@ extension MWUpperLabelLayout: SubviewAddable {
 
 }
 
-extension MWLowerLabelLayout: SubviewAddable {
+public typealias MWLowerLabelLayout = MWLowerItemLayout
+
+extension MWLowerItemLayout: SubviewAddable {
 
     func addChildViewToParent(childView: UIView, parentView: UIView) {
         parentView.addSubviewWithConstraints(
@@ -107,7 +111,7 @@ extension MWLowerLabelLayout: SubviewAddable {
 
 // MARK: - Layout
 
-public struct MWUpperLabelLayout: Equatable {
+public struct MWUpperItemLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let topConstant: CGFloat
@@ -126,7 +130,7 @@ public struct MWUpperLabelLayout: Equatable {
     }
 }
 
-public struct MWLowerLabelLayout: Equatable {
+public struct MWLowerItemLayout: Equatable {
     let leadingConstant: CGFloat
     let trailingConstant: CGFloat
     let bottomConstant: CGFloat

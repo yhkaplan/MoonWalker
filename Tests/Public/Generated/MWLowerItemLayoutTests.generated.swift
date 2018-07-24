@@ -1,24 +1,24 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - MWLowerLabelLayoutTests
+// MARK: - MWLowerItemLayoutTests
 
 import Nimble
 import Quick
 @testable import MoonWalker
 
-class MWLowerLabelLayoutTests: QuickSpec {
+class MWLowerItemLayoutTests: QuickSpec {
 
     override func spec() {
 
-        describe("MWLowerLabelLayoutTests") {
+        describe("MWLowerItemLayoutTests") {
 
             let leadingConstant = generateRandomCGFloat()
             let trailingConstant = generateRandomCGFloat()
             let bottomConstant = generateRandomCGFloat()
             let height = generateRandomCGFloat()
 
-            let sut = MWLowerLabelLayout(
+            let sut = MWLowerItemLayout(
                 leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, height: height
             )
 

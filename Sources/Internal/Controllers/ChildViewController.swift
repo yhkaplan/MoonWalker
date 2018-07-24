@@ -44,15 +44,22 @@ private extension ChildViewController {
         if viewModel.backgroundImage.image != nil {
             let backgroundImage = UIImageView()
             backgroundImage.image = viewModel.backgroundImage.image
-            backgroundImage.contentMode = viewModel.mainImage.contentMode //TODO: make this customizable
+            backgroundImage.contentMode = viewModel.mainImage.contentMode
             viewModel.backgroundImage.layout.addChildViewToParent(childView: backgroundImage, parentView: view)
         }
 
         if viewModel.mainImage.image != nil {
             let mainImage = UIImageView()
             mainImage.image = viewModel.mainImage.image
-            mainImage.contentMode = viewModel.mainImage.contentMode //TODO: make this customizable
+            mainImage.contentMode = viewModel.mainImage.contentMode
             viewModel.mainImage.layout.addChildViewToParent(childView: mainImage, parentView: view)
+        }
+
+        if viewModel.lowerImage.image != nil {
+            let lowerImage = UIImageView()
+            lowerImage.image = viewModel.lowerImage.image
+            lowerImage.contentMode = viewModel.lowerImage.contentMode
+            viewModel.lowerImage.layout.addChildViewToParent(childView: lowerImage, parentView: view)
         }
 
         viewModel.childViewController.embed(in: self)
