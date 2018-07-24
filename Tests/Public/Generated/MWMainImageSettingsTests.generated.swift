@@ -14,7 +14,7 @@ class MWMainImageSettingsTests: QuickSpec {
         describe("MWMainImageSettingsTests") {
 
             let image = UIImage()
-            let contentMode = UIViewContentMode()
+            let contentMode = UIViewContentMode.bottom
             let layout = MWCenteredObjectLayout()
 
             let sut = MWMainImageSettings(

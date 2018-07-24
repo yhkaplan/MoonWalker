@@ -14,7 +14,7 @@ class MWBackgroundImageSettingsTests: QuickSpec {
         describe("MWBackgroundImageSettingsTests") {
 
             let image = UIImage()
-            let contentMode = UIViewContentMode()
+            let contentMode = UIViewContentMode.bottom
             let layout = MWBackgroundImageLayout()
 
             let sut = MWBackgroundImageSettings(
