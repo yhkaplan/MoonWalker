@@ -11,14 +11,14 @@
 */
 public struct MWChildViewModel: Equatable {
 
-    public var upperLabel: MWUpperLabelSettings
+    public var upperLabel: MWUpperLabel
     public var lowerLabel: MWLowerLabelSettings
     public var childViewController: MWChildViewController
     public var mainImage: MWMainImage
     public var backgroundImage: MWBackgroundImage
 
     public init(
-        upperLabel: MWUpperLabelSettings = MWUpperLabelSettings(),
+        upperLabel: MWUpperLabel = MWUpperLabel(),
         lowerLabel: MWLowerLabelSettings = MWLowerLabelSettings(),
         childViewController: MWChildViewController = MWChildViewController(),
         mainImage: MWMainImage = MWMainImage(),

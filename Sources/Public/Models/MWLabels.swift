@@ -21,7 +21,7 @@ protocol Label {
  This struct is used to configure contain text, textSettings, and MWUpperLabelLayout
  for the upper label
  */
-public struct MWUpperLabelSettings: Label, Equatable {
+public struct MWUpperLabel: Label, Equatable {
     public var text: String?
     public var layout: MWUpperLabelLayout
     public var textSettings: MWTextSettings

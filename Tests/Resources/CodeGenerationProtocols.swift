@@ -14,7 +14,7 @@ extension MWChildViewModel: AutoTestable {}
 extension MWUpperLabelLayout: AutoTestable {}
 extension MWLowerLabelLayout: AutoTestable {}
 extension MWTextSettings: AutoTestable {}
-extension MWUpperLabelSettings: AutoTestable {}
+extension MWUpperLabel: AutoTestable {}
 extension MWLowerLabelSettings: AutoTestable {}
 
 extension MWCenteredObjectLayout: AutoTestable {}

@@ -23,7 +23,7 @@ class ChildViewControllerTests: QuickSpec {
                     textAlignment: .left
                 )
 
-                let upperLabel = MWUpperLabelSettings(
+                let upperLabel = MWUpperLabel(
                     text: "upperTestyMcTestFace",
                     textSettings: upperLabelMWTextSettings
                 )
