@@ -30,7 +30,7 @@ extension SubviewAddable where Self: RegularLayout {
 
 }
 
-public struct MWCenteredObjectLayout: RegularLayout, SubviewAddable, Equatable {
+public struct MWCenteredItemLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
     var trailingConstant: CGFloat
     var bottomConstant: CGFloat

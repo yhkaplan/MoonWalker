@@ -1,24 +1,24 @@
 // Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
-// MARK: - MWCenteredObjectLayoutTests
+// MARK: - MWCenteredItemLayoutTests
 
 import Nimble
 import Quick
 @testable import MoonWalker
 
-class MWCenteredObjectLayoutTests: QuickSpec {
+class MWCenteredItemLayoutTests: QuickSpec {
 
     override func spec() {
 
-        describe("MWCenteredObjectLayoutTests") {
+        describe("MWCenteredItemLayoutTests") {
 
             let leadingConstant = generateRandomCGFloat()
             let trailingConstant = generateRandomCGFloat()
             let bottomConstant = generateRandomCGFloat()
             let topConstant = generateRandomCGFloat()
 
-            let sut = MWCenteredObjectLayout(
+            let sut = MWCenteredItemLayout(
                 leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, topConstant: topConstant
             )
 

@@ -37,6 +37,7 @@
 		03E18BF22107191A00EC21B7 /* MWLowerItemLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E18BEF2107191A00EC21B7 /* MWLowerItemLayoutTests.generated.swift */; };
 		03E18BF32107191A00EC21B7 /* MWUpperItemLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E18BF02107191A00EC21B7 /* MWUpperItemLayoutTests.generated.swift */; };
 		03E18BF42107191A00EC21B7 /* MWLowerImageTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E18BF12107191A00EC21B7 /* MWLowerImageTests.generated.swift */; };
+		03E18BF6210719BD00EC21B7 /* MWCenteredItemLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E18BF5210719BD00EC21B7 /* MWCenteredItemLayoutTests.generated.swift */; };
 		03E58FF62105CE550014199A /* ParentViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB5B20DA64A6003A9794 /* ParentViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E58FF72105CE550014199A /* ChildViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 039FDB5920DA5AE1003A9794 /* ChildViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E58FF82105CE550014199A /* PageVCDataSource.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,7 +59,6 @@
 		03E590082105CE560014199A /* MWChildViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F5A19C20E260A600431717 /* PageVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5A19B20E260A600431717 /* PageVCDataSource.swift */; };
 		03F630B02101C0EA00CCDE46 /* MWChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */; };
-		03F630B72101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630B32101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift */; };
 		03F630B82101C65700CCDE46 /* MWBackgroundImageLayoutTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630B42101C65700CCDE46 /* MWBackgroundImageLayoutTests.generated.swift */; };
 		03F630C12101C7AF00CCDE46 /* MWTextSettingsTests.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630BC2101C7AF00CCDE46 /* MWTextSettingsTests.generated.swift */; };
 		03F630C62101D99800CCDE46 /* PageViewControllerExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F630C52101D99800CCDE46 /* PageViewControllerExtensionsTests.swift */; };
@@ -117,9 +117,9 @@
 		03E18BEF2107191A00EC21B7 /* MWLowerItemLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWLowerItemLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03E18BF02107191A00EC21B7 /* MWUpperItemLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWUpperItemLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03E18BF12107191A00EC21B7 /* MWLowerImageTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWLowerImageTests.generated.swift; sourceTree = "<group>"; };
+		03E18BF5210719BD00EC21B7 /* MWCenteredItemLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWCenteredItemLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03F5A19B20E260A600431717 /* PageVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCDataSource.swift; sourceTree = "<group>"; };
 		03F630AF2101C0EA00CCDE46 /* MWChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWChildViewController.swift; sourceTree = "<group>"; };
-		03F630B32101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWCenteredObjectLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03F630B42101C65700CCDE46 /* MWBackgroundImageLayoutTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWBackgroundImageLayoutTests.generated.swift; sourceTree = "<group>"; };
 		03F630BC2101C7AF00CCDE46 /* MWTextSettingsTests.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWTextSettingsTests.generated.swift; sourceTree = "<group>"; };
 		03F630C52101D99800CCDE46 /* PageViewControllerExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerExtensionsTests.swift; sourceTree = "<group>"; };
@@ -320,8 +320,8 @@
 				03E18BF12107191A00EC21B7 /* MWLowerImageTests.generated.swift */,
 				03E18BEF2107191A00EC21B7 /* MWLowerItemLayoutTests.generated.swift */,
 				03E18BF02107191A00EC21B7 /* MWUpperItemLayoutTests.generated.swift */,
-				03F630B32101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift */,
 				03F630BC2101C7AF00CCDE46 /* MWTextSettingsTests.generated.swift */,
+				03E18BF5210719BD00EC21B7 /* MWCenteredItemLayoutTests.generated.swift */,
 				03E18BEB2107121800EC21B7 /* MWUpperLabelTests.generated.swift */,
 				03E18BED2107128500EC21B7 /* MWLowerLabelTests.generated.swift */,
 				03E18BE92107112300EC21B7 /* MWMainImageTests.generated.swift */,
@@ -534,7 +534,6 @@
 				03E18BEC2107121800EC21B7 /* MWUpperLabelTests.generated.swift in Sources */,
 				03E18BF32107191A00EC21B7 /* MWUpperItemLayoutTests.generated.swift in Sources */,
 				03E18BEE2107128500EC21B7 /* MWLowerLabelTests.generated.swift in Sources */,
-				03F630B72101C65700CCDE46 /* MWCenteredObjectLayoutTests.generated.swift in Sources */,
 				A328EA2E2103349F00024A84 /* MWChildViewControllerTests.generated.swift in Sources */,
 				A309968320EA746A002DFE94 /* CodeGenerationProtocols.swift in Sources */,
 				A309968C20EA75E2002DFE94 /* MWChildViewModelTests.generated.swift in Sources */,
@@ -548,6 +547,7 @@
 				A3E104B020E7537C0064E76F /* TestHelpers.swift in Sources */,
 				03F630C62101D99800CCDE46 /* PageViewControllerExtensionsTests.swift in Sources */,
 				03DD9A1E20F61E7C00D4E542 /* MWButtonTests.generated.swift in Sources */,
+				03E18BF6210719BD00EC21B7 /* MWCenteredItemLayoutTests.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

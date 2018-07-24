@@ -14,7 +14,7 @@ class MWChildViewControllerTests: QuickSpec {
         describe("MWChildViewControllerTests") {
 
             let viewController = UIViewController()
-            let layout = MWCenteredObjectLayout()
+            let layout = MWCenteredItemLayout()
 
             let sut = MWChildViewController(
                 viewController: viewController, layout: layout

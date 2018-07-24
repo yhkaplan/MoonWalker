@@ -60,9 +60,9 @@ public struct MWLowerImage: Equatable {
 // MARK: - Image layout
 
 /// This represents layout properties of the main image, which are
-/// implemented in MWCenteredObjectLayout (a common type for objects
+/// implemented in MWCenteredItemLayout (a common type for objects
 /// with similar layout properties)
-public typealias MWMainImageLayout = MWCenteredObjectLayout
+public typealias MWMainImageLayout = MWCenteredItemLayout
 
 public struct MWBackgroundImageLayout: RegularLayout, SubviewAddable, Equatable {
     var leadingConstant: CGFloat
