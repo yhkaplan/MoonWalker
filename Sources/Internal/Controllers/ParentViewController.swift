@@ -42,7 +42,7 @@ final class ParentViewController: UIViewController {
         pageVC: UIPageViewController,
         dataSource: PageVCDataSource,
         delegate: PageVCDelegate,
-        viewModel: MWParentViewModel = MWParentViewModel()
+        viewModel: MWParentViewModel
     ) {
         super.init(nibName: nil, bundle: nil)
 
