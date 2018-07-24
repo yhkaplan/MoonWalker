@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let views = [0, 1, 2].map { index -> MWChildViewModel in
 
-            let upperLabel = MWLowerLabelSettings(text: "Screen \(index)")
+            let upperLabel = MWLowerLabel(text: "Screen \(index)")
             let image = UIImage(named: "screen\(index)")
             let backgroundImage = MWBackgroundImage(image: image)
 

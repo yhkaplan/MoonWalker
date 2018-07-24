@@ -66,7 +66,7 @@ class ChildViewControllerTests: QuickSpec {
                     textAlignment: .left
                 )
 
-                let lowerLabel = MWLowerLabelSettings(
+                let lowerLabel = MWLowerLabel(
                     text: "lowerTestyMcTestFace",
                     textSettings: lowerLabelMWTextSettings
                 )

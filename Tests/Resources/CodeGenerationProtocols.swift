@@ -15,7 +15,7 @@ extension MWUpperLabelLayout: AutoTestable {}
 extension MWLowerLabelLayout: AutoTestable {}
 extension MWTextSettings: AutoTestable {}
 extension MWUpperLabel: AutoTestable {}
-extension MWLowerLabelSettings: AutoTestable {}
+extension MWLowerLabel: AutoTestable {}
 
 extension MWCenteredObjectLayout: AutoTestable {}
 

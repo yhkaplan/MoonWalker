@@ -37,7 +37,7 @@ public struct MWUpperLabel: Label, Equatable {
     }
 }
 
-public struct MWLowerLabelSettings: Label, Equatable {
+public struct MWLowerLabel: Label, Equatable {
     public var text: String?
     public var layout: MWLowerLabelLayout
     public var textSettings: MWTextSettings
