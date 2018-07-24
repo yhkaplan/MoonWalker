@@ -107,13 +107,22 @@ extension ParentViewController: MWActionDelegate {
         dismiss(animated: true) { }//TODO: call delegateWasSkipped here
     }
 
+    @objc func skipToLastPage() {
+        guard let lastVC = pageVCDataSource.getLastPage() else { return }
+        showVC(lastVC)
+    }
+
     @objc func showNextPage() {
         guard
             let currentVC = pageVC.viewControllers?.first,
             let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC)
         else { return }
 
-        pageVC.setViewControllers([nextVC], direction: .forward, animated: true) { isFinished in
+        showVC(nextVC)
+    }
+
+    private func showVC(_ viewController: UIViewController) {
+        pageVC.setViewControllers([viewController], direction: .forward, animated: true) { isFinished in
             guard isFinished else { return }
 
             //TODO: this code is needed both here and in the delegate
@@ -153,6 +162,9 @@ private extension ParentViewController {
                 switch buttonModel.action {
                 case .dismissWalkthrough:
                     button.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
+
+                case .skipToLastPage:
+                    button.addTarget(self, action: #selector(skipToLastPage), for: .touchUpInside)
 
                 case .nextPage:
                     button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
