@@ -18,6 +18,7 @@ public protocol MWActionDelegate: AnyObject {
 }
 
 protocol PageChangeDelegate: AnyObject {
+    func pageWillChange(to index: Int)
     func pageDidChange(to index: Int)
 }
 
@@ -31,6 +32,8 @@ final class ParentViewController: UIViewController {
     private var pageVCDelegate = PageVCDelegate()
     private var viewModel = MWParentViewModel()
 
+    private var customActionAfterLastPage: MWCustomAction?
+
     private lazy var leftButton = UIButton()
     private lazy var rightButton = UIButton()
 
@@ -42,7 +45,8 @@ final class ParentViewController: UIViewController {
         pageVC: UIPageViewController,
         dataSource: PageVCDataSource,
         delegate: PageVCDelegate,
-        viewModel: MWParentViewModel
+        viewModel: MWParentViewModel,
+        customActionAfterLastPage: MWCustomAction?
     ) {
         super.init(nibName: nil, bundle: nil)
 
@@ -50,6 +54,7 @@ final class ParentViewController: UIViewController {
         self.pageVCDataSource = dataSource
         self.pageVCDelegate = delegate
         self.viewModel = viewModel
+        self.customActionAfterLastPage = customActionAfterLastPage
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -70,6 +75,12 @@ final class ParentViewController: UIViewController {
 // MARK: - PageControlUpdateDelegate
 
 extension ParentViewController: PageChangeDelegate {
+
+    func pageWillChange(to index: Int) {
+        guard index == 0 else { return }
+
+        customActionAfterLastPage?()
+    }
 
     func pageDidChange(to index: Int) {
         updatePageControl(with: index)
@@ -107,9 +118,8 @@ extension ParentViewController: MWActionDelegate {
         dismiss(animated: true) { }//TODO: call delegateWasSkipped here
     }
 
-    @objc func skipToLastPage() {
-        guard let lastVC = pageVCDataSource.getLastPage() else { return }
-        showVC(lastVC)
+    @objc func beginCustomAction() {
+        customActionAfterLastPage?()
     }
 
     @objc func showNextPage() {
@@ -122,6 +132,10 @@ extension ParentViewController: MWActionDelegate {
     }
 
     private func showVC(_ viewController: UIViewController) {
+        if let nextIndex = pageVCDataSource.getNextPageIndex(for: pageVC) {
+            pageWillChange(to: nextIndex)
+        }
+
         pageVC.setViewControllers([viewController], direction: .forward, animated: true) { isFinished in
             guard isFinished else { return }
 
@@ -163,8 +177,8 @@ private extension ParentViewController {
                 case .dismissWalkthrough:
                     button.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
 
-                case .skipToLastPage:
-                    button.addTarget(self, action: #selector(skipToLastPage), for: .touchUpInside)
+                case .customActionAfterLastPage:
+                    button.addTarget(self, action: #selector(beginCustomAction), for: .touchUpInside)
 
                 case .nextPage:
                     button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)

@@ -11,6 +11,16 @@ class PageVCDelegate: NSObject, UIPageViewControllerDelegate {
 
     weak var pageChangeDelegate: PageChangeDelegate?
 
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        guard
+            let pendingViewController = pendingViewControllers.first,
+            let childViewController = pendingViewController as? ChildViewController,
+            let nextIndex = childViewController.index
+        else { return }
+
+        pageChangeDelegate?.pageWillChange(to: nextIndex)
+    }
+
     // didFinishAnimating
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard completed else { return }

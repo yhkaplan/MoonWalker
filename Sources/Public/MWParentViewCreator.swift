@@ -5,6 +5,9 @@
 //  Created by josh on 2018/06/20.
 //
 
+/// A custom action settable for when the last page is reached
+public typealias MWCustomAction = () -> Void
+
 /*
  * This struct is resposible for:
  * 1. creating ParentViewController
@@ -12,18 +15,24 @@
 open class MWParentViewCreator {
 
     public var childViews: [MWChildViewModel]
+    public var viewModel: MWParentViewModel
+    public var customActionAfterLastPage: MWCustomAction?
 
-    public init(childViews: [MWChildViewModel]) {
+    public init(
+        childViews: [MWChildViewModel],
+        viewModel: MWParentViewModel = MWParentViewModel(),
+        customActionAfterLastPage: MWCustomAction? = nil
+    ) {
         self.childViews = childViews
+        self.viewModel = viewModel
+        self.customActionAfterLastPage = customActionAfterLastPage
     }
 
 }
 
 public extension MWParentViewCreator {
 
-    func getParentViewController(
-        with viewModel: MWParentViewModel = MWParentViewModel()
-    ) -> UIViewController {
+    func getParentViewController() -> UIViewController {
 
         let childViewControllers = getChildViewControllers()
         let dataSource = PageVCDataSource(childVCs: childViewControllers)
@@ -40,7 +49,8 @@ public extension MWParentViewCreator {
             pageVC: pageViewController,
             dataSource: dataSource,
             delegate: delegate,
-            viewModel: viewModel
+            viewModel: viewModel,
+            customActionAfterLastPage: customActionAfterLastPage
         )
     }
 

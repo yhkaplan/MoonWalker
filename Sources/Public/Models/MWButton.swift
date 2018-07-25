@@ -57,7 +57,7 @@ public struct MWButtonLayout: Equatable {
 
 public enum MWButtonAction: Equatable {
     case nextPage
-    case skipToLastPage
+    case customActionAfterLastPage
     case dismissWalkthrough
 }
 
