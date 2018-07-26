@@ -32,7 +32,7 @@ public struct MWMainImage: Equatable {
 
     public init(
         image: UIImage? = nil,
-        contentMode: UIViewContentMode = .scaleAspectFill,
+        contentMode: UIViewContentMode = .scaleAspectFit,
         layout: MWMainImageLayout = MWMainImageLayout()
     ) {
         self.image = image
@@ -48,7 +48,7 @@ public struct MWLowerImage: Equatable {
 
     public init(
         image: UIImage? = nil,
-        contentMode: UIViewContentMode = .scaleAspectFill,
+        contentMode: UIViewContentMode = .scaleAspectFit,
         layout: MWLowerItemLayout = MWLowerItemLayout()
     ) {
         self.image = image
