@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let views = [0, 1, 2].map { index -> MWChildViewModel in
 
-            let upperLabel = MWLowerLabel(text: "Screen \(index)")
+            let font = UIFont.boldSystemFont(ofSize: 20.0)
+            let settings = MWTextSettings(font: font, color: .white, hasBlurredShadow: true)
+            let upperLabel = MWLowerLabel(text: "Test McTest Face \(index)", textSettings: settings)
             let image = UIImage(named: "screen\(index)")
             let backgroundImage = MWBackgroundImage(image: image)
 
