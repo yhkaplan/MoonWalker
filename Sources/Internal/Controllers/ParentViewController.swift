@@ -77,7 +77,10 @@ final class ParentViewController: UIViewController {
 extension ParentViewController: PageChangeDelegate {
 
     func pageWillChange(to index: Int) {
-        guard index == 0 else { return }
+        guard
+            index == 0,
+            pageVCDataSource.isLastPage(for: pageVC)
+        else { return }
 
         customActionAfterLastPage?()
     }
