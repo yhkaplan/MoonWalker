@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
 
     private var defaultShadowOffset: CGSize {
-        return CGSize(width: 2, height: 2)
+        return CGSize(width: 0, height: 2)
     }
 
     var textSettings: MWTextSettings {
@@ -42,8 +42,8 @@ extension UILabel {
 
     private func setBlurredShadow() {
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowRadius = 3.0
-        layer.shadowOpacity = 1.0
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 0.5
         layer.shadowOffset = defaultShadowOffset
         layer.masksToBounds = false
     }
