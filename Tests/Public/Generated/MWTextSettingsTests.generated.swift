@@ -16,7 +16,7 @@ class MWTextSettingsTests: QuickSpec {
             let font = UIFont.boldSystemFont(ofSize: 20.0)
             let color = UIColor.green
             let numberOfLines = Int()
-            let hasBlurredShadow = Bool()
+            let hasBlurredShadow = false
             let textAlignment = NSTextAlignment.right
 
             let sut = MWTextSettings(

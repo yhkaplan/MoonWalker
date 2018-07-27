@@ -16,7 +16,7 @@ class MWButtonTests: QuickSpec {
             let label = "test label"
             let labelColor = UIColor.green
             let backgroundImage = UIImage()
-            let isHiddenOnLastScreen = Bool()
+            let isHiddenOnLastScreen = false
             let action = MWButtonAction.nextPage
             let layout = MWButtonLayout()
 

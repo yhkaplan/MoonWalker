@@ -17,6 +17,8 @@
             let {{variable.name}} = UIViewContentMode.bottom
          {% elif variable.typeName|contains:"CGSize" %}
             let {{variable.name}} = CGSize(width: generateRandomCGFloat(), height: generateRandomCGFloat())
+         {% elif variable.typeName|contains:"Bool" %}
+            let {{variable.name}} = false
          {% else %}
             {% if variable.typeName|contains:"UIView?" %}
             let {{variable.name}} = UIView()

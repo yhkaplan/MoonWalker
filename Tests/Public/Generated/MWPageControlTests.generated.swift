@@ -15,7 +15,7 @@ class MWPageControlTests: QuickSpec {
 
             let pageIndicatorTintColor = UIColor.green
             let currentPageIndicatorTintColor = UIColor.green
-            let isHiddenOnLastScreen = Bool()
+            let isHiddenOnLastScreen = false
             let layout = MWPageControlLayout()
 
             let sut = MWPageControl(

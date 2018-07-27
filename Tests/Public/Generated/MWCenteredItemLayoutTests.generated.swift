@@ -17,9 +17,10 @@ class MWCenteredItemLayoutTests: QuickSpec {
             let trailingConstant = generateRandomCGFloat()
             let bottomConstant = generateRandomCGFloat()
             let topConstant = generateRandomCGFloat()
+            let useSafeAreaLayoutGuide = false
 
             let sut = MWCenteredItemLayout(
-                leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, topConstant: topConstant
+                leadingConstant: leadingConstant, trailingConstant: trailingConstant, bottomConstant: bottomConstant, topConstant: topConstant, useSafeAreaLayoutGuide: useSafeAreaLayoutGuide
             )
 
             it("leadingConstant is set") {
@@ -46,6 +47,13 @@ class MWCenteredItemLayoutTests: QuickSpec {
             it("topConstant is set") {
                 let expected = topConstant
                 let tested = sut.topConstant
+
+                expect(tested) == expected
+            }
+
+            it("useSafeAreaLayoutGuide is set") {
+                let expected = useSafeAreaLayoutGuide
+                let tested = sut.useSafeAreaLayoutGuide
 
                 expect(tested) == expected
             }
