@@ -45,7 +45,7 @@ final class ParentViewController: UIViewController {
         pageVC: UIPageViewController,
         dataSource: PageVCDataSource,
         delegate: PageVCDelegate,
-        viewModel: MWParentViewModel,
+        parentViewModel: MWParentViewModel,
         customActionAfterLastPage: MWCustomAction?
     ) {
         super.init(nibName: nil, bundle: nil)
@@ -53,7 +53,7 @@ final class ParentViewController: UIViewController {
         self.pageVC = pageVC
         self.pageVCDataSource = dataSource
         self.pageVCDelegate = delegate
-        self.viewModel = viewModel
+        self.viewModel = parentViewModel
         self.customActionAfterLastPage = customActionAfterLastPage
     }
 
