@@ -64,17 +64,18 @@ extension UILabel {
             let lineSpacing = settings.lineSpacing
         {
             attributedString.setCharacterSpacing(characterSpacing, text: textString)
-            attributedString.setLineSpacing(lineSpacing, text: textString)
+            let paragraphStyle = attributedString.getParagraphStyle(with: lineSpacing)
+            attributedString.setParagraphStyle(to: settings.textAlignment, with: textString, paragraphStyle: paragraphStyle)
 
         } else if let characterSpacing = settings.characterSpacing {
             attributedString.setCharacterSpacing(characterSpacing, text: textString)
+            // TODO: test if this issue appears only with other cases
+            attributedString.setParagraphStyle(to: settings.textAlignment, with: textString)
 
         } else if let lineSpacing = settings.lineSpacing {
-            attributedString.setLineSpacing(lineSpacing, text: textString)
+            let paragraphStyle = attributedString.getParagraphStyle(with: lineSpacing)
+            attributedString.setParagraphStyle(to: settings.textAlignment, with: textString, paragraphStyle: paragraphStyle)
         }
-
-        // Making a text label use an attributedString makes it ignore alignment settings
-        attributedString.setTextAlignment(settings.textAlignment, text: textString)
 
         text = nil
         attributedText = attributedString
@@ -93,31 +94,32 @@ extension UILabel {
 extension NSMutableAttributedString {
 
     func setCharacterSpacing(_ spacing: CGFloat, text: String) {
-            addAttribute(
-                .kern,
-                value: spacing,
-                range: NSRange(location: 0, length: text.count)
-            )
+        addAttribute(
+            .kern,
+            value: spacing,
+            range: NSRange(location: 0, length: text.count)
+        )
     }
 
-    func setLineSpacing(_ spacing: CGFloat, text: String) {
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = spacing
-            addAttribute(
-                .paragraphStyle,
-                value: paragraphStyle,
-                range: NSRange(location: 0, length: text.count)
-            )
+    func getParagraphStyle(with lineSpacing: CGFloat) -> NSMutableParagraphStyle {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+
+        return paragraphStyle
     }
 
-    func setTextAlignment(_ alignment: NSTextAlignment, text: String) {
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.alignment = alignment
-            addAttribute(
-                .paragraphStyle,
-                value: paragraphStyle,
-                range: NSRange(location: 0, length: text.count)
-            )
+    // Making a text label use an attributedString makes it ignore alignment settings
+    func setParagraphStyle(
+        to alignment: NSTextAlignment,
+        with text: String,
+        paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+    ) {
+        paragraphStyle.alignment = alignment
+        addAttribute(
+            .paragraphStyle,
+            value: paragraphStyle,
+            range: NSRange(location: 0, length: text.count)
+        )
     }
 
 }
