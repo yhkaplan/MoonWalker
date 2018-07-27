@@ -60,6 +60,7 @@ public struct MWTextSettings: Equatable {
     public var hasBlurredShadow: Bool
     public var textAlignment: NSTextAlignment
     public var adjustsFontSizeToFitWidth: Bool
+    public var minimumScaleFactor: CGFloat
 
     public init(
         font: UIFont = UIFont.systemFont(ofSize: 22.0),
@@ -67,7 +68,8 @@ public struct MWTextSettings: Equatable {
         numberOfLines: Int = 1,
         hasBlurredShadow: Bool = false,
         textAlignment: NSTextAlignment = .center,
-        adjustsFontSizeToFitWidth: Bool = false
+        adjustsFontSizeToFitWidth: Bool = false,
+        minimumScaleFactor: CGFloat = 0.0
     ) {
         self.font = font
         self.color = color
@@ -75,6 +77,7 @@ public struct MWTextSettings: Equatable {
         self.hasBlurredShadow = hasBlurredShadow
         self.textAlignment = textAlignment
         self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        self.minimumScaleFactor = minimumScaleFactor
     }
 }
 

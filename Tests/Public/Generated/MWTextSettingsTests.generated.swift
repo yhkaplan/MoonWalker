@@ -19,9 +19,10 @@ class MWTextSettingsTests: QuickSpec {
             let hasBlurredShadow = false
             let textAlignment = NSTextAlignment.right
             let adjustsFontSizeToFitWidth = false
+            let minimumScaleFactor = generateRandomCGFloat()
 
             let sut = MWTextSettings(
-                font: font, color: color, numberOfLines: numberOfLines, hasBlurredShadow: hasBlurredShadow, textAlignment: textAlignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth
+                font: font, color: color, numberOfLines: numberOfLines, hasBlurredShadow: hasBlurredShadow, textAlignment: textAlignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth, minimumScaleFactor: minimumScaleFactor
             )
 
             it("font is set") {
@@ -62,6 +63,13 @@ class MWTextSettingsTests: QuickSpec {
             it("adjustsFontSizeToFitWidth is set") {
                 let expected = adjustsFontSizeToFitWidth
                 let tested = sut.adjustsFontSizeToFitWidth
+
+                expect(tested) == expected
+            }
+
+            it("minimumScaleFactor is set") {
+                let expected = minimumScaleFactor
+                let tested = sut.minimumScaleFactor
 
                 expect(tested) == expected
             }

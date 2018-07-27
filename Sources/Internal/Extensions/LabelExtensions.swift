@@ -24,7 +24,8 @@ extension UILabel {
                 numberOfLines: numberOfLines,
                 hasBlurredShadow: hasBlurredShadow,
                 textAlignment: textAlignment,
-                adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth
+                adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth,
+                minimumScaleFactor: minimumScaleFactor
             )
         }
 
@@ -34,6 +35,7 @@ extension UILabel {
             numberOfLines = settings.numberOfLines
             textAlignment = settings.textAlignment
             adjustsFontSizeToFitWidth = settings.adjustsFontSizeToFitWidth
+            minimumScaleFactor = settings.minimumScaleFactor
 
             if settings.hasBlurredShadow {
                 setBlurredShadow()
