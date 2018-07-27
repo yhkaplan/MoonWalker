@@ -14,17 +14,17 @@ public typealias MWCustomAction = () -> Void
  */
 open class MWParentViewCreator {
 
-    public var childViews: [MWChildViewModel]
-    public var viewModel: MWParentViewModel
+    public var childViewModels: [MWChildViewModel]
+    public var parentViewModel: MWParentViewModel
     public var customActionAfterLastPage: MWCustomAction?
 
     public init(
-        childViews: [MWChildViewModel],
-        viewModel: MWParentViewModel = MWParentViewModel(),
+        childViewModels: [MWChildViewModel],
+        parentViewModel: MWParentViewModel = MWParentViewModel(),
         customActionAfterLastPage: MWCustomAction? = nil
     ) {
-        self.childViews = childViews
-        self.viewModel = viewModel
+        self.childViewModels = childViewModels
+        self.parentViewModel = parentViewModel
         self.customActionAfterLastPage = customActionAfterLastPage
     }
 
@@ -49,7 +49,7 @@ public extension MWParentViewCreator {
             pageVC: pageViewController,
             dataSource: dataSource,
             delegate: delegate,
-            viewModel: viewModel,
+            parentViewModel: parentViewModel,
             customActionAfterLastPage: customActionAfterLastPage
         )
     }
@@ -59,7 +59,7 @@ public extension MWParentViewCreator {
 private extension MWParentViewCreator {
 
     func getChildViewControllers() -> [ChildViewController] {
-        return childViews.enumerated().map { index, childView in
+        return childViewModels.enumerated().map { index, childView in
             ChildViewController(
                 childViewModel: childView,
                 index: index
