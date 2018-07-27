@@ -18,9 +18,10 @@ class MWTextSettingsTests: QuickSpec {
             let numberOfLines = Int()
             let hasBlurredShadow = false
             let textAlignment = NSTextAlignment.right
+            let adjustsFontSizeToFitWidth = false
 
             let sut = MWTextSettings(
-                font: font, color: color, numberOfLines: numberOfLines, hasBlurredShadow: hasBlurredShadow, textAlignment: textAlignment
+                font: font, color: color, numberOfLines: numberOfLines, hasBlurredShadow: hasBlurredShadow, textAlignment: textAlignment, adjustsFontSizeToFitWidth: adjustsFontSizeToFitWidth
             )
 
             it("font is set") {
@@ -54,6 +55,13 @@ class MWTextSettingsTests: QuickSpec {
             it("textAlignment is set") {
                 let expected = textAlignment
                 let tested = sut.textAlignment
+
+                expect(tested) == expected
+            }
+
+            it("adjustsFontSizeToFitWidth is set") {
+                let expected = adjustsFontSizeToFitWidth
+                let tested = sut.adjustsFontSizeToFitWidth
 
                 expect(tested) == expected
             }

@@ -59,19 +59,22 @@ public struct MWTextSettings: Equatable {
     public var numberOfLines: Int
     public var hasBlurredShadow: Bool
     public var textAlignment: NSTextAlignment
+    public var adjustsFontSizeToFitWidth: Bool
 
     public init(
         font: UIFont = UIFont.systemFont(ofSize: 22.0),
         color: UIColor = .black,
         numberOfLines: Int = 1,
         hasBlurredShadow: Bool = false,
-        textAlignment: NSTextAlignment = .center
+        textAlignment: NSTextAlignment = .center,
+        adjustsFontSizeToFitWidth: Bool = false
     ) {
         self.font = font
         self.color = color
         self.numberOfLines = numberOfLines
         self.hasBlurredShadow = hasBlurredShadow
         self.textAlignment = textAlignment
+        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
     }
 }
 
