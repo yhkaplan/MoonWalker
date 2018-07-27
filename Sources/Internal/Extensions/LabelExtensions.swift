@@ -73,6 +73,9 @@ extension UILabel {
             attributedString.setLineSpacing(lineSpacing, text: textString)
         }
 
+        // Making a text label use an attributedString makes it ignore alignment settings
+        attributedString.setTextAlignment(settings.textAlignment, text: textString)
+
         text = nil
         attributedText = attributedString
     }
@@ -100,6 +103,16 @@ extension NSMutableAttributedString {
     func setLineSpacing(_ spacing: CGFloat, text: String) {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = spacing
+            addAttribute(
+                .paragraphStyle,
+                value: paragraphStyle,
+                range: NSRange(location: 0, length: text.count)
+            )
+    }
+
+    func setTextAlignment(_ alignment: NSTextAlignment, text: String) {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = alignment
             addAttribute(
                 .paragraphStyle,
                 value: paragraphStyle,
