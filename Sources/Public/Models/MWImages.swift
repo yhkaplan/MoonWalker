@@ -69,16 +69,20 @@ public struct MWBackgroundImageLayout: RegularLayout, SubviewAddable, Equatable 
     var trailingConstant: CGFloat
     var bottomConstant: CGFloat
     var topConstant: CGFloat
+    var useSafeAreaLayoutGuide: Bool
 
     public init(
         leadingConstant: CGFloat = 0.0,
         trailingConstant: CGFloat = 0.0,
         bottomConstant: CGFloat = 0.0,
-        topConstant: CGFloat = 0.0
+        topConstant: CGFloat = 0.0,
+        // Stretching into safe area for iPhone X is generally preferrable
+        useSafeAreaLayoutGuide: Bool = false
     ) {
         self.leadingConstant = leadingConstant
         self.trailingConstant = trailingConstant
         self.bottomConstant = bottomConstant
         self.topConstant = topConstant
+        self.useSafeAreaLayoutGuide = useSafeAreaLayoutGuide
     }
 }

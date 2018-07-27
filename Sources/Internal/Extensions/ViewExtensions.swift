@@ -19,7 +19,7 @@ extension UIView {
         trailingConstant: CGFloat = 0.0,
         topConstant: CGFloat = 0.0,
         bottomConstant: CGFloat = 0.0,
-        withSafeArea: Bool = false
+        useSafeAreaLayoutGuide: Bool = false
     ) {
         addSubview(subView)
         subView.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +28,7 @@ extension UIView {
 
         //TODO: optimize this w/ wrapper func
         if #available(iOS 11.0, *) {
-            if withSafeArea {
+            if useSafeAreaLayoutGuide {
                 constraints = [
                     subView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: leadingConstant),
                     subView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: trailingConstant),
