@@ -36,7 +36,10 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
 
     // Before
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? ChildViewController else {
+        guard
+            let viewController = viewController as? ChildViewController,
+            viewController.index != childViewControllers.startIndex
+        else {
             return nil
         }
 
