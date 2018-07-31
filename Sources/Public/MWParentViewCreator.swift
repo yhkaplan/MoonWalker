@@ -16,7 +16,7 @@ open class MWParentViewCreator {
 
     public var childViewModels: [MWChildViewModel]
     public var parentViewModel: MWParentViewModel
-    public var customActionAfterLastPage: MWCustomAction?
+    public var customActionAfterLastPage: MWCustomAction? //TODO: change to delegate
 
     public init(
         childViewModels: [MWChildViewModel],
