@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return MWChildViewModel(lowerLabel: upperLabel, backgroundImage: backgroundImage)
         }
 
-        let creator = MWParentViewCreator(childViews: views)
+        let creator = MWParentViewCreator(childViewModels: views)
         let walkthroughVC = creator.getParentViewController()
 
         window!.rootViewController = walkthroughVC
