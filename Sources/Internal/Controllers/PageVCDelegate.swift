@@ -33,9 +33,7 @@ class PageVCDelegate: NSObject, UIPageViewControllerDelegate {
             let currentIndex = currentVC.index
         else { return }
 
-        pageChangeDelegate?.pageDidChange(to: currentIndex)
-
-        //TODO: call didChangeToIndex here
+        pageChangeDelegate?.pageDidChange(to: currentIndex, from: previousVC.index)
     }
 
 }

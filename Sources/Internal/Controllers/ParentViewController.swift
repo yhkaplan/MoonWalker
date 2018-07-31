@@ -17,9 +17,21 @@ public protocol MWActionDelegate: AnyObject {
     func showNextPage()
 }
 
+//TODO: move
+/// Delegate to cause side effects on page changes
+public protocol MWPageChangeDelegate: AnyObject {
+    func pageWillChange(to toIndex: Int, from fromIndex: Int)
+    func pageDidChange(to toIndex: Int, from fromIndex: Int)
+}
+
+public protocol MWButtonActionDelegate: AnyObject {
+    func buttonWasTapped(at index: Int)
+}
+
+// Internal page change delegate
 protocol PageChangeDelegate: AnyObject {
     func pageWillChange(to index: Int)
-    func pageDidChange(to index: Int)
+    func pageDidChange(to toIndex: Int, from fromIndex: Int)
 }
 
 final class ParentViewController: UIViewController {
@@ -32,7 +44,8 @@ final class ParentViewController: UIViewController {
     private var pageVCDelegate = PageVCDelegate()
     private var viewModel = MWParentViewModel()
 
-    private var customActionAfterLastPage: MWCustomAction?
+    private weak var pageChangeDelegate: MWPageChangeDelegate?
+    private weak var buttonActionDelegate: MWButtonActionDelegate?
 
     private lazy var leftButton = UIButton()
     private lazy var rightButton = UIButton()
@@ -46,7 +59,8 @@ final class ParentViewController: UIViewController {
         dataSource: PageVCDataSource,
         delegate: PageVCDelegate,
         parentViewModel: MWParentViewModel,
-        customActionAfterLastPage: MWCustomAction?
+        pageChangeDelegate: MWPageChangeDelegate?,
+        buttonActionDelegate: MWButtonActionDelegate?
     ) {
         super.init(nibName: nil, bundle: nil)
 
@@ -54,7 +68,8 @@ final class ParentViewController: UIViewController {
         self.pageVCDataSource = dataSource
         self.pageVCDelegate = delegate
         self.viewModel = parentViewModel
-        self.customActionAfterLastPage = customActionAfterLastPage
+        self.pageChangeDelegate = pageChangeDelegate
+        self.buttonActionDelegate = buttonActionDelegate
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -76,17 +91,15 @@ final class ParentViewController: UIViewController {
 extension ParentViewController: PageChangeDelegate {
 
     func pageWillChange(to index: Int) {
-        guard
-            index == 0,
-            pageVCDataSource.isLastPage(for: pageVC)
-        else { return }
-
-        customActionAfterLastPage?()
+        let currentIndex = pageVCDataSource.presentationIndex(for: pageVC)
+        pageChangeDelegate?.pageWillChange(to: index, from: currentIndex)
     }
 
-    func pageDidChange(to index: Int) {
-        updatePageControl(with: index)
+    func pageDidChange(to toIndex: Int, from fromIndex: Int) {
+        updatePageControl(with: toIndex)
         updateIsHiddenViews()
+
+        pageChangeDelegate?.pageDidChange(to: toIndex, from: fromIndex)
     }
 
     private func updatePageControl(with index: Int) {
@@ -120,8 +133,9 @@ extension ParentViewController: MWActionDelegate {
         dismiss(animated: true) { }//TODO: call delegateWasSkipped here
     }
 
-    @objc func beginCustomAction() {
-        customActionAfterLastPage?()
+    @objc func delegateButtonAction() {
+        let currentIndex = pageVCDataSource.presentationIndex(for: pageVC)
+        buttonActionDelegate?.buttonWasTapped(at: currentIndex)
     }
 
     @objc func showNextPage() {
@@ -138,12 +152,14 @@ extension ParentViewController: MWActionDelegate {
             pageWillChange(to: nextIndex)
         }
 
+        let previousIndex = pageVCDataSource.presentationIndex(for: pageVC)
+
         pageVC.setViewControllers([viewController], direction: .forward, animated: true) { isFinished in
             guard isFinished else { return }
 
             //TODO: this code is needed both here and in the delegate
             let index = self.pageVCDataSource.presentationIndex(for: self.pageVC)
-            self.pageDidChange(to: index)
+            self.pageDidChange(to: index, from: previousIndex)
         }
     }
 }
@@ -179,8 +195,8 @@ private extension ParentViewController {
                 case .dismissWalkthrough:
                     button.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
 
-                case .customActionAfterLastPage:
-                    button.addTarget(self, action: #selector(beginCustomAction), for: .touchUpInside)
+                case .delegateButtonAction:
+                    button.addTarget(self, action: #selector(delegateButtonAction), for: .touchUpInside)
 
                 case .nextPage:
                     button.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)

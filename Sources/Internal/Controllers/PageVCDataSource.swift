@@ -55,6 +55,7 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
         return childViewControllers[after: viewController.index]
     }
 
+    // Current index
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return (pageViewController.viewControllers?.first as? ChildViewController)?.index ?? 0
     }
