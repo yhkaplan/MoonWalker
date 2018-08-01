@@ -41,11 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: MWPageChangeDelegate {
 
-    func pageWillChange(to toIndex: Int, from fromIndex: Int?) {
-        print("to: \(toIndex), from: \(fromIndex.debugDescription)")
+    func pageWillChange(to toIndex: Int, from fromIndex: Int) {
+        print("to: \(toIndex), from: \(fromIndex)")
     }
 
-    func pageDidChange(to toIndex: Int, from fromIndex: Int?) {
-        print("to: \(toIndex), from: \(fromIndex.debugDescription)")
+    func pageDidChange(to toIndex: Int, from fromIndex: Int) {
+        print("to: \(toIndex), from: \(fromIndex)")
     }
 }
