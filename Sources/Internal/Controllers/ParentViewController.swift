@@ -97,30 +97,28 @@ extension ParentViewController: PageChangeDelegate {
 
     func pageDidChange(to toIndex: Int, from fromIndex: Int) {
         updatePageControl(with: toIndex)
-        updateIsHiddenViews()
+        updateButtonLabels()
 
         pageChangeDelegate?.pageDidChange(to: toIndex, from: fromIndex)
+    }
+
+    private func updateButtonLabels() {
+        guard pageVCDataSource.isLastPage(for: pageVC) else { return }
+
+        if let newLabel = viewModel.leftButton?.labelOnLastPage {
+            leftButton.setTitle(newLabel, for: .normal)
+            // This may be needed: leftButton.setTitleColor(buttonModel.labelColor, for: .normal)
+        }
+
+        if let newLabel = viewModel.rightButton?.labelOnLastPage {
+            rightButton.setTitle(newLabel, for: .normal)
+            // This may be needed: rightButton.setTitleColor(buttonModel.labelColor, for: .normal)
+        }
     }
 
     private func updatePageControl(with index: Int) {
         pageControl.currentPage = index
         pageControl.updateCurrentPageDisplay()
-    }
-
-    private func updateIsHiddenViews() {
-        guard pageVCDataSource.isLastPage(for: pageVC) else { return }
-
-        if let leftButtonModel = viewModel.leftButton {
-            leftButton.isHidden = leftButtonModel.isHiddenOnLastScreen
-        }
-
-        if let rightButtonModel = viewModel.rightButton {
-            rightButton.isHidden = rightButtonModel.isHiddenOnLastScreen
-        }
-
-        if let pageControlModel = viewModel.pageControl {
-            pageControl.isHidden = pageControlModel.isHiddenOnLastScreen
-        }
     }
 }
 

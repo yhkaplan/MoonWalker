@@ -9,25 +9,25 @@ import UIKit
 
 public struct MWButton: Equatable {
     public var label: String?
+    public var labelOnLastPage: String?
     public var labelColor: UIColor
     public var backgroundImage: UIImage?
-    public var isHiddenOnLastScreen: Bool
     // TODO: font
     public var action: MWButtonAction
     public var layout: MWButtonLayout
 
     public init(
-        label: String,
+        label: String?,
+        labelOnLastPage: String? = nil,
         labelColor: UIColor = .black,
         backgroundImage: UIImage? = nil,
-        isHiddenOnLastScreen: Bool = false,
         action: MWButtonAction,
         layout: MWButtonLayout
     ) {
         self.label = label
+        self.labelOnLastPage = labelOnLastPage
         self.labelColor = labelColor
         self.backgroundImage = backgroundImage
-        self.isHiddenOnLastScreen = isHiddenOnLastScreen
         self.action = action
         self.layout = layout
     }
