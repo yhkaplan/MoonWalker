@@ -14,19 +14,26 @@ class MWButtonTests: QuickSpec {
         describe("MWButtonTests") {
 
             let label = "test label"
+            let labelOnLastPage = "test labelOnLastPage"
             let labelColor = UIColor.green
             let backgroundImage = UIImage()
-            let isHiddenOnLastScreen = false
             let action = MWButtonAction.nextPage
             let layout = MWButtonLayout()
 
             let sut = MWButton(
-                label: label, labelColor: labelColor, backgroundImage: backgroundImage, isHiddenOnLastScreen: isHiddenOnLastScreen, action: action, layout: layout
+                label: label, labelOnLastPage: labelOnLastPage, labelColor: labelColor, backgroundImage: backgroundImage, action: action, layout: layout
             )
 
             it("label is set") {
                 let expected = label
                 let tested = sut.label
+
+                expect(tested) == expected
+            }
+
+            it("labelOnLastPage is set") {
+                let expected = labelOnLastPage
+                let tested = sut.labelOnLastPage
 
                 expect(tested) == expected
             }
@@ -41,13 +48,6 @@ class MWButtonTests: QuickSpec {
             it("backgroundImage is set") {
                 let expected = backgroundImage
                 let tested = sut.backgroundImage
-
-                expect(tested) == expected
-            }
-
-            it("isHiddenOnLastScreen is set") {
-                let expected = isHiddenOnLastScreen
-                let tested = sut.isHiddenOnLastScreen
 
                 expect(tested) == expected
             }
