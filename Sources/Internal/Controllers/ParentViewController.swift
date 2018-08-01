@@ -19,13 +19,14 @@ public protocol MWActionDelegate: AnyObject {
 
 //TODO: move
 /// Delegate to cause side effects on page changes
-public protocol MWPageChangeDelegate: AnyObject {
-    func pageWillChange(to toIndex: Int, from fromIndex: Int?)
-    func pageDidChange(to toIndex: Int, from fromIndex: Int?)
+@objc public protocol MWPageChangeDelegate: AnyObject {
+    @objc optional func pageWillChange(to toIndex: Int, from fromIndex: Int)
+    @objc optional func pageDidChange(to toIndex: Int, from fromIndex: Int)
 }
 
-public protocol MWButtonActionDelegate: AnyObject {
-    func buttonWasTapped(at index: Int)
+@objc public protocol MWButtonActionDelegate: AnyObject {
+    @objc optional func customActionButtonWasTapped(at index: Int)
+    @objc optional func nextButtonWasTapped(at index: Int)
 }
 
 // Internal page change delegate
@@ -88,14 +89,14 @@ final class ParentViewController: UIViewController {
         super.viewWillAppear(animated)
 
         let firstIndex = pageVCDataSource.firstIndex
-        pageChangeDelegate?.pageWillChange(to: firstIndex, from: nil)
+        pageChangeDelegate?.pageWillChange?(to: firstIndex, from: firstIndex)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         let firstIndex = pageVCDataSource.firstIndex
-        pageChangeDelegate?.pageDidChange(to: firstIndex, from: nil)
+        pageChangeDelegate?.pageDidChange?(to: firstIndex, from: firstIndex)
     }
 }
 
@@ -105,14 +106,14 @@ extension ParentViewController: PageChangeDelegate {
 
     func pageWillChange(to index: Int) {
         let currentIndex = pageVCDataSource.presentationIndex(for: pageVC)
-        pageChangeDelegate?.pageWillChange(to: index, from: currentIndex)
+        pageChangeDelegate?.pageWillChange?(to: index, from: currentIndex)
     }
 
     func pageDidChange(to toIndex: Int, from fromIndex: Int) {
         updatePageControl(with: toIndex)
         updateButtonLabels()
 
-        pageChangeDelegate?.pageDidChange(to: toIndex, from: fromIndex)
+        pageChangeDelegate?.pageDidChange?(to: toIndex, from: fromIndex)
     }
 
     private func updateButtonLabels() {
@@ -153,7 +154,7 @@ extension ParentViewController: MWActionDelegate {
 
     @objc func delegateButtonAction() {
         let currentIndex = pageVCDataSource.presentationIndex(for: pageVC)
-        buttonActionDelegate?.buttonWasTapped(at: currentIndex)
+        buttonActionDelegate?.customActionButtonWasTapped?(at: currentIndex)
     }
 
     @objc func showNextPage() {
@@ -181,7 +182,6 @@ extension ParentViewController: MWActionDelegate {
         }
     }
 }
-
 
 // MARK: - Setup methods
 
