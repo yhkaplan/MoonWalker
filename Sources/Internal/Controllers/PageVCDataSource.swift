@@ -34,6 +34,7 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard
             let viewController = viewController as? ChildViewController,
+            // Prevents transition from first page to last
             viewController.index != childViewControllers.startIndex
         else {
             return nil
@@ -44,7 +45,11 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
 
     // After
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewController = viewController as? ChildViewController else {
+        guard
+            let viewController = viewController as? ChildViewController,
+            // Prevents transition from last page back to first
+            viewController.index != childViewControllers.finalValidIndex
+        else {
             return nil
         }
 
