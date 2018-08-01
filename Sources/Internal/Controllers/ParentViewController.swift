@@ -20,8 +20,8 @@ public protocol MWActionDelegate: AnyObject {
 //TODO: move
 /// Delegate to cause side effects on page changes
 public protocol MWPageChangeDelegate: AnyObject {
-    func pageWillChange(to toIndex: Int, from fromIndex: Int)
-    func pageDidChange(to toIndex: Int, from fromIndex: Int)
+    func pageWillChange(to toIndex: Int, from fromIndex: Int?)
+    func pageDidChange(to toIndex: Int, from fromIndex: Int?)
 }
 
 public protocol MWButtonActionDelegate: AnyObject {
@@ -84,6 +84,19 @@ final class ParentViewController: UIViewController {
         addPageControl()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let firstIndex = pageVCDataSource.firstIndex
+        pageChangeDelegate?.pageWillChange(to: firstIndex, from: nil)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let firstIndex = pageVCDataSource.firstIndex
+        pageChangeDelegate?.pageDidChange(to: firstIndex, from: nil)
+    }
 }
 
 // MARK: - PageControlUpdateDelegate

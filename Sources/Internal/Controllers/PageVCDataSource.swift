@@ -11,6 +11,8 @@ class PageVCDataSource: NSObject {
 
     var viewControllerCount: Int { return childViewControllers.count }
 
+    var firstIndex: Int { return childViewControllers.startIndex }
+
     init(childVCs: [ChildViewController]) {
         super.init()
 
