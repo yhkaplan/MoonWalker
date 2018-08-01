@@ -17,10 +17,6 @@ class PageVCDataSource: NSObject {
         self.childViewControllers = childVCs
     }
 
-    func getLastPage() -> UIViewController? {
-        return childViewControllers.last
-    }
-
     func getNextPageIndex(for pageViewConroller: UIPageViewController) -> Int? {
         let currentIndex = presentationIndex(for: pageViewConroller)
         return childViewControllers.nextIndex(for: currentIndex)
