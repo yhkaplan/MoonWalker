@@ -157,28 +157,21 @@ extension ParentViewController: MWActionDelegate {
         buttonActionDelegate?.customActionButtonWasTapped?(at: currentIndex)
     }
 
+    //TODO: break up this func
     @objc func showNextPage() {
+        let fromIndex = pageVCDataSource.presentationIndex(for: pageVC)
+        buttonActionDelegate?.nextButtonWasTapped?(at: fromIndex)
+
         guard
             let currentVC = pageVC.viewControllers?.first,
-            let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC)
+            let nextVC = pageVCDataSource.pageViewController(pageVC, viewControllerAfter: currentVC),
+            let toIndex = pageVCDataSource.getNextPageIndex(for: pageVC)
         else { return }
 
-        showVC(nextVC)
-    }
-
-    private func showVC(_ viewController: UIViewController) {
-        if let nextIndex = pageVCDataSource.getNextPageIndex(for: pageVC) {
-            pageWillChange(to: nextIndex)
-        }
-
-        let previousIndex = pageVCDataSource.presentationIndex(for: pageVC)
-
-        pageVC.setViewControllers([viewController], direction: .forward, animated: true) { isFinished in
+        pageWillChange(to: toIndex)
+        pageVC.setViewControllers([nextVC], direction: .forward, animated: true) { isFinished in
             guard isFinished else { return }
-
-            //TODO: this code is needed both here and in the delegate
-            let index = self.pageVCDataSource.presentationIndex(for: self.pageVC)
-            self.pageDidChange(to: index, from: previousIndex)
+            self.pageDidChange(to: toIndex, from: fromIndex)
         }
     }
 }
