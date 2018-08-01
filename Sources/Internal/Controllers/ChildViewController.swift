@@ -30,6 +30,12 @@ final class ChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // This is necessary to prevent background image etc from
+        // extending beyond its bounds in iPhone X
+        // https://github.com/hyperoslo/Pages/issues/48
+        // TODO: This may be required in pageVC instead
+        view.clipsToBounds = true
+
         setupLayout()
     }
 
