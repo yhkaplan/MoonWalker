@@ -116,17 +116,24 @@ extension ParentViewController: PageChangeDelegate {
     }
 
     private func updateButtonLabels() {
-        guard pageVCDataSource.isLastPage(for: pageVC) else { return }
+        guard pageVCDataSource.isLastPage(for: pageVC) else {
+            setNonLastButtonLabels()
+            return
+        }
 
         if let newLabel = viewModel.leftButton?.labelOnLastPage {
             leftButton.setTitle(newLabel, for: .normal)
-            // This may be needed: leftButton.setTitleColor(buttonModel.labelColor, for: .normal)
         }
 
         if let newLabel = viewModel.rightButton?.labelOnLastPage {
             rightButton.setTitle(newLabel, for: .normal)
-            // This may be needed: rightButton.setTitleColor(buttonModel.labelColor, for: .normal)
         }
+    }
+
+    // Resets button labels for when user changes from last to previous page
+    private func setNonLastButtonLabels() {
+        leftButton.setTitle(viewModel.leftButton?.label, for: .normal)
+        rightButton.setTitle(viewModel.rightButton?.label, for: .normal)
     }
 
     private func updatePageControl(with index: Int) {
