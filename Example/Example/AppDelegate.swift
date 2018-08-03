@@ -41,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: MWPageChangeDelegate {
 
+    func walkthroughDidFinish() {
+        print("Finished!")
+    }
+
     func pageWillChange(to toIndex: Int, from fromIndex: Int) {
         print("to: \(toIndex), from: \(fromIndex)")
     }
