@@ -13,6 +13,8 @@ class PageVCDataSource: NSObject {
 
     var firstIndex: Int { return childViewControllers.startIndex }
 
+    var finalValidIndex: Int { return childViewControllers.finalValidIndex }
+
     init(childVCs: [ChildViewController]) {
         super.init()
 
@@ -47,11 +49,7 @@ extension PageVCDataSource: UIPageViewControllerDataSource {
 
     // After
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard
-            let viewController = viewController as? ChildViewController,
-            // Prevents transition from last page back to first
-            viewController.index != childViewControllers.finalValidIndex
-        else {
+        guard let viewController = viewController as? ChildViewController else {
             return nil
         }
 

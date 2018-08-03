@@ -22,6 +22,8 @@ public protocol MWActionDelegate: AnyObject {
 @objc public protocol MWPageChangeDelegate: AnyObject {
     @objc optional func pageWillChange(to toIndex: Int, from fromIndex: Int)
     @objc optional func pageDidChange(to toIndex: Int, from fromIndex: Int)
+    /// Sent when Next button pressed on last page
+    @objc optional func walkthroughDidFinish()
 }
 
 @objc public protocol MWButtonActionDelegate: AnyObject {
@@ -57,7 +59,9 @@ final class ParentViewController: UIViewController {
 
     init(
         pageVC: UIPageViewController,
+        //TODO: rename
         dataSource: PageVCDataSource,
+        //TODO: rename
         delegate: PageVCDelegate,
         parentViewModel: MWParentViewModel,
         pageChangeDelegate: MWPageChangeDelegate?,
@@ -71,6 +75,9 @@ final class ParentViewController: UIViewController {
         self.viewModel = parentViewModel
         self.pageChangeDelegate = pageChangeDelegate
         self.buttonActionDelegate = buttonActionDelegate
+
+        // TODO: move this
+        self.pageVCDelegate.pageChangeDelegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -106,12 +113,25 @@ extension ParentViewController: PageChangeDelegate {
 
     func pageWillChange(to index: Int) {
         let currentIndex = pageVCDataSource.presentationIndex(for: pageVC)
-        pageChangeDelegate?.pageWillChange?(to: index, from: currentIndex)
+
+        let fromIndex = pageVCDataSource.presentationIndex(for: pageVC)
+        // Prevents change to: first, from: last
+        if index == pageVCDataSource.firstIndex && fromIndex == pageVCDataSource.finalValidIndex {
+            pageChangeDelegate?.walkthroughDidFinish?()
+        } else {
+            pageChangeDelegate?.pageWillChange?(to: index, from: currentIndex)
+        }
     }
 
     func pageDidChange(to toIndex: Int, from fromIndex: Int) {
         updatePageControl(with: toIndex)
         updateButtonLabels()
+
+        //TODO: repeating this logic is not good
+        // Prevents change to: first, from: last
+        if toIndex == pageVCDataSource.firstIndex && fromIndex == pageVCDataSource.finalValidIndex {
+            return
+        }
 
         pageChangeDelegate?.pageDidChange?(to: toIndex, from: fromIndex)
     }
@@ -225,8 +245,6 @@ private extension ParentViewController {
 
     func addPageControl() {
         guard let pageControlModel = viewModel.pageControl else { return }
-
-        pageVCDelegate.pageChangeDelegate = self
 
         pageControl.currentPageIndicatorTintColor = pageControlModel.currentPageIndicatorTintColor
         pageControl.pageIndicatorTintColor = pageControlModel.pageIndicatorTintColor
