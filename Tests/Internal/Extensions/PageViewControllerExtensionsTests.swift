@@ -31,14 +31,14 @@ class PageViewControllerExtensionsTests: QuickSpec {
                     let tested = sut.navigationOrientation
                     let expected = UIPageViewControllerNavigationOrientation.horizontal
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("has transitionStyle set properly") {
                     let tested = sut.transitionStyle
                     let expected = UIPageViewControllerTransitionStyle.scroll
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
             }
@@ -59,7 +59,7 @@ class PageViewControllerExtensionsTests: QuickSpec {
                     sut.setup(with: expected, dataSource: dataSource, delegate: delegate)
                     let tested = sut.viewControllers
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("sets dataSource") {
@@ -70,7 +70,7 @@ class PageViewControllerExtensionsTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("sets delegate") {
@@ -81,7 +81,7 @@ class PageViewControllerExtensionsTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
             }
 
@@ -99,7 +99,7 @@ class PageViewControllerExtensionsTests: QuickSpec {
                     sut.setInitialViewController(from: viewControllers, animated: false)
                     let tested = sut.viewControllers
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
             }
         }

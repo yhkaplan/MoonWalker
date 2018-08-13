@@ -48,7 +48,7 @@ class PageVCDataSourceTests: QuickSpec {
                             fail(); return
                         }
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                     it("returns final index when first index") {
@@ -64,7 +64,7 @@ class PageVCDataSourceTests: QuickSpec {
                             fail(); return
                         }
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                     it("returns nil when view controller not childVC") {
@@ -90,10 +90,10 @@ class PageVCDataSourceTests: QuickSpec {
                             pageViewController,
                             viewControllerAfter: childVC
                         ) as? ChildViewController else {
-                                fail(); return
+                            fail(); return
                         }
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                     it("returns start index when final index") {
@@ -109,7 +109,7 @@ class PageVCDataSourceTests: QuickSpec {
                             fail(); return
                         }
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                     it("returns nil when view controller not childVC") {
@@ -129,7 +129,7 @@ class PageVCDataSourceTests: QuickSpec {
                         let expected = childViewControllers.count
                         let tested = sut.viewControllerCount
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                 }
@@ -143,7 +143,7 @@ class PageVCDataSourceTests: QuickSpec {
 
                         let tested = sut.presentationIndex(for: pageViewController)
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                     it("returns zero when childViewControllers array is empty") {
@@ -152,7 +152,7 @@ class PageVCDataSourceTests: QuickSpec {
 
                         let tested = sut.presentationIndex(for: pageViewController)
 
-                        expect(tested).to(equal(expected))
+                        expect(tested) == expected
                     }
 
                 }
@@ -197,7 +197,7 @@ class PageVCDataSourceTests: QuickSpec {
 
                 func setupChildViewControllers() {
                     childViewControllers = [0, 1, 2].map { index -> ChildViewController in
-                        return ChildViewController(
+                        ChildViewController(
                             childViewModel: MWChildViewModel(),
                             index: index
                         )

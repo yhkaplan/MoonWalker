@@ -17,7 +17,7 @@ class ChildViewControllerTests: QuickSpec {
 
             context("Upper Label") {
 
-               let upperLabelMWTextSettings = MWTextSettings(
+                let upperLabelMWTextSettings = MWTextSettings(
                     font: UIFont.boldSystemFont(ofSize: 28.2),
                     color: .green,
                     textAlignment: .left
@@ -53,14 +53,14 @@ class ChildViewControllerTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(label.textSettings).to(equal(upperLabel.textSettings))
+                    expect(label.textSettings) == upperLabel.textSettings
                 }
 
             }
 
             context("Lower Label") {
 
-               let lowerLabelMWTextSettings = MWTextSettings(
+                let lowerLabelMWTextSettings = MWTextSettings(
                     font: UIFont.boldSystemFont(ofSize: 28.2),
                     color: .green,
                     textAlignment: .left
@@ -96,7 +96,7 @@ class ChildViewControllerTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(label.textSettings).to(equal(lowerLabel.textSettings))
+                    expect(label.textSettings) == lowerLabel.textSettings
                 }
             }
 

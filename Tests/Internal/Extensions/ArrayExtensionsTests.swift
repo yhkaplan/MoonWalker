@@ -10,11 +10,11 @@ import Nimble
 @testable import MoonWalker
 
 class ArrayExtensionsTests: QuickSpec {
-    
+
     override func spec() {
-        
+
         describe("Array extensions") {
-            
+
             let array: [String] = ["green", "blue", "red"]
 
             context("When finalValidIndex is called") {
@@ -23,7 +23,7 @@ class ArrayExtensionsTests: QuickSpec {
                     let expected = array.count - 1
                     let tested = array.finalValidIndex
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("returns 0 for an empty array") {
@@ -32,13 +32,13 @@ class ArrayExtensionsTests: QuickSpec {
                     let expected = 0
                     let tested = emptyArray.finalValidIndex
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
             }
 
             context("When subscript after is called") {
-                
+
                 it("returns the first value for endIndex") {
                     guard
                         let expected = array.first,
@@ -46,35 +46,35 @@ class ArrayExtensionsTests: QuickSpec {
                     else {
                         fail(); return
                     }
-                    
-                    expect(tested).to(equal(expected))
+
+                    expect(tested) == expected
                 }
-             
+
                 it("returns the value after for regular index") {
                     let arrayIndex = 1
-                    
+
                     let expected = array[arrayIndex + 1]
-                    
+
                     guard let tested = array[after: arrayIndex] else {
                         fail(); return
                     }
-                    
-                    expect(tested).to(equal(expected))
+
+                    expect(tested) == expected
                 }
 
                 it("returns nil for empty array") {
                     let arrayIndex = 0
                     let emptyArray: [Int] = []
-                    
+
                     let tested: Int? = emptyArray[after: arrayIndex]
-                    
+
                     expect(tested).to(beNil())
                 }
-                
+
             }
 
             context("When subscript before is called") {
-                
+
                 it("returns the last value for startIndex") {
                     guard
                         let expected = array.last,
@@ -83,7 +83,7 @@ class ArrayExtensionsTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("returns the value after for regular index") {
@@ -95,21 +95,21 @@ class ArrayExtensionsTests: QuickSpec {
                         fail(); return
                     }
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
-                
+
                 it("returns nil for empty array") {
                     let arrayIndex = 0
                     let emptyArray: [Int] = []
-                    
+
                     let tested: Int? = emptyArray[before: arrayIndex]
-                    
+
                     expect(tested).to(beNil())
                 }
-                
+
             }
-            
+
         }
-        
+
     }
 }

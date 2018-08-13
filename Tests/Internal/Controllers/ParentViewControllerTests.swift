@@ -10,18 +10,18 @@ import Nimble
 @testable import MoonWalker
 
 class ParentViewControllerTests: QuickSpec {
-    
+
     override func spec() {
-        
+
         describe("ParentViewController") {
-            
+
             context("When the VC is loaded") {
-            
+
                 let pageViewController = UIPageViewController(
                     nibName: nil,
                     bundle: nil
                 )
-                
+
                 let childVCs: [ChildViewController] = []
                 let dataSource = PageVCDataSource(childVCs: childVCs)
                 let delegate = PageVCDelegate()
@@ -32,11 +32,11 @@ class ParentViewControllerTests: QuickSpec {
                     delegate: delegate,
                     viewModel: MWParentViewModel()
                 )
-                
+
                 it("sets childVC view as a subview") {
                     sut.preloadView()
                     // Make sure subviews are layed out here
-                    
+
                     let expected = pageViewController.view
                     let subview = sut.view.subviews
                         .filter { $0 == expected }
@@ -44,12 +44,12 @@ class ParentViewControllerTests: QuickSpec {
 
                     guard let tested = subview else { fail(); return }
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
-                
+
             }
-            
+
         }
-        
+
     }
 }
