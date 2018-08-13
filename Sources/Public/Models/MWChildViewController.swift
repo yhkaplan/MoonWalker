@@ -14,7 +14,7 @@ public struct MWChildViewController: Equatable {
     public init(
         viewController: UIViewController? = nil,
         layout: MWCenteredItemLayout = MWCenteredItemLayout()
-        ) {
+    ) {
         self.viewController = viewController
         self.layout = layout
     }

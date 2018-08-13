@@ -18,7 +18,7 @@ class PageVCDataSource: NSObject {
     init(childVCs: [ChildViewController]) {
         super.init()
 
-        self.childViewControllers = childVCs
+        childViewControllers = childVCs
     }
 
     func getNextPageIndex(for pageViewConroller: UIPageViewController) -> Int? {

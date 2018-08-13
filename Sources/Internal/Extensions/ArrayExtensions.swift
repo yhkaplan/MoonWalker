@@ -30,5 +30,5 @@ extension Array {
         guard let previousIndex = previousIndex(for: index) else { return nil }
         return self[previousIndex]
     }
-    
+
 }

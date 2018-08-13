@@ -7,7 +7,7 @@
 
 /**
  This struct represents the data that will fill the main parent view
-*/
+ */
 public struct MWParentViewModel: Equatable {
     public var leftButton: MWButton?
     public var rightButton: MWButton?

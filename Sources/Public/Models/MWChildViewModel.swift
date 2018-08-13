@@ -8,7 +8,7 @@
 
 /**
  This struct represents the data that will fill your Walkthrough views
-*/
+ */
 public struct MWChildViewModel: Equatable {
 
     public var upperLabel: MWUpperLabel
