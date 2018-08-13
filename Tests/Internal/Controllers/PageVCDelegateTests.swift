@@ -80,7 +80,7 @@ class PageVCDelegateTests: QuickSpec {
                     let expected = randomIndex
                     let tested = pageChangeDelegateMock.index
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
                 it("does not call pageControlUpdateDelegate when transition is not complete") {
@@ -94,7 +94,7 @@ class PageVCDelegateTests: QuickSpec {
                     let expected = randomNumberSeed
                     let tested = pageChangeDelegateMock.index
 
-                    expect(tested).to(equal(expected))
+                    expect(tested) == expected
                 }
 
             }

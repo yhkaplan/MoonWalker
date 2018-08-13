@@ -26,7 +26,7 @@ extension UIView {
 
         var constraints: [NSLayoutConstraint] = []
 
-        //TODO: optimize this w/ wrapper func
+        // TODO: optimize this w/ wrapper func
         if #available(iOS 11.0, *) {
             if useSafeAreaLayoutGuide {
                 constraints = [
@@ -36,12 +36,12 @@ extension UIView {
                     subView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: bottomConstant)
                 ]
             } else {
-            constraints = [
-                subView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingConstant),
-                subView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailingConstant),
-                subView.topAnchor.constraint(equalTo: topAnchor, constant: topConstant),
-                subView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant)
-            ]
+                constraints = [
+                    subView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingConstant),
+                    subView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailingConstant),
+                    subView.topAnchor.constraint(equalTo: topAnchor, constant: topConstant),
+                    subView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant)
+                ]
 
             }
         } else {

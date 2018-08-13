@@ -12,13 +12,14 @@ before_install:
 - brew outdated carthage || brew upgrade carthage
 - brew outdated npm || brew upgrade npm
 - npm install -g danger
-- brew install danger/tap/danger-swift
-- brew install swiftlint
 - carthage update --platform iOS
 - gem install xcpretty cocoapods -no-rdoc --no-ri --no-document --quiet
 script:
 - set -o pipefail
 - xcodebuild -version
+- brew update
+- brew upgrade
+- brew bundle
 - swiftlint lint --path Tests --reporter json > swiftlint-results.json
 - danger process danger-swift -v
 - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK"

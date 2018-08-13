@@ -30,7 +30,7 @@ extension UILabel {
             )
         }
 
-        set (settings) {
+        set(settings) {
             font = settings.font
             textColor = settings.color
             numberOfLines = settings.numberOfLines
@@ -61,8 +61,7 @@ extension UILabel {
 
         if
             let characterSpacing = settings.characterSpacing,
-            let lineSpacing = settings.lineSpacing
-        {
+            let lineSpacing = settings.lineSpacing {
             attributedString.setCharacterSpacing(characterSpacing, text: textString)
             let paragraphStyle = attributedString.getParagraphStyle(with: lineSpacing)
             attributedString.setParagraphStyle(to: settings.textAlignment, with: textString, paragraphStyle: paragraphStyle)

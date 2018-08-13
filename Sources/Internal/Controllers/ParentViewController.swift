@@ -11,13 +11,13 @@ import UIKit
  * Calling this delegate allows you to dismiss the walkthrough
  * or show the next page at will
  */
-//TODO: move this somewhere else and apply to public class
+// TODO: move this somewhere else and apply to public class
 public protocol MWActionDelegate: AnyObject {
     func dismissSelf()
     func showNextPage()
 }
 
-//TODO: move
+// TODO: move
 /// Delegate to cause side effects on page changes
 @objc public protocol MWPageChangeDelegate: AnyObject {
     @objc optional func pageWillChange(to toIndex: Int, from fromIndex: Int)
@@ -59,9 +59,9 @@ final class ParentViewController: UIViewController {
 
     init(
         pageVC: UIPageViewController,
-        //TODO: rename
+        // TODO: rename
         dataSource: PageVCDataSource,
-        //TODO: rename
+        // TODO: rename
         delegate: PageVCDelegate,
         parentViewModel: MWParentViewModel,
         pageChangeDelegate: MWPageChangeDelegate?,
@@ -70,14 +70,14 @@ final class ParentViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.pageVC = pageVC
-        self.pageVCDataSource = dataSource
-        self.pageVCDelegate = delegate
-        self.viewModel = parentViewModel
+        pageVCDataSource = dataSource
+        pageVCDelegate = delegate
+        viewModel = parentViewModel
         self.pageChangeDelegate = pageChangeDelegate
         self.buttonActionDelegate = buttonActionDelegate
 
         // TODO: move this
-        self.pageVCDelegate.pageChangeDelegate = self
+        pageVCDelegate.pageChangeDelegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -127,7 +127,7 @@ extension ParentViewController: PageChangeDelegate {
         updatePageControl(with: toIndex)
         updateButtonLabels()
 
-        //TODO: repeating this logic is not good
+        // TODO: repeating this logic is not good
         // Prevents change to: first, from: last
         if toIndex == pageVCDataSource.firstIndex && fromIndex == pageVCDataSource.finalValidIndex {
             return
@@ -165,11 +165,11 @@ extension ParentViewController: PageChangeDelegate {
 
 // MARK: - Button actions
 
-//TODO: move this to public class
+// TODO: move this to public class
 extension ParentViewController: MWActionDelegate {
 
     @objc func dismissSelf() {
-        dismiss(animated: true) { }//TODO: call delegateWasSkipped here
+        dismiss(animated: true) {} // TODO: call delegateWasSkipped here
     }
 
     @objc func delegateButtonAction() {
@@ -177,7 +177,7 @@ extension ParentViewController: MWActionDelegate {
         buttonActionDelegate?.customActionButtonWasTapped?(at: currentIndex)
     }
 
-    //TODO: break up this func
+    // TODO: break up this func
     @objc func showNextPage() {
         let fromIndex = pageVCDataSource.presentationIndex(for: pageVC)
         buttonActionDelegate?.nextButtonWasTapped?(at: fromIndex)

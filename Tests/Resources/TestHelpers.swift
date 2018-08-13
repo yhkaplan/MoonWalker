@@ -41,7 +41,7 @@ extension UIViewController {
             .contains(where: { $0.image == image })
     }
 
-    func getAllSubviews<Subview: UIView>(of type: Subview.Type) -> [Subview] {//contrains type as .Type?
+    func getAllSubviews<Subview: UIView>(of type: Subview.Type) -> [Subview] { // contrains type as .Type?
         return view.subviews.compactMap { $0 as? Subview }
     }
 

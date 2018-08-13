@@ -20,7 +20,7 @@ final class ChildViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
 
         self.index = index
-        self.viewModel = childViewModel
+        viewModel = childViewModel
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -45,7 +45,7 @@ final class ChildViewController: UIViewController {
 
 private extension ChildViewController {
 
-    func setupLayout() {//TODO: optimize these into procotol funcs
+    func setupLayout() { // TODO: optimize these into procotol funcs
 
         if viewModel.backgroundImage.image != nil {
             let backgroundImage = UIImageView()

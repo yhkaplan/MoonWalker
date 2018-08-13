@@ -8,7 +8,7 @@
 // MARK: - Protocol
 
 protocol Label {
-    associatedtype T: SubviewAddable //TODO: not clear if these constraints work
+    associatedtype T: SubviewAddable // TODO: not clear if these constraints work
 
     var text: String? { get set }
     var layout: T { get set }
