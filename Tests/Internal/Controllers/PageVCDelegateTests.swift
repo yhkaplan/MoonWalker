@@ -105,13 +105,18 @@ class PageVCDelegateTests: QuickSpec {
 }
 
 class PageChangeDelegateMock: PageChangeDelegate {
+
     var index: Int
 
     init(index: Int) {
         self.index = index
     }
 
-    func pageDidChange(to index: Int) {
-        self.index = index
+    func pageWillChange(to index: Int) {
+        //TODO: implement
+    }
+
+    func pageDidChange(to toIndex: Int, from fromIndex: Int) {
+        index = toIndex
     }
 }

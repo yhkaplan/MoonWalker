@@ -51,20 +51,18 @@ class PageVCDataSourceTests: QuickSpec {
                         expect(tested) == expected
                     }
 
-                    it("returns final index when first index") {
+                    it("returns nil when first index") {
                         let expectedIndex = 2
                         let expected = childViewControllers[expectedIndex]
 
                         let childVC = childViewControllers[0]
 
-                        guard let tested = sut.pageViewController(
+                        let tested = sut.pageViewController(
                             pageViewController,
                             viewControllerBefore: childVC
-                        ) as? ChildViewController else {
-                            fail(); return
-                        }
+                        )
 
-                        expect(tested) == expected
+                        expect(tested).to(beNil())
                     }
 
                     it("returns nil when view controller not childVC") {
