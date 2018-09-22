@@ -19,8 +19,7 @@ script:
 - xcodebuild -version
 - brew update
 - brew upgrade
-- brew bundle
-- swiftlint lint --path Tests --reporter json > swiftlint-results.json
+- swiftlint lint --path Sources --reporter json > swiftlint-results.json
 - danger process danger-swift -v
 - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK"
   -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty
