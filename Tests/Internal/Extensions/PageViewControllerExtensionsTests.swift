@@ -29,14 +29,14 @@ class PageViewControllerExtensionsTests: QuickSpec {
 
                 it("has navigationOrientation set properly") {
                     let tested = sut.navigationOrientation
-                    let expected = UIPageViewControllerNavigationOrientation.horizontal
+                    let expected = UIPageViewController.NavigationOrientation.horizontal
 
                     expect(tested) == expected
                 }
 
                 it("has transitionStyle set properly") {
                     let tested = sut.transitionStyle
-                    let expected = UIPageViewControllerTransitionStyle.scroll
+                    let expected = UIPageViewController.TransitionStyle.scroll
 
                     expect(tested) == expected
                 }

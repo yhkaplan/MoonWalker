@@ -17,7 +17,7 @@ extension UIViewController {
         topConstant: CGFloat = 0.0,
         bottomConstant: CGFloat = 0.0
     ) {
-        addChildViewController(childVC)
+        addChild(childVC)
         view.addSubviewWithConstraints(
             childVC.view,
             leadingConstant: leadingConstant,
@@ -25,7 +25,7 @@ extension UIViewController {
             topConstant: topConstant,
             bottomConstant: bottomConstant
         )
-        childVC.didMove(toParentViewController: self)
+        childVC.didMove(toParent: self)
     }
 
 }

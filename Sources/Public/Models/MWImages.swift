@@ -11,12 +11,12 @@ import UIKit
 
 public struct MWBackgroundImage: Equatable {
     public var image: UIImage?
-    public var contentMode: UIViewContentMode
+    public var contentMode: UIView.ContentMode
     public var layout: MWBackgroundImageLayout
 
     public init(
         image: UIImage? = nil,
-        contentMode: UIViewContentMode = .scaleAspectFill,
+        contentMode: UIView.ContentMode = .scaleAspectFill,
         layout: MWBackgroundImageLayout = MWBackgroundImageLayout()
     ) {
         self.image = image
@@ -27,12 +27,12 @@ public struct MWBackgroundImage: Equatable {
 
 public struct MWMainImage: Equatable {
     public var image: UIImage?
-    public var contentMode: UIViewContentMode
+    public var contentMode: UIView.ContentMode
     public var layout: MWMainImageLayout
 
     public init(
         image: UIImage? = nil,
-        contentMode: UIViewContentMode = .scaleAspectFit,
+        contentMode: UIView.ContentMode = .scaleAspectFit,
         layout: MWMainImageLayout = MWMainImageLayout()
     ) {
         self.image = image
@@ -43,12 +43,12 @@ public struct MWMainImage: Equatable {
 
 public struct MWLowerImage: Equatable {
     public var image: UIImage?
-    public var contentMode: UIViewContentMode
+    public var contentMode: UIView.ContentMode
     public var layout: MWLowerItemLayout
 
     public init(
         image: UIImage? = nil,
-        contentMode: UIViewContentMode = .scaleAspectFit,
+        contentMode: UIView.ContentMode = .scaleAspectFit,
         layout: MWLowerItemLayout = MWLowerItemLayout()
     ) {
         self.image = image

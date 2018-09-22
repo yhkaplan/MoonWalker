@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.14.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 // MARK: - MWBackgroundImageTests
@@ -14,7 +14,7 @@ class MWBackgroundImageTests: QuickSpec {
         describe("MWBackgroundImageTests") {
 
             let image = UIImage()
-            let contentMode = UIViewContentMode.bottom
+            let contentMode = UIView.ContentMode.bottom
             let layout = MWBackgroundImageLayout()
 
             let sut = MWBackgroundImage(

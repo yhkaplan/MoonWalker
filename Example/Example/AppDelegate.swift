@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
         let views = [0, 1, 2].map { index -> MWChildViewModel in
 
             let font = UIFont.boldSystemFont(ofSize: 20.0)
@@ -37,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
 
 extension AppDelegate: MWPageChangeDelegate {
 

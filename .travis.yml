@@ -1,10 +1,10 @@
 language: objective-c
-osx_image: xcode9.4
+osx_image: xcode10
 xcode_workspace: MoonWalker.xcworkspace
 xcode_scheme: MoonWalker
 env:
   matrix:
-  - DESTINATION="platform=iOS Simulator,name=iPhone 8" SCHEME="MoonWalker" SDK=iphonesimulator11.4
+  - DESTINATION="platform=iOS Simulator,name=iPhone 8" SCHEME="MoonWalker" SDK=iphonesimulator12.0
   global:
     secure: OSab2t7pyQ6FBJMjLU69PpL4XRHr6ej+d2t1YNvnMc5PW1HjCoYh9gGUTGgLvoUXNcvPeRXD3Bb51G2SiTZxUVtdRg1PBqPKFWHuZRW17tL8MlH5V3fv/pIqDS2yzP4zjl1UcViMvVGcrZbvHywlB62khyKBzXs3b8ku+zQpoKHnqzgfPEWYXsro7QhmidQevv6puJJGidyC9e8bGv/5Vwnd6Bs6nLqeYJLgyAEH6xD+b+11OMDuZbgyUmEYWufBws80EmYMNBEp1BH1YnvJCYUJS1WcMGc4T7c8AQLeQgj1X+3xyaPvOC6myrHzyeN0E3oXbeIaNkQVpomd+SSHBNUXcXnx8A8kCzK6DLmyvynqJ0rgDugUgvrmQ7tFE0pqY6S0ukr8ZJIJSg5YFiBAZPaaYuVyzHYgEqjxeKMCWRBul4KUyHHsBBte1k2sOaOMCx+w2KtrZFkzapewoB2pCZj8cJ1xvETyZCDJBQo0w9OJfq5kqmNA+1IhhlAWvLcA/Ly0XmuCAqJuap6FSjONXNLzBghKY8ImBVDofqg1+ynd1K1ItHV5hlei9toHBleSp9pL/9xhhjspW8kJV7BYe0mSUzwomygIumSMsbktkAu7qMtzdSjfRpD9o1VJnKbHnnd/AbVUXE8a9E17MT8n0WsNtdEAkGdc7IycFPkqRIw=
 before_install:
@@ -19,8 +19,7 @@ script:
 - xcodebuild -version
 - brew update
 - brew upgrade
-- brew bundle
-- swiftlint lint --path Tests --reporter json > swiftlint-results.json
+- swiftlint lint --path Sources --reporter json > swiftlint-results.json
 - danger process danger-swift -v
 - xcodebuild clean build -project MoonWalker.xcodeproj -scheme "$SCHEME" -sdk "$SDK"
   -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty
