@@ -19,7 +19,7 @@ I focus heavily on test coverage.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Sources/**/*.{h,swift}'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
