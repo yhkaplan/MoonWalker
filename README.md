@@ -27,7 +27,7 @@ import MoonWalker
 ## Requirements
 
 * iOS 10.0+
-* Xcode 9.4+
+* Xcode 10.0+
 
 ## Getting involved
 
