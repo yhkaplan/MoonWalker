@@ -5,6 +5,8 @@
 //  Created by josh on 2018/07/11.
 //
 
+import UIKit
+
 /**
  This struct represents the data that will fill the main parent view
  */

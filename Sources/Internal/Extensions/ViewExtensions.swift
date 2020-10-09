@@ -9,10 +9,6 @@ import UIKit
 
 extension UIView {
 
-    private func setHeightConstraint(_ height: CGFloat, for subView: UIView) {
-        subView.heightAnchor.constraint(equalToConstant: height)
-    }
-
     func addSubviewWithConstraints(
         _ subView: UIView,
         leadingConstant: CGFloat = 0.0,

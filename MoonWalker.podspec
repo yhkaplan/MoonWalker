@@ -16,10 +16,10 @@ I focus heavily on test coverage.
   s.author           = { 'yhkaplan' => 'josh@pepabo.com' }
   s.source           = { :git => 'https://github.com/yhkaplan/MoonWalker.git', :tag => "#{"v" + s.version.to_s}" }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'Sources/**/*.{h,swift}'
-  s.swift_version = '4.2'
+  s.swift_version = '5.2'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'

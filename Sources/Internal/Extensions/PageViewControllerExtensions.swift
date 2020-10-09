@@ -5,6 +5,8 @@
 //  Created by josh on 2018/07/02.
 //
 
+import UIKit
+
 extension UIPageViewController {
 
     static var `default`: UIPageViewController {

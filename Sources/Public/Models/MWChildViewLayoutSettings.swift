@@ -5,6 +5,8 @@
 //  Created by josh on 2018/06/20.
 //
 
+import UIKit
+
 protocol SubviewAddable {
     func addChildViewToParent(childView: UIView, parentView: UIView)
 }
