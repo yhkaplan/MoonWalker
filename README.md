@@ -3,7 +3,7 @@
 <p align="left">
 <a href="https://travis-ci.org/yhkaplan@gmail.com/MoonWalker"><img src="https://travis-ci.org/yhkaplan@gmail.com/MoonWalker.svg?branch=master" alt="Build status" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift5.2-compatible-4BC51D.svg?style=flat" alt="Swift 5.2 compatible" /></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
 <a href="https://cocoapods.org/pods/XLActionController"><img src="https://img.shields.io/cocoapods/v/MoonWalker.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/yhkaplan@gmail.com/MoonWalker/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
@@ -26,8 +26,8 @@ import MoonWalker
 
 ## Requirements
 
-* iOS 10.0+
-* Xcode 10.0+
+* iOS 11.0+
+* Xcode 11.0+
 
 ## Getting involved
 
@@ -83,8 +83,8 @@ pod 'MoonWalker', '~> 1.0'
 
 To install MoonWalker, simply add the following line to your Cartfile:
 
-```ogdl
-github "yhkaplan@gmail.com/MoonWalker" ~> 1.0
+```ruby
+github "yhkaplan/MoonWalker" ~> 1.0
 ```
 
 ## Author

@@ -5,6 +5,8 @@
 //  Created by josh on 2018/06/20.
 //
 
+import UIKit
+
 /*
  * This struct is resposible for:
  * 1. creating ParentViewController

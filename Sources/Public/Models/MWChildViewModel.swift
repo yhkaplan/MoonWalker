@@ -6,6 +6,8 @@
 //  Copyright © 2018年 josh. All rights reserved.
 //
 
+import UIKit
+
 /**
  This struct represents the data that will fill your Walkthrough views
  */

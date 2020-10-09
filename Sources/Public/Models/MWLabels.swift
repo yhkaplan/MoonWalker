@@ -5,6 +5,8 @@
 //  Created by josh on 2018/07/09.
 //
 
+import UIKit
+
 // MARK: - Protocol
 
 protocol Label {
