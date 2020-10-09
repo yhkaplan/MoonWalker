@@ -14,7 +14,7 @@ I focus heavily on test coverage.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yhkaplan' => 'josh@pepabo.com' }
-  s.source           = { :git => 'https://github.com/yhkaplan/MoonWalker.git', :tag => "#{"v" + s.version.to_s}" }
+  s.source           = { :git => 'https://github.com/yhkaplan/MoonWalker.git', :tag => "#{s.version}" }
 
   s.ios.deployment_target = '11.0'
 
