@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MoonWalker'
-  s.version          = '0.26.0'
+  s.version          = '1.0.0'
   s.summary          = 'An easy to use Walkthrough framework'
 
   s.description      = <<-DESC
