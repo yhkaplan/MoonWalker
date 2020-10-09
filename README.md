@@ -67,6 +67,11 @@ Follow these 3 steps to run Example project: clone MoonWalker repository, open M
 
 * If you are having issues installing, then it may be due to an old version of Sourcery that is incompatible with the latest file format. To fix this, please a). upgrade or b) uninstall sourcery.
 
+#### Swift Package Manager
+
+Add via Xcode in the [usual way](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+
+
 ### CocoaPods
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects.
